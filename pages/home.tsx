@@ -4,6 +4,7 @@ import Head from "next/head";
 import Image from "next/image";
 import { DefaultSeo } from "next-seo";
 import styled from "styled-components";
+import First from "@/components/pages/First";
 
 const pageHeader: IPageHeader = {
   title: "Welcome",
@@ -82,7 +83,7 @@ const HomePage: IDefaultLayoutPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head> */}
       <HomePageWrapper spin={spin} onWheel={wheelEvent} onTouchStart={touchEvent} onTouchEnd={touchEvent}>
-        <div>Home이다</div>
+        <First />
       </HomePageWrapper>
     </>
   );

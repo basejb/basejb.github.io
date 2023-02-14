@@ -31,7 +31,7 @@ const MenuBar = styled.div`
   width: 32px;
   height: 4px;
   background-color: #000;
-  transition: top 0.25s, background-color 0.5s, transform 0.25s;
+  transition: all 0.3s ease-in-out;
   @media (max-width: 640px) {
     width: 16px;
     height: 2px;
