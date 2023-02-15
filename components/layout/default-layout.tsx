@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import MenuBtn from "./menu-btn";
 import styled from "styled-components";
 import Link from "next/link";
+import Copyright from "./Copyright";
 
 export type IDefaultLayoutPage<P = {}> = NextPage<P> & {
   getLayout(page: NextComponentType, props: unknown): React.ReactNode;
@@ -113,6 +114,7 @@ const DefaultLayout = ({ Page, ...props }: IDefaultLayoutProps) => {
       <PageWrapper>
         <Page {...props} />
       </PageWrapper>
+      <Copyright />
     </div>
   );
 };
