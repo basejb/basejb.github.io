@@ -51,7 +51,7 @@ const MenuBar = styled.div`
   &.menu-middle {
     top: 12px;
     &.active {
-      transform: translate(32px);
+      transform: translate(40px);
     }
     @media (max-width: 640px) {
       top: 6px;
