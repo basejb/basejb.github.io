@@ -25,15 +25,16 @@ const HeaderWrapper = styled.div`
     z-index: 40;
     height: 60px;
   }
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 40;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   padding: 40px 80px;
   width: 100%;
-  top: 0;
-  left: 0;
-  z-index: 1;
   transition: all 0.25s;
 `;
 
@@ -47,16 +48,20 @@ const HeaderTitle = styled.div`
     color: black;
     font-size: 20px;
     text-align: center;
-    line-height: 45px;
-    width: 45px;
-    height: 45px;
-    background-color: darkcyan;
+    line-height: 40px;
+    width: 40px;
+    height: 40px;
+    background-color: #000000;
+    color: white;
     border-radius: 3px;
   }
 `;
 
 const PageWrapper = styled.section`
-  padding: 0 20px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100vh;
 `;
 
 const MenuStyle = {

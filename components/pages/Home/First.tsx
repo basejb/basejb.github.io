@@ -5,18 +5,17 @@ import Image from "next/image";
 
 const FirstStyle = styled.section`
   display: flex;
-  align-items: center;
   justify-content: center;
   width: 100%;
-  /* background-color: #9ea4cd; */
+  height: 100vh;
   .container {
-    width: 80%;
+    width: 70%;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    justify-content: center;
     z-index: 1;
     transition: all 0.3s ease-in-out;
-
     p {
       margin: 0;
       color: #000000;
@@ -28,36 +27,33 @@ const FirstStyle = styled.section`
     }
 
     #job {
-      font-size: 6rem;
+      font-size: 5rem;
     }
   }
 
   .me {
+    transition: all 0.3s;
     position: absolute;
-    bottom: 12%;
     right: 5%;
-    width: 800px;
+    width: auto;
     height: 100vh;
-    transition: all 0.2s ease-in-out;
+    object-fit: cover;
   }
 
   @media (max-width: 1400px) {
-    .container {
-      margin-top: 50px;
-      width: 80%;
-    }
     .me {
-      width: 800px;
-      height: 100vh;
-      right: 0;
+      right: -10%;
+      width: auto;
     }
   }
 
   @media (max-width: 1100px) {
-    align-items: flex-start;
+    margin-top: 130px;
+    flex-direction: column;
+    align-items: center;
     .container {
+      width: 100%;
       margin-top: 0;
-      /* transform: translateY(150px); */
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -70,21 +66,19 @@ const FirstStyle = styled.section`
       }
     }
     .me {
-      width: 100%;
-      height: 70vh;
+      position: initial;
+      width: auto;
+      height: 70%;
     }
   }
 
-  @media (max-width: 500px) {
+  @media (max-width: 640px) {
+    height: calc(100vh - 130px);
     .container {
       min-width: 350px;
       #job {
         font-size: 2.5rem;
       }
-    }
-    .me {
-      background-size: 70%;
-      background-position: bottom;
     }
   }
 `;
@@ -100,7 +94,7 @@ const HomeFirstPage = () => {
           <p>Developer ;</p>
         </div>
       </div>
-      <Image className="me" src={me} alt={"준범"} priority={true} />
+      <Image className="me" src={me} alt={"me"} priority={true} />
     </FirstStyle>
   );
 };
