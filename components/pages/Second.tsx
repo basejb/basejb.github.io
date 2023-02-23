@@ -1,14 +1,15 @@
 import React from "react";
 import styled from "styled-components";
-import me from "@/public/junbeom.webp";
+import me from "@/public/junbeom.png";
 import Image from "next/image";
 
-const FirstStyle = styled.section`
+const SecondStyle = styled.section`
   display: flex;
   align-items: center;
   justify-content: center;
   width: 100%;
-  height: calc(100vh - 128px);
+  height: 100vh;
+  background-color: tan;
   .container {
     width: 80%;
     display: flex;
@@ -34,9 +35,10 @@ const FirstStyle = styled.section`
 
   .me {
     position: absolute;
+    bottom: 12%;
     right: 5%;
     width: 800px;
-    height: calc(100vh - 128px);
+    height: 100vh;
     transition: all 0.2s ease-in-out;
   }
 
@@ -47,6 +49,7 @@ const FirstStyle = styled.section`
     }
     .me {
       width: 800px;
+      height: 100vh;
       right: 0;
     }
   }
@@ -69,12 +72,11 @@ const FirstStyle = styled.section`
     }
     .me {
       width: 100%;
+      height: 70vh;
     }
   }
 
-  @media (max-width: 640px) {
-    align-items: flex-start;
-    height: calc(100vh - 60px);
+  @media (max-width: 500px) {
     .container {
       min-width: 350px;
       #job {
@@ -82,14 +84,15 @@ const FirstStyle = styled.section`
       }
     }
     .me {
-      height: calc(100vh - 60px);
+      background-size: 70%;
+      background-position: bottom;
     }
   }
 `;
 
-const HomeFirstPage = () => {
+const HomeSecondPage = () => {
   return (
-    <FirstStyle>
+    <SecondStyle>
       <div className="container">
         <p id="name">JUNBEOM MOON</p>
         <div id="job">
@@ -98,8 +101,8 @@ const HomeFirstPage = () => {
           <p>Developer ;</p>
         </div>
       </div>
-      <Image className="me" src={me} alt={"준범"} priority={true} />
-    </FirstStyle>
+      {/* <Image className="me" src={me} alt={"준범"} priority={true} /> */}
+    </SecondStyle>
   );
 };
 
@@ -109,4 +112,4 @@ export async function getServerSideProps() {
   };
 }
 
-export default React.memo(HomeFirstPage);
+export default React.memo(HomeSecondPage);

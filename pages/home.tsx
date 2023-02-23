@@ -5,13 +5,13 @@ import Image from "next/image";
 import { DefaultSeo } from "next-seo";
 import styled from "styled-components";
 import First from "@/components/pages/First";
+import Second from "@/components/pages/Second";
 
 const pageHeader: IPageHeader = {
   title: "Welcome",
 };
 
 const HomePageWrapper: any = styled.section`
-  height: 100vh;
   transition: transform 1s cubic-bezier(0.8, 0.085, 0, 0.99);
   -webkit-transition: transform 1s cubic-bezier(0.8, 0.085, 0, 0.99);
   transform: translateY(${(props: any) => -props.spin * 100}vh);
@@ -50,7 +50,9 @@ const HomePage: IDefaultLayoutPage = () => {
       setScroll(false);
       if (e.deltaY > 0) {
         spin < articleNum - 1 && setSpin((prev) => prev + 1);
-      } else spin > 0 && setSpin((prev) => prev - 1);
+      } else {
+        spin > 0 && setSpin((prev) => prev - 1);
+      }
       setTimeout(() => setScroll(true), 800);
     }
   };
@@ -69,8 +71,8 @@ const HomePage: IDefaultLayoutPage = () => {
 
   useEffect(() => {
     window.scrollTo(0, 0);
+
     //  document.querySelector("#header").style.backgroundColor = "transparent";
-    //  document.querySelector("body").style.overflow = "hidden";
   }, []);
 
   return (
@@ -84,6 +86,7 @@ const HomePage: IDefaultLayoutPage = () => {
       </Head> */}
       <HomePageWrapper spin={spin} onWheel={wheelEvent} onTouchStart={touchEvent} onTouchEnd={touchEvent}>
         <First />
+        <Second />
       </HomePageWrapper>
     </>
   );

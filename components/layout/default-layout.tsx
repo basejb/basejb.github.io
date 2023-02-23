@@ -33,7 +33,7 @@ const HeaderWrapper = styled.div`
   width: 100%;
   top: 0;
   left: 0;
-  z-index: 1;
+  z-index: 40;
   transition: all 0.25s;
 `;
 
@@ -53,10 +53,6 @@ const HeaderTitle = styled.div`
     background-color: darkcyan;
     border-radius: 3px;
   }
-`;
-
-const PageWrapper = styled.section`
-  padding: 0 20px;
 `;
 
 const MenuStyle = {
@@ -84,7 +80,7 @@ const DefaultLayout = ({ Page, ...props }: IDefaultLayoutProps) => {
   }, []);
 
   return (
-    <div>
+    <div style={{ overflow: "hidden", height: "100vh" }}>
       {/* 사이드바 자리 */}
 
       {/* mobile navigation */}
@@ -111,9 +107,7 @@ const DefaultLayout = ({ Page, ...props }: IDefaultLayoutProps) => {
         {/* <MainMenu /> */}
       </motion.div>
 
-      <PageWrapper>
-        <Page {...props} />
-      </PageWrapper>
+      <Page {...props} />
       <Copyright />
     </div>
   );
