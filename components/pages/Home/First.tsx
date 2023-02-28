@@ -33,11 +33,12 @@ const FirstStyle = styled.section`
   }
 
   .me {
+    animation: me 0.9s ease-in-out forwards;
     position: absolute;
     right: 5%;
-    width: 800px;
+    width: 1000px;
     height: calc(100vh - 128px);
-    transition: all 0.2s ease-in-out;
+    transition: all 0.5s ease-in-out;
   }
 
   @media (max-width: 1400px) {
@@ -46,7 +47,7 @@ const FirstStyle = styled.section`
       width: 80%;
     }
     .me {
-      width: 800px;
+      /* width: 100%; */
       right: 0;
     }
   }
@@ -68,7 +69,9 @@ const FirstStyle = styled.section`
       }
     }
     .me {
+      margin: auto;
       width: 100%;
+      height: calc(100vh - 128px);
     }
   }
 

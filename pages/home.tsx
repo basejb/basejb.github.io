@@ -4,8 +4,8 @@ import Head from "next/head";
 import Image from "next/image";
 import { DefaultSeo } from "next-seo";
 import styled from "styled-components";
-import First from "@/components/pages/First";
-import Second from "@/components/pages/Second";
+import First from "@/components/pages/Home/First";
+import Second from "@/components/pages/Home/Second";
 
 const pageHeader: IPageHeader = {
   title: "Welcome",
