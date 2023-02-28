@@ -10,14 +10,13 @@ interface IMenuBtnProps {
 const Button = styled.button`
   cursor: pointer;
   border: none;
-  background-color: white;
+  background-color: transparent;
   padding: 10px;
 `;
 
 const MenuWrapper = styled.div`
   position: relative;
   overflow: hidden;
-  z-index: 40;
   @media (max-width: 640px) {
     width: 16px;
     height: 14px;
@@ -32,7 +31,7 @@ const MenuBar = styled.div`
   position: absolute;
   width: 32px;
   height: 3px;
-  background-color: #000;
+  background-color: #eeeeee;
   transition: all 0.3s ease-in-out;
   @media (max-width: 640px) {
     width: 16px;

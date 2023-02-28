@@ -5,6 +5,7 @@ import type { AppProps } from "next/app";
 import { NextComponentType } from "next";
 import Head from "next/head";
 import { DefaultSeo } from "next-seo";
+import { Analytics } from "@vercel/analytics/react";
 
 const DEFAULT_SEO = {
   title: "Title",
@@ -45,6 +46,7 @@ export default function App({ Component, pageProps }: AppProps) {
         /> */}
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <Analytics />
       <main>{getLayout(Component, pageProps)}</main>
     </>
   );

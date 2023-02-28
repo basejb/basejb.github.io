@@ -2,24 +2,29 @@ import React from "react";
 import styled from "styled-components";
 import me from "@/public/junbeom.webp";
 import Image from "next/image";
+import Round from "@/public/elipse-home-slide.png";
+import Forest from "@/public/asdf.png";
 
-const FirstStyle = styled.section`
+const FirstStyle: any = styled.section`
   display: flex;
   align-items: center;
   justify-content: center;
   width: 100%;
-  height: calc(100vh - 128px);
+  height: 100vh;
+  z-index: 10;
+  background-color: #268e47;
+  transition: all 0.4s ease-in-out;
   .container {
-    width: 80%;
+    width: 65%;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
     z-index: 1;
     transition: all 0.3s ease-in-out;
-
+    transition-delay: 5ms;
+    margin: 0 0 100px 0;
     p {
       margin: 0;
-      color: #000000;
+      color: #eeeeee;
       font-weight: 600;
     }
 
@@ -28,17 +33,43 @@ const FirstStyle = styled.section`
     }
 
     #job {
-      font-size: 6rem;
+      font-size: 5.5rem;
     }
   }
 
   .me {
-    animation: me 0.9s ease-in-out forwards;
+    z-index: 3;
     position: absolute;
-    right: 5%;
-    width: 1000px;
-    height: calc(100vh - 128px);
-    transition: all 0.5s ease-in-out;
+    transition: all 0.4s ease-in-out;
+    right: 0;
+    width: 60vw;
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+    background-image: url(${(props: any) => props.me.src});
+  }
+
+  .round {
+    z-index: 1;
+    position: absolute;
+    bottom: 40vw;
+    left: 55vw;
+    width: 65vw;
+    height: 65vw;
+    background-size: cover;
+    background-image: url(${(props: any) => props.round.src});
+    transition-duration: 1.5s;
+    transition-delay: 150ms;
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+
+  .forest {
+    z-index: 2;
+    min-width: 1920px;
+    position: absolute;
+    bottom: 100vh;
+    left: 0;
   }
 
   @media (max-width: 1400px) {
@@ -47,16 +78,16 @@ const FirstStyle = styled.section`
       width: 80%;
     }
     .me {
-      /* width: 100%; */
       right: 0;
     }
   }
 
   @media (max-width: 1100px) {
-    align-items: flex-start;
+    align-items: center;
+    flex-direction: column;
     .container {
       margin-top: 0;
-      /* transform: translateY(150px); */
+      transform: translateY(150px);
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -69,30 +100,28 @@ const FirstStyle = styled.section`
       }
     }
     .me {
-      margin: auto;
-      width: 100%;
-      height: calc(100vh - 128px);
+      position: static;
+      width: 100vw;
+      .round {
+        display: none;
+      }
     }
   }
 
   @media (max-width: 640px) {
-    align-items: flex-start;
-    height: calc(100vh - 60px);
     .container {
-      min-width: 350px;
       #job {
         font-size: 2.5rem;
       }
     }
     .me {
-      height: calc(100vh - 60px);
     }
   }
 `;
 
 const HomeFirstPage = () => {
   return (
-    <FirstStyle>
+    <FirstStyle me={me} round={Round}>
       <div className="container">
         <p id="name">JUNBEOM MOON</p>
         <div id="job">
@@ -101,7 +130,9 @@ const HomeFirstPage = () => {
           <p>Developer ;</p>
         </div>
       </div>
-      <Image className="me" src={me} alt={"준범"} priority={true} />
+      <div className="me" />
+      <div className="round" />
+      <Image className="forest" src={Forest} />
     </FirstStyle>
   );
 };

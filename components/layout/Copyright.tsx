@@ -9,7 +9,7 @@ const CopyrightStyle = styled.div`
   left: 0;
   z-index: 1;
   p {
-    color: #000000;
+    color: #eeeeee;
     font-size: 14px;
     margin: 0;
   }
