@@ -5,16 +5,12 @@ const repository = "racejb.github.io";
 
 const nextConfig = {
   // assetPrefix: !debug ? `/${repository}` : "",
+  basePath: !debug ? `/${repository}` : "",
   trailingSlash: true,
   reactStrictMode: true,
   swcMinify: true,
   compiler: {
     styledComponents: true,
-  },
-  modularizeImports: {
-    // lodash: {
-    //   transform: "lodash/{{member}}",
-    // },
   },
   images: {
     formats: ["image/avif", "image/webp"],
