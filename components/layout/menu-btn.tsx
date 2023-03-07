@@ -32,7 +32,10 @@ const MenuBar = styled.div`
   width: 32px;
   height: 3px;
   background-color: #eeeeee;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  &.active {
+    background-color: #000000;
+  }
   @media (max-width: 640px) {
     width: 16px;
     height: 2px;
