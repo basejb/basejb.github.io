@@ -56,7 +56,7 @@ const Umokmin = () => {
     <UmokminStyle>
       <div className="intro">
         <Image alt="logo" className="logo" src={umokminLogo} />
-        <p>"여행을 즐기다, 나만의 특별한 장소 유목민"</p>
+        <p>여행을 즐기다, 나만의 특별한 장소 유목민</p>
       </div>
       <Overview />
       <Branding />
