@@ -1,6 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  basePath: "/racejb.github.io",
+  assetPrefix: process.env.NODE_ENV === "production" ? "/racejb.github.io" : "",
+  // basePath: process.env.NODE_ENV === "production" ? "/racejb.github.io" : "/",
   reactStrictMode: true,
   swcMinify: true,
   compiler: {
