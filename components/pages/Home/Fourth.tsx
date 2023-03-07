@@ -46,7 +46,7 @@ const FourthStyle = styled.section`
           background-color: white;
           border-radius: 100%;
           transition: all 2s ease-in-out;
-          opacity: ${(props) => (props.spin === 3 ? "1" : "0")};
+          opacity: ${(props: any) => (props.spin === 3 ? "1" : "0")};
         }
 
         p {
@@ -58,7 +58,7 @@ const FourthStyle = styled.section`
 
         .hugus {
           background-color: #f5d0a9;
-          transition-delay: ${(props) => (props.spin === 3 ? "0.4s" : "0s")};
+          transition-delay: ${(props: any) => (props.spin === 3 ? "0.4s" : "0s")};
           p {
             color: #ffa500;
             font-size: 2rem;
@@ -72,7 +72,7 @@ const FourthStyle = styled.section`
 
         .work {
           background-color: #ff9e9d;
-          transition-delay: ${(props) => (props.spin === 3 ? "0.7s" : "0s")};
+          transition-delay: ${(props: any) => (props.spin === 3 ? "0.7s" : "0s")};
           p {
             color: #da463c;
             font-size: 2rem;
@@ -85,7 +85,7 @@ const FourthStyle = styled.section`
 
         .umokmin {
           background-color: #e2f4de;
-          transition-delay: ${(props) => (props.spin === 3 ? "1s" : "0s")};
+          transition-delay: ${(props: any) => (props.spin === 3 ? "1s" : "0s")};
           p {
             color: #46613d;
             font-size: 2rem;
@@ -119,7 +119,7 @@ const FourthStyle = styled.section`
     position: absolute;
     width: 100%;
     height: 100vh;
-    transform: ${(props) => (props.spin === 3 ? "scale(1)" : "scale(1.3)")};
+    transform: ${(props: any) => (props.spin === 3 ? "scale(1)" : "scale(1.3)")};
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;

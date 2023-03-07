@@ -42,7 +42,7 @@ const ArchitectureStyle = styled.div`
         img {
           width: 100%;
           height: auto;
-          cursor: ${(props) => (props.zoom ? "zoom-out" : "zoom-in")};
+          cursor: ${(props: any) => (props.zoom ? "zoom-out" : "zoom-in")};
         }
       }
     }
@@ -51,16 +51,16 @@ const ArchitectureStyle = styled.div`
   #zoom {
     position: fixed;
     inset: 0px;
-    z-index: ${(props) => (props.zoom ? 100 : -1)};
+    z-index: ${(props: any) => (props.zoom ? 100 : -1)};
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: white;
-    opacity: ${(props) => (props.zoom ? 1 : 0)};
+    opacity: ${(props: any) => (props.zoom ? 1 : 0)};
     transition: opacity 0.3s ease-in-out;
 
     img {
-      cursor: ${(props) => (props.zoom ? "zoom-out" : "zoom-in")};
+      cursor: ${(props: any) => (props.zoom ? "zoom-out" : "zoom-in")};
       inset: 0px;
       width: 85%;
       height: auto;

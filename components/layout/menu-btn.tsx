@@ -115,18 +115,18 @@ const NavStyle: any = styled.nav`
 `;
 
 const NavMenu = styled.div`
-  visibility: ${(props) => (props.open ? "visible" : "hidden")};
+  visibility: ${(props: any) => (props.open ? "visible" : "hidden")};
   position: fixed;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   right: 0;
-  width: ${(props) => (props.open ? "500px" : "0")};
+  width: ${(props: any) => (props.open ? "500px" : "0")};
   height: 100vh;
   background-color: #212121;
   transition: all 1s cubic-bezier(0.55, 0.085, 0, 0.99);
-  transition-delay: ${(props) => (props.open ? "0s" : "0.5s")};
+  transition-delay: ${(props: any) => (props.open ? "0s" : "0.5s")};
 
   .nav__btn {
     position: absolute;
@@ -142,20 +142,20 @@ const NavMenu = styled.div`
 
     span {
       transition: all 0.3s ease-in-out;
-      transition-delay: ${(props) => (props.open ? "0.5s" : "0.1s")};
-      opacity: ${(props) => (props.open ? "1" : "0")};
+      transition-delay: ${(props: any) => (props.open ? "0.5s" : "0.1s")};
+      opacity: ${(props: any) => (props.open ? "1" : "0")};
     }
 
     span:nth-child(1) {
-      ${(props) => (props.open ? "transform:rotate(-45deg); top:15px;right:1px" : "top:5px;right:1px")}
+      ${(props: any) => (props.open ? "transform:rotate(-45deg); top:15px;right:1px" : "top:5px;right:1px")}
     }
 
     span:nth-child(2) {
-      ${(props) => (props.open ? "opacity: 0;top:15px;right:1px" : "top:15px;right:1px")}
+      ${(props: any) => (props.open ? "opacity: 0;top:15px;right:1px" : "top:15px;right:1px")}
     }
 
     span:nth-child(3) {
-      ${(props) => (props.open ? "transform: rotate(45deg);top:15px;right:1px" : "top:25px;right:1px")}
+      ${(props: any) => (props.open ? "transform: rotate(45deg);top:15px;right:1px" : "top:25px;right:1px")}
     }
   }
 
@@ -190,19 +190,19 @@ const NavMenu = styled.div`
         }
       }
       :nth-child(1) {
-        transform: translateX(${(props) => (props.open ? 0 : 100)}px);
-        transition-delay: ${(props) => (props.open ? "0.5s" : "0.45s")};
-        opacity: ${(props) => (props.open ? "1" : "0")};
+        transform: translateX(${(props: any) => (props.open ? 0 : 100)}px);
+        transition-delay: ${(props: any) => (props.open ? "0.5s" : "0.45s")};
+        opacity: ${(props: any) => (props.open ? "1" : "0")};
       }
       :nth-child(2) {
-        transform: translateX(${(props) => (props.open ? 0 : 100)}px);
-        transition-delay: ${(props) => (props.open ? "0.65s" : "0.3s")};
-        opacity: ${(props) => (props.open ? "1" : "0")};
+        transform: translateX(${(props: any) => (props.open ? 0 : 100)}px);
+        transition-delay: ${(props: any) => (props.open ? "0.65s" : "0.3s")};
+        opacity: ${(props: any) => (props.open ? "1" : "0")};
       }
       :nth-child(3) {
-        transform: translateX(${(props) => (props.open ? 0 : 100)}px);
-        transition-delay: ${(props) => (props.open ? "0.8s" : "0.15s")};
-        opacity: ${(props) => (props.open ? "1" : "0")};
+        transform: translateX(${(props: any) => (props.open ? 0 : 100)}px);
+        transition-delay: ${(props: any) => (props.open ? "0.8s" : "0.15s")};
+        opacity: ${(props: any) => (props.open ? "1" : "0")};
       }
     }
   }
@@ -216,10 +216,10 @@ const NavMenu = styled.div`
       border: none;
       height: 50px;
       cursor: pointer;
-      transform: translateX(${(props) => (props.open ? 0 : 100)}px);
+      transform: translateX(${(props: any) => (props.open ? 0 : 100)}px);
       transition: all 0.3s cubic-bezier(0.46, 0.03, 0.52, 0.96);
-      transition-delay: ${(props) => (props.open ? "1s" : "0s")};
-      opacity: ${(props) => (props.open ? "1" : "0")};
+      transition-delay: ${(props: any) => (props.open ? "1s" : "0s")};
+      opacity: ${(props: any) => (props.open ? "1" : "0")};
       a {
         color: lightgray;
         font-size: 1rem;
@@ -240,7 +240,7 @@ const NavMenu = styled.div`
   @media (max-width: 500px) {
     left: 0;
     width: 100%;
-    height: ${(props) => (props.open ? "100vh" : "0")};
+    height: ${(props: any) => (props.open ? "100vh" : "0")};
     transition: all 1s cubic-bezier(0.55, 0.085, 0, 0.99);
     -webkit-transition: all 1s cubic-bezier(0.55, 0.085, 0, 0.99);
 

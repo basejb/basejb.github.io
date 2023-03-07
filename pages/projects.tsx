@@ -31,7 +31,7 @@ const ProjectsStyle: any = styled.section`
     justify-content: center;
     background-color: rgb(17, 17, 19);
     transition: all 1s ease-in-out;
-    /* transform: translateY(${(props) => (props.scroll ? "-100px" : "0px")}); */
+    /* transform: translateY(${(props: any) => (props.scroll ? "-100px" : "0px")}); */
 
     .list {
       display: grid;
@@ -75,15 +75,15 @@ const ProjectsStyle: any = styled.section`
         }
 
         #hugus {
-          ${(props) => props.type === "hugus" && "color:#ffa500;span{opacity:1}"};
+          ${(props: any) => props.type === "hugus" && "color:#ffa500;span{opacity:1}"};
         }
 
         #work {
-          ${(props) => props.type === "work" && "color:#ec6375;span{opacity:1}"};
+          ${(props: any) => props.type === "work" && "color:#ec6375;span{opacity:1}"};
         }
 
         #umokmin {
-          ${(props) => props.type === "umokmin" && "color:#79928e;span{opacity:1}"};
+          ${(props: any) => props.type === "umokmin" && "color:#79928e;span{opacity:1}"};
         }
       }
     }
@@ -101,17 +101,17 @@ const ProjectsStyle: any = styled.section`
       }
 
       #hugus {
-        opacity: ${(props) => (props.type === "hugus" ? "1" : "0")};
+        opacity: ${(props: any) => (props.type === "hugus" ? "1" : "0")};
         background-color: #ffa500;
       }
 
       #work {
-        opacity: ${(props) => (props.type === "work" ? "1" : "0")};
+        opacity: ${(props: any) => (props.type === "work" ? "1" : "0")};
         background-color: #ec6375;
       }
 
       #umokmin {
-        opacity: ${(props) => (props.type === "umokmin" ? "1" : "0")};
+        opacity: ${(props: any) => (props.type === "umokmin" ? "1" : "0")};
         background-color: #79928e;
       }
     }
