@@ -117,6 +117,7 @@ const ProcessStyle: any = styled.div`
       cursor: ${(props: any) => (props.zoom ? "zoom-out" : "zoom-in")};
       inset: 0px;
       width: 85%;
+      height: auto;
     }
   }
 
@@ -184,7 +185,7 @@ const ProcessStyle: any = styled.div`
 `;
 
 const Process = () => {
-  const [zoom, setZoom] = useState(false);
+  const [zoom, setZoom] = useState<string>("");
 
   const zoomHandler = (e: React.MouseEvent<HTMLLIElement, MouseEvent>) => {
     const { alt }: any = e.target;
@@ -238,7 +239,7 @@ const Process = () => {
                   /> */}
                 </section>
               </div>
-              <Image alt="infinity_scroll" src={infinityScroll} />
+              <Image alt="infinityScroll" src={infinityScroll} />
               <p>
                 • axios api로 초기 로드 데이터 10개를 불러오고 스크롤 값을 계산해서 추가 로드시에 10개씩 추가
                 로드합니다.
@@ -329,7 +330,7 @@ const Process = () => {
                   /> */}
                 </section>
               </div>
-              <Image alt="state_change" src={stateChange} />
+              <Image alt="stateChange" src={stateChange} />
               <p>
                 • 작업물 접수 및 상태 변경을 클릭하면 해당 조건을 서버에서 이미 눌렀거나 다른 유저가 눌렀다면 예외처리
                 합니다.
@@ -394,18 +395,7 @@ const Process = () => {
       </div>
 
       <div id="zoom">
-        <Image
-          alt="zoom"
-          src={
-            (zoom === "infinity_scroll" && infinityScroll) ||
-            (zoom === "write" && write) ||
-            (zoom === "filter" && filter) ||
-            (zoom === "state_change" && stateChange) ||
-            (zoom === "noti" && noti) ||
-            (zoom === "mobile" && mobile)
-          }
-          onClick={() => setZoom(false)}
-        />
+        <Image alt="zoom" src={zoom} onClick={() => setZoom("")} />
       </div>
     </ProcessStyle>
   );
