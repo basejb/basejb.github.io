@@ -11,7 +11,7 @@ module.exports = {
     "plugin:react/recommended",
     "plugin:react-hooks/recommended",
     "plugin:@typescript-eslint/recommended",
-    "next/core-web-vitals",
+    "@next/next/recommended",
     "plugin:prettier/recommended",
   ],
   overrides: [],
