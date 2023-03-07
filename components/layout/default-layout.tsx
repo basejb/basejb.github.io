@@ -5,14 +5,14 @@ import Copyright from "./Copyright";
 import Header from "./header";
 import { useRouter } from "next/router";
 
+export interface IPageHeader {
+  title: string;
+}
+
 export type IDefaultLayoutPage<P = {}> = NextPage<P> & {
   getLayout(page: NextComponentType, props: unknown): React.ReactNode;
   pageHeader?: IPageHeader;
 };
-
-export interface IPageHeader {
-  title: string;
-}
 
 interface IDefaultLayoutProps {
   Page: IDefaultLayoutPage;
@@ -35,7 +35,7 @@ const DefaultLayout = ({ Page, ...props }: IDefaultLayoutProps) => {
   const [isShowPopupMenu, setIsShowPopupMenu] = useState(false);
 
   useEffect(() => {
-    router.route.includes("projects") ? setOverflow("auto") : setOverflow("hidden");
+    // router.route.includes("projects") ? setOverflow("auto") : setOverflow("hidden");
   }, [router]);
 
   return (

@@ -240,14 +240,17 @@ const Nav = () => {
   // Nav.handleClickOutside = () => setOpen(false);
 
   return (
-    <NavStyle open={open} onKeyDown={(e: any) => e.code === "Escape" && setOpen(!open)}>
-      <button className="nav__btn" onClick={() => setOpen(!open)}>
+    <NavStyle
+      open={open}
+      // onKeyDown={(e: any) => e.code === "Escape" && setOpen(!open)}
+    >
+      <button type="button" className="nav__btn" onClick={() => setOpen(!open)}>
         <span />
         <span />
         <span />
       </button>
       <div className="nav__menu">
-        <button className="nav__btn" onClick={() => setOpen(!open)}>
+        <button type="button" className="nav__btn" onClick={() => setOpen(!open)}>
           <span />
           <span />
           <span />
@@ -270,13 +273,13 @@ const Nav = () => {
           </li> */}
         </ul>
         <div className="sites">
-          <button>
-            <a href="https://github.com/racejb" target="_blank" id="github">
+          <button type="button">
+            <a href="https://github.com/racejb" target="_blank" id="github" rel="noreferrer">
               GH.
             </a>
           </button>
-          <button>
-            <a href="https://www.instagram.com/racejb/?hl=ko" target="_blank" id="instagram">
+          <button type="button">
+            <a href="https://www.instagram.com/racejb/?hl=ko" target="_blank" id="instagram" rel="noreferrer">
               IG.
             </a>
           </button>

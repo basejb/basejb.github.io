@@ -1,7 +1,11 @@
 /** @type {import('next').NextConfig} */
+
+const debug = process.env.NODE_ENV !== "production";
+const repository = "racejb.github.io";
+
 const nextConfig = {
-  assetPrefix: process.env.NODE_ENV === "production" ? "/racejb.github.io" : "",
-  // basePath: process.env.NODE_ENV === "production" ? "/racejb.github.io" : "/",
+  assetPrefix: !debug ? `/${repository}` : "",
+  trailingSlash: true,
   reactStrictMode: true,
   swcMinify: true,
   compiler: {
