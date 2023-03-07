@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import Link from "next/link";
 import iphone from "@/public/images/second2.jpg";
-import hugus from "../Projects/Hugus";
 
 const FourthStyle = styled.section`
   display: flex;
