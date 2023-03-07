@@ -98,6 +98,7 @@ const FourthStyle = styled.section`
       }
 
       #more {
+        text-decoration: none;
         align-self: flex-end;
         display: flex;
         justify-content: center;

@@ -131,7 +131,7 @@ const HomeFirstPage = () => {
         </div>
       </div>
       <div className="me" />
-      <div className="round" />
+      {/* <div className="round" /> */}
       <Image alt="forest" className="forest" src={Forest} />
     </FirstStyle>
   );
