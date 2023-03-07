@@ -18,7 +18,7 @@ module.exports = {
     ecmaVersion: "latest",
     sourceType: "module",
   },
-  plugins: ["react", "react-hooks", "@typescript-eslint", "simple-import-sort", "prettier"],
+  plugins: ["react", "react-hooks", "@typescript-eslint", "prettier"],
   rules: {
     "react/jsx-filename-extension": [
       1,
@@ -51,9 +51,6 @@ module.exports = {
     "react/no-danger": 0,
     // console 허용
     "no-console": 0,
-    // import 순서
-    "simple-import-sort/imports": "error",
-    "simple-import-sort/exports": "error",
     // require문 허용
     "@typescript-eslint/no-var-requires": 0,
     // var 사용 제한
