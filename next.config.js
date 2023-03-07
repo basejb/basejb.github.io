@@ -4,7 +4,7 @@ const debug = process.env.NODE_ENV !== "production";
 const repository = "racejb.github.io";
 
 const nextConfig = {
-  assetPrefix: !debug ? `/${repository}` : "",
+  // assetPrefix: !debug ? `/${repository}` : "",
   trailingSlash: true,
   reactStrictMode: true,
   swcMinify: true,
