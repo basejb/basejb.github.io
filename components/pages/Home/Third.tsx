@@ -71,72 +71,72 @@ const ThirdStyle: any = styled.section`
             }
 
             #javascript {
-              width: ${(props: any) => (props.spin == 2 ? "85%" : "0%")};
+              width: ${(props: any) => (props.spin === 2 ? "85%" : "0%")};
               background: linear-gradient(90deg, #b852cc, #cc5285);
             }
 
             #typescript {
-              width: ${(props: any) => (props.spin == 2 ? "50%" : "0%")};
+              width: ${(props: any) => (props.spin === 2 ? "50%" : "0%")};
               background: linear-gradient(90deg, #cc5285, #e0aaf2);
             }
 
             #html {
-              width: ${(props: any) => (props.spin == 2 ? "85%" : "0%")};
+              width: ${(props: any) => (props.spin === 2 ? "85%" : "0%")};
               background: linear-gradient(90deg, #b852cc, #cc5285);
             }
 
             #css {
-              width: ${(props: any) => (props.spin == 2 ? "80%" : "0%")};
+              width: ${(props: any) => (props.spin === 2 ? "80%" : "0%")};
               background: linear-gradient(90deg, #7ea1e5, #9460e2);
             }
 
             #java {
-              width: ${(props: any) => (props.spin == 2 ? "30%" : "0%")};
+              width: ${(props: any) => (props.spin === 2 ? "30%" : "0%")};
               background: linear-gradient(90deg, #cc5285, #e0aaf2);
             }
 
             #solidity {
-              width: ${(props: any) => (props.spin == 2 ? "30%" : "0%")};
+              width: ${(props: any) => (props.spin === 2 ? "30%" : "0%")};
               background: linear-gradient(90deg, #cc5285, #e57e88);
             }
 
             #react {
-              width: ${(props: any) => (props.spin == 2 ? "85%" : "0%")};
+              width: ${(props: any) => (props.spin === 2 ? "85%" : "0%")};
               background: linear-gradient(90deg, #6291ee, #c1c1f3);
             }
 
             #express {
-              width: ${(props: any) => (props.spin == 2 ? "80%" : "0%")};
+              width: ${(props: any) => (props.spin === 2 ? "80%" : "0%")};
               background: linear-gradient(90deg, #e57e88, #db45b4);
             }
 
             #fabric {
-              width: ${(props: any) => (props.spin == 2 ? "30%" : "0%")};
+              width: ${(props: any) => (props.spin === 2 ? "30%" : "0%")};
               background: linear-gradient(90deg, #f2bcaa, #a87ee5);
             }
 
             #ethereum {
-              width: ${(props: any) => (props.spin == 2 ? "30%" : "0%")};
+              width: ${(props: any) => (props.spin === 2 ? "30%" : "0%")};
               background: linear-gradient(90deg, #e57e88, #cc5285);
             }
 
             #klaytn {
-              width: ${(props: any) => (props.spin == 2 ? "20%" : "0%")};
+              width: ${(props: any) => (props.spin === 2 ? "20%" : "0%")};
               background: linear-gradient(90deg, #c779d0, #feac5e);
             }
 
             #docker {
-              width: ${(props: any) => (props.spin == 2 ? "30%" : "0%")};
+              width: ${(props: any) => (props.spin === 2 ? "30%" : "0%")};
               background: linear-gradient(90deg, #fffcdc, #d9a7c7);
             }
 
             #linux {
-              width: ${(props: any) => (props.spin == 2 ? "55%" : "0%")};
+              width: ${(props: any) => (props.spin === 2 ? "55%" : "0%")};
               background: linear-gradient(90deg, #cc5285, #e57e88);
             }
 
             #ubuntu {
-              width: ${(props: any) => (props.spin == 2 ? "55%" : "0%")};
+              width: ${(props: any) => (props.spin === 2 ? "55%" : "0%")};
               background: linear-gradient(90deg, #fffcdc, #d9a7c7);
             }
           }

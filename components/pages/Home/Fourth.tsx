@@ -3,7 +3,7 @@ import styled from "styled-components";
 import Link from "next/link";
 import iphone from "@/public/images/second2.jpg";
 
-const FourthStyle = styled.section`
+const FourthStyle: any = styled.section`
   display: flex;
   justify-content: center;
   width: 100%;
@@ -216,7 +216,7 @@ const FourthStyle = styled.section`
   }
 `;
 
-const Fourth = ({ spin }) => {
+const Fourth = ({ spin }: any) => {
   return (
     <FourthStyle spin={spin}>
       <div className="container">
@@ -241,7 +241,7 @@ const Fourth = ({ spin }) => {
           </Link>
         </div>
       </div>
-      <div className="background" style={{ backgroundImage: `url(${iphone})` }}></div>
+      <div className="background" style={{ backgroundImage: `url(${iphone})` }} />
     </FourthStyle>
   );
 };
