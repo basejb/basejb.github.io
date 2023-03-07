@@ -154,7 +154,7 @@ const ProjectsStyle: any = styled.section`
 `;
 
 const Projects = () => {
-  const [type, setType] = useState("hugus");
+  const [type, setType] = useState<string>("hugus");
   const [scroll, setScroll] = useState(false);
 
   const wheelEvent = (e: WheelEvent) => {
@@ -165,20 +165,6 @@ const Projects = () => {
     // else {
     //   setScroll(false);
     // }
-  };
-
-  const Project = () => {
-    switch (type) {
-      case "hugus": {
-        return <Hugus />;
-      }
-      case "work": {
-        return <RealTimeWork />;
-      }
-      case "umokmin": {
-        return <Umokmin />;
-      }
-    }
   };
 
   useEffect(() => {
@@ -208,12 +194,15 @@ const Projects = () => {
           </li>
         </ul>
         <div className="bar">
-          <div id="hugus"></div>
-          <div id="work"></div>
-          <div id="umokmin"></div>
+          <div id="hugus" />
+          <div id="work" />
+          <div id="umokmin" />
         </div>
       </div>
-      <Project />
+
+      {type === "hugus" && <Hugus />}
+      {type === "work" && <RealTimeWork />}
+      {type === "umokmin" && <Umokmin />}
     </ProjectsStyle>
   );
 };

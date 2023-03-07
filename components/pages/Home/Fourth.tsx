@@ -8,7 +8,7 @@ const FourthStyle: any = styled.section`
   justify-content: center;
   width: 100%;
   height: 100vh;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: black;
 
   .container {
     margin-top: 150px;
