@@ -52,7 +52,7 @@ const DefaultLayout = ({ Page, ...props }: IDefaultLayoutProps) => {
           closed: { opacity: 0, y: "-10px", transitionEnd: { display: "none" } },
         }}
         transition={{ duration: 0.15 }}
-        style={MenuStyle}
+        // style={MenuStyle}
       >
         {/* <Profile /> */}
         {/* <MainMenu /> */}

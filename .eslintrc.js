@@ -3,7 +3,6 @@ module.exports = {
     browser: true,
     es2021: true,
     node: true,
-    jest: true,
   },
   extends: [
     "eslint:recommended",
@@ -19,7 +18,7 @@ module.exports = {
     ecmaVersion: "latest",
     sourceType: "module",
   },
-  plugins: ["react", "react-hooks", "@typescript-eslint", "jest-dom", "simple-import-sort", "prettier"],
+  plugins: ["react", "react-hooks", "@typescript-eslint", "simple-import-sort", "prettier"],
   rules: {
     "react/jsx-filename-extension": [
       1,
