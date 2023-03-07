@@ -1,5 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  basePath: "/racejb.github.io",
   reactStrictMode: true,
   swcMinify: true,
   compiler: {

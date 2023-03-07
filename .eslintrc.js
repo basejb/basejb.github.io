@@ -5,11 +5,13 @@ module.exports = {
     node: true,
   },
   extends: [
+    "plugin:@next/next/recommended",
     "eslint:recommended",
     "airbnb",
     "plugin:react/recommended",
     "plugin:react-hooks/recommended",
     "plugin:@typescript-eslint/recommended",
+    "next/core-web-vitals",
     "plugin:prettier/recommended",
   ],
   overrides: [],

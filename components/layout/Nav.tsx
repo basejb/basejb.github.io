@@ -240,17 +240,17 @@ const Nav = () => {
   // Nav.handleClickOutside = () => setOpen(false);
 
   return (
-    <NavStyle open={open} onKeyDown={(e: any) => e.code == "Escape" && setOpen(!open)}>
+    <NavStyle open={open} onKeyDown={(e: any) => e.code === "Escape" && setOpen(!open)}>
       <button className="nav__btn" onClick={() => setOpen(!open)}>
-        <span></span>
-        <span></span>
-        <span></span>
+        <span />
+        <span />
+        <span />
       </button>
       <div className="nav__menu">
         <button className="nav__btn" onClick={() => setOpen(!open)}>
-          <span></span>
-          <span></span>
-          <span></span>
+          <span />
+          <span />
+          <span />
         </button>
         <ul>
           <li>
