@@ -18,6 +18,7 @@
     "paths": {
       "@/*": ["./*"],
       "@/pages": ["./pages"],
+      "@/public": ["./public"],
       "@/components": ["./components"],
       "@/iamges": ["./iamges"]
     }

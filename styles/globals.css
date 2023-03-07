@@ -1,3 +1,9 @@
+@font-face {
+  font-family: "Kcc";
+  font-style: normal;
+  src: local(KCC-은영체), url("~/public/fonts/KCC-eunyoung.woff2") format("woff2");
+}
+
 * {
   box-sizing: border-box;
   -webkit-tap-highlight-color: rgba(255, 255, 255, 0);

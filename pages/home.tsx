@@ -6,6 +6,8 @@ import { DefaultSeo } from "next-seo";
 import styled from "styled-components";
 import First from "@/components/pages/Home/First";
 import Second from "@/components/pages/Home/Second";
+import Third from "@/components/pages/Home/Third";
+import Fourth from "@/components/pages/Home/Fourth";
 
 const pageHeader: IPageHeader = {
   title: "Welcome",
@@ -43,7 +45,7 @@ const HomePage: IDefaultLayoutPage = () => {
   const [spin, setSpin] = useState(0);
   const [touchStart, setTouchStart] = useState(0);
   const [scroll, setScroll] = useState(true);
-  const [articleNum] = useState(2);
+  const [articleNum] = useState(4);
 
   const wheelEvent = (e: WheelEvent) => {
     if (scroll) {
@@ -71,7 +73,6 @@ const HomePage: IDefaultLayoutPage = () => {
 
   useEffect(() => {
     window.scrollTo(0, 0);
-
     //  document.querySelector("#header").style.backgroundColor = "transparent";
   }, []);
 
@@ -87,6 +88,8 @@ const HomePage: IDefaultLayoutPage = () => {
       <HomePageWrapper spin={spin} onWheel={wheelEvent} onTouchStart={touchEvent} onTouchEnd={touchEvent}>
         <First />
         <Second />
+        <Third spin={spin} />
+        <Fourth spin={spin} />
       </HomePageWrapper>
     </>
   );

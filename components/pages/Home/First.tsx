@@ -68,8 +68,8 @@ const FirstStyle: any = styled.section`
     z-index: 2;
     min-width: 1920px;
     position: absolute;
-    bottom: 100vh;
-    left: 0;
+    right: 0;
+    height: 100vh;
   }
 
   @media (max-width: 1400px) {
@@ -132,7 +132,7 @@ const HomeFirstPage = () => {
       </div>
       <div className="me" />
       <div className="round" />
-      <Image className="forest" src={Forest} />
+      <Image alt="forest" className="forest" src={Forest} />
     </FirstStyle>
   );
 };

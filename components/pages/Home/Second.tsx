@@ -9,48 +9,29 @@ const SecondStyle = styled.section`
   justify-content: center;
   width: 100%;
   height: 100vh;
-  background-color: tan;
+  background-color: black;
   .container {
     width: 80%;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     z-index: 1;
     transition: all 0.3s ease-in-out;
 
-    p {
-      margin: 0;
-      color: #000000;
+    h1 {
+      text-align: center;
+      margin: 0 auto;
+      color: white;
+      font-size: 2rem;
       font-weight: 600;
+      line-height: 80px;
     }
-
-    #name {
-      margin-bottom: 1rem;
-    }
-
-    #job {
-      font-size: 6rem;
-    }
-  }
-
-  .me {
-    position: absolute;
-    bottom: 12%;
-    right: 5%;
-    width: 800px;
-    height: 100vh;
-    transition: all 0.2s ease-in-out;
   }
 
   @media (max-width: 1400px) {
     .container {
       margin-top: 50px;
       width: 80%;
-    }
-    .me {
-      width: 800px;
-      height: 100vh;
-      right: 0;
     }
   }
 
@@ -63,29 +44,15 @@ const SecondStyle = styled.section`
       flex-direction: column;
       align-items: center;
       z-index: 1;
-      #name {
+      #text {
         font-size: 0.8rem;
       }
-      #job {
-        font-size: 4rem;
-      }
-    }
-    .me {
-      width: 100%;
-      height: 70vh;
     }
   }
 
   @media (max-width: 500px) {
     .container {
       min-width: 350px;
-      #job {
-        font-size: 2.5rem;
-      }
-    }
-    .me {
-      background-size: 70%;
-      background-position: bottom;
     }
   }
 `;
@@ -94,12 +61,13 @@ const HomeSecondPage = () => {
   return (
     <SecondStyle>
       <div className="container">
-        <p id="name">JUNBEOM MOON</p>
-        <div id="job">
-          <p>I'm Junior </p>
-          <p>front-end</p>
-          <p>Developer ;</p>
-        </div>
+        <h1 id="text">
+          안녕하세요 문준범입니다. ✋🏻
+          <br />
+          페이지 전체를 리뉴얼 준비중에 있습니다. 🙂
+          <br />
+          아래에 저의 정보가 더 있습니다 👇🏻
+        </h1>
       </div>
       {/* <Image className="me" src={me} alt={"준범"} priority={true} /> */}
     </SecondStyle>

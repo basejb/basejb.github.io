@@ -2,6 +2,7 @@ import React, { useCallback, useState } from "react";
 import MenuBtn from "./menu-btn";
 import styled from "styled-components";
 import Link from "next/link";
+import Nav from "./Nav";
 
 const HeaderWrapper = styled.div`
   @media (max-width: 640px) {
@@ -97,7 +98,8 @@ const Header = (props: any) => {
           <a href="mailto:moonnr94@gmail.com">moonnr94@gmail.com</a>
         </Email>
       </HeaderTitle>
-      <MenuBtn isActive={isShowPopupMenu} setActive={setActive} />
+      {/* <MenuBtn isActive={isShowPopupMenu} setActive={setActive} /> */}
+      <Nav />
     </HeaderWrapper>
   );
 };

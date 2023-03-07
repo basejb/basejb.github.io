@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { NextComponentType, NextPage } from "next";
 import { motion } from "framer-motion";
 import Copyright from "./Copyright";
 import Header from "./header";
+import { useRouter } from "next/router";
 
 export type IDefaultLayoutPage<P = {}> = NextPage<P> & {
   getLayout(page: NextComponentType, props: unknown): React.ReactNode;
@@ -29,10 +30,16 @@ const MenuStyle = {
 };
 
 const DefaultLayout = ({ Page, ...props }: IDefaultLayoutProps) => {
+  const router = useRouter();
+  const [pageOverflow, setOverflow] = useState("hidden");
   const [isShowPopupMenu, setIsShowPopupMenu] = useState(false);
 
+  useEffect(() => {
+    router.route.includes("projects") ? setOverflow("auto") : setOverflow("hidden");
+  }, [router]);
+
   return (
-    <div style={{ overflow: "hidden", height: "100vh" }}>
+    <div style={{ overflow: pageOverflow, height: "100vh" }}>
       {/* 사이드바 자리 */}
 
       {/* mobile navigation */}
