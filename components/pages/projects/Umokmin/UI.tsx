@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import ui from "@/public/images/UI.jpg";
+import Image from "next/image";
 
-const UIStyle = styled.div`
+const UIStyle: any = styled.div`
   width: 100%;
   display: flex;
   justify-content: center;
@@ -94,7 +95,7 @@ const UI = () => {
 
   return (
     <UIStyle zoom={zoom}>
-      <div className="bar"></div>
+      <div className="bar" />
       <div className="item">
         <strong className="num">05</strong>
         <div className="detail">
@@ -103,12 +104,12 @@ const UI = () => {
             <p>Convenient UI</p>
           </ul>
           <ul id="body">
-            <img alt="process" src={ui} onClick={() => setZoom(!zoom)} />
+            <Image alt="process" src={ui} onClick={() => setZoom(!zoom)} />
           </ul>
         </div>
       </div>
       <div id="zoom">
-        <img alt="ui" src={ui} onClick={() => setZoom(!zoom)} />
+        <Image alt="ui" src={ui} onClick={() => setZoom(!zoom)} />
       </div>
     </UIStyle>
   );

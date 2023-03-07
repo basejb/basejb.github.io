@@ -1,5 +1,5 @@
-import React, { useState, useCallback, useEffect } from 'react';
-import styled from 'styled-components';
+import React, { useState, useCallback, useEffect } from "react";
+import styled from "styled-components";
 
 const YoutubeStyle = styled.div`
   width: 100%;
@@ -91,7 +91,7 @@ const YoutubeStyle = styled.div`
 const Youtube = () => {
   return (
     <YoutubeStyle>
-      <div className="bar"></div>
+      <div className="bar" />
       <div className="item">
         <strong className="num">08</strong>
         <div className="detail">

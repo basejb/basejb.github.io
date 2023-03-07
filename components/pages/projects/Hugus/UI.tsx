@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import architecture from "@/public/images/architecture.jpg";
+import ui from "@/public/images/UI.jpg";
 import Image from "next/image";
 
-const ArchitectureStyle = styled.div`
+const UIStyle: any = styled.div`
   width: 100%;
   display: flex;
   justify-content: center;
@@ -92,29 +92,29 @@ const ArchitectureStyle = styled.div`
   }
 `;
 
-const Architecture = () => {
+const UI = () => {
   const [zoom, setZoom] = useState(false);
 
   return (
-    <ArchitectureStyle zoom={zoom}>
-      <div className="bar"></div>
+    <UIStyle zoom={zoom}>
+      <div className="bar" />
       <div className="item">
-        <strong className="num">03</strong>
+        <strong className="num">05</strong>
         <div className="detail">
           <ul id="head">
-            <strong>시스템 아키텍쳐</strong>
-            <p>System Architecture</p>
+            <strong>편리한 UI</strong>
+            <p>Convenient UI</p>
           </ul>
           <ul id="body">
-            <Image alt="process" src={architecture} onClick={() => setZoom(!zoom)} />
+            <Image alt="process" src={ui} onClick={() => setZoom(!zoom)} />
           </ul>
         </div>
       </div>
       <div id="zoom">
-        <Image alt="process" src={architecture} onClick={() => setZoom(!zoom)} />
+        <Image alt="ui" src={ui} onClick={() => setZoom(!zoom)} />
       </div>
-    </ArchitectureStyle>
+    </UIStyle>
   );
 };
 
-export default Architecture;
+export default UI;

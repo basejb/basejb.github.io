@@ -1,8 +1,9 @@
-import React, { useState } from 'react';
-import styled from 'styled-components';
-import process from '@images/process.jpg';
+import React, { useState } from "react";
+import styled from "styled-components";
+import process from "@images/process.jpg";
+import Image from "next/image";
 
-const ProcessStyle = styled.div`
+const ProcessStyle: any = styled.div`
   width: 100%;
   display: flex;
   justify-content: center;
@@ -40,7 +41,7 @@ const ProcessStyle = styled.div`
       #body {
         img {
           width: 100%;
-          cursor: ${props => (props.zoom ? 'zoom-out' : 'zoom-in')};
+          cursor: ${(props: any) => (props.zoom ? "zoom-out" : "zoom-in")};
         }
       }
     }
@@ -49,16 +50,16 @@ const ProcessStyle = styled.div`
   #zoom {
     position: fixed;
     inset: 0px;
-    z-index: ${props => (props.zoom ? 100 : -1)};
+    z-index: ${(props: any) => (props.zoom ? 100 : -1)};
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: white;
-    opacity: ${props => (props.zoom ? 1 : 0)};
+    opacity: ${(props: any) => (props.zoom ? 1 : 0)};
     transition: opacity 0.3s ease-in-out;
 
     img {
-      cursor: ${props => (props.zoom ? 'zoom-out' : 'zoom-in')};
+      cursor: ${(props: any) => (props.zoom ? "zoom-out" : "zoom-in")};
       inset: 0px;
       width: 85%;
     }
@@ -94,7 +95,7 @@ const Process = () => {
 
   return (
     <ProcessStyle zoom={zoom}>
-      <div className="bar"></div>
+      <div className="bar" />
       <div className="item">
         <strong className="num">04</strong>
         <div className="detail">
@@ -102,13 +103,11 @@ const Process = () => {
             <strong>작동 프로세스</strong>
             <p>Working Process</p>
           </ul>
-          <ul id="body">
-            {/* <img alt="process" src={process} onClick={() => setZoom(!zoom)} /> */}
-          </ul>
+          <ul id="body">{/* <img alt="process" src={process} onClick={() => setZoom(!zoom)} /> */}</ul>
         </div>
       </div>
       <div id="zoom">
-        <img alt="process" src={process} onClick={() => setZoom(!zoom)} />
+        <Image alt="process" src={process} onClick={() => setZoom(!zoom)} />
       </div>
     </ProcessStyle>
   );

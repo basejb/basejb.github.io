@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import ui from "@/public/images/UI.jpg";
+import process from "@/public/images/process.jpg";
 import Image from "next/image";
-const UIStyle = styled.div`
+
+const ProcessStyle: any = styled.div`
   width: 100%;
   display: flex;
   justify-content: center;
@@ -40,7 +41,7 @@ const UIStyle = styled.div`
       #body {
         img {
           width: 100%;
-          height: auto;
+          height: 400px;
           cursor: ${(props: any) => (props.zoom ? "zoom-out" : "zoom-in")};
         }
       }
@@ -62,7 +63,7 @@ const UIStyle = styled.div`
       cursor: ${(props: any) => (props.zoom ? "zoom-out" : "zoom-in")};
       inset: 0px;
       width: 85%;
-      height: auto;
+      height: 100vh;
     }
   }
 
@@ -91,29 +92,29 @@ const UIStyle = styled.div`
   }
 `;
 
-const UI = () => {
+const Process = () => {
   const [zoom, setZoom] = useState(false);
 
   return (
-    <UIStyle zoom={zoom}>
-      <div className="bar"></div>
+    <ProcessStyle zoom={zoom}>
+      <div className="bar" />
       <div className="item">
-        <strong className="num">05</strong>
+        <strong className="num">04</strong>
         <div className="detail">
           <ul id="head">
-            <strong>편리한 UI</strong>
-            <p>Convenient UI</p>
+            <strong>작동 프로세스</strong>
+            <p>Working Process</p>
           </ul>
           <ul id="body">
-            <Image alt="process" src={ui} onClick={() => setZoom(!zoom)} />
+            <Image alt="process" src={process} onClick={() => setZoom(!zoom)} />
           </ul>
         </div>
       </div>
       <div id="zoom">
-        <Image alt="ui" src={ui} onClick={() => setZoom(!zoom)} />
+        <Image alt="process" src={process} onClick={() => setZoom(!zoom)} />
       </div>
-    </UIStyle>
+    </ProcessStyle>
   );
 };
 
-export default UI;
+export default Process;

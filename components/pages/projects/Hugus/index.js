@@ -1,13 +1,17 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
-import Overview from "./RealTimeWork/Overview";
-import Goal from "./RealTimeWork/Goal";
-import Process from "./RealTimeWork/Process";
-import Used from "./RealTimeWork/Used";
-import Architecture from "./RealTimeWork/Architecture";
+import Overview from "./Overview";
+import Goal from "./Goal";
+import Process from "./Process";
+import Used from "./Used";
+import Architecture from "./Architecture";
+import UI from "./UI";
+import Branding from "./Branding";
+import Youtube from "./Youtube";
+import hugus from "@/public/images/hugus.png";
 import Image from "next/image";
 
-const RealTimeWorkStyle = styled.article`
+const HugusStyle = styled.article`
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -16,7 +20,7 @@ const RealTimeWorkStyle = styled.article`
   color: white;
 
   .intro {
-    height: 100px;
+    height: 400px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -27,7 +31,7 @@ const RealTimeWorkStyle = styled.article`
     }
 
     p {
-      color: #ec6375;
+      color: #ffb73f;
       font-size: 2.5rem;
       font-family: Kcc;
     }
@@ -42,7 +46,7 @@ const RealTimeWorkStyle = styled.article`
       }
 
       p {
-        color: #ec6375;
+        color: #ffb73f;
         font-size: 1.5rem;
         font-family: Kcc;
       }
@@ -50,24 +54,27 @@ const RealTimeWorkStyle = styled.article`
   }
 `;
 
-const RealTimeWork = () => {
+const Hugus = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
   return (
-    <RealTimeWorkStyle>
+    <HugusStyle>
       <div className="intro">
-        <Image alt="logo" className="logo" src={""} />
-        <p>"실시간으로 빠르게 소통하는 업무 시스템"</p>
+        <Image height={150} alt="logo" className="logo" src={hugus} />
+        <p>"허그어스, 기부문화의 새로운 방향을 제시하다"</p>
       </div>
       <Overview />
       <Goal />
       <Architecture />
       <Process />
+      <UI />
       <Used />
-    </RealTimeWorkStyle>
+      <Branding />
+      <Youtube />
+    </HugusStyle>
   );
 };
 
-export default RealTimeWork;
+export default Hugus;

@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import process from "@/public/images/process.jpg";
+import architecture from "@/public/images/GM-시스템 시스템 아키텍쳐.001.png";
 import Image from "next/image";
 
-const ProcessStyle = styled.div`
+const ArchitectureStyle: any = styled.div`
   width: 100%;
   display: flex;
   justify-content: center;
@@ -41,7 +41,7 @@ const ProcessStyle = styled.div`
       #body {
         img {
           width: 100%;
-          height: 400px;
+          height: auto;
           cursor: ${(props: any) => (props.zoom ? "zoom-out" : "zoom-in")};
         }
       }
@@ -63,7 +63,7 @@ const ProcessStyle = styled.div`
       cursor: ${(props: any) => (props.zoom ? "zoom-out" : "zoom-in")};
       inset: 0px;
       width: 85%;
-      height: 100vh;
+      height: auto;
     }
   }
 
@@ -92,29 +92,29 @@ const ProcessStyle = styled.div`
   }
 `;
 
-const Process = () => {
+const Architecture = () => {
   const [zoom, setZoom] = useState(false);
 
   return (
-    <ProcessStyle zoom={zoom}>
-      <div className="bar"></div>
+    <ArchitectureStyle zoom={zoom}>
+      <div className="bar" />
       <div className="item">
-        <strong className="num">04</strong>
+        <strong className="num">03</strong>
         <div className="detail">
           <ul id="head">
-            <strong>작동 프로세스</strong>
-            <p>Working Process</p>
+            <strong>시스템 아키텍쳐</strong>
+            <p>System Architecture</p>
           </ul>
           <ul id="body">
-            <Image alt="process" src={process} onClick={() => setZoom(!zoom)} />
+            <Image alt="process" src={architecture} onClick={() => setZoom(!zoom)} />
           </ul>
         </div>
       </div>
       <div id="zoom">
-        <Image alt="process" src={process} onClick={() => setZoom(!zoom)} />
+        <Image alt="process" src={architecture} onClick={() => setZoom(!zoom)} />
       </div>
-    </ProcessStyle>
+    </ArchitectureStyle>
   );
 };
 
-export default Process;
+export default Architecture;

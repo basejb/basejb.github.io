@@ -180,7 +180,7 @@ const BrandingStyle = styled.div`
 const Branding = () => {
   return (
     <BrandingStyle>
-      <div className="bar"></div>
+      <div className="bar" />
       <div className="item">
         <strong className="num">02</strong>
         <div className="detail">

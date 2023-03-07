@@ -1,11 +1,11 @@
 import React from "react";
 import styled from "styled-components";
-import Overview from "./Umokmin/Overview";
-import Goal from "./Umokmin/Goal";
-import Used from "./Umokmin/Used";
-import Architecture from "./Umokmin/Architecture";
-import UI from "./Umokmin/UI";
-import Branding from "./Umokmin/Branding";
+import Overview from "./Overview";
+import Goal from "./Goal";
+// import Used from "./Used";
+import Architecture from "./Architecture";
+// import UI from "./UI";
+import Branding from "./Branding";
 import umokminLogo from "@/public/images/umokminLogo2.png";
 import Image from "next/image";
 

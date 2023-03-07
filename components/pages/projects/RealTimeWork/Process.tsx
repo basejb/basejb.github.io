@@ -1,15 +1,15 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 
-import infinity_scroll from "@/public/images/work_infinity_scroll.gif";
+import infinityScroll from "@/public/images/work_infinity_scroll.gif";
 import write from "@/public/images/work_write.gif";
 import filter from "@/public/images/work_filter.gif";
-import state_change from "@/public/images/work_state_change.gif";
+import stateChange from "@/public/images/work_state_change.gif";
 import mobile from "@/public/images/work_mobile.gif";
 import noti from "@/public/images/work_noti.gif";
 import Image from "next/image";
 
-const ProcessStyle = styled.div`
+const ProcessStyle: any = styled.div`
   width: 100%;
   display: flex;
   justify-content: center;
@@ -186,14 +186,14 @@ const ProcessStyle = styled.div`
 const Process = () => {
   const [zoom, setZoom] = useState(false);
 
-  const zoomHandler = (e) => {
-    const alt = e.target.alt;
+  const zoomHandler = (e: React.MouseEvent<HTMLLIElement, MouseEvent>) => {
+    const { alt }: any = e.target;
     setZoom(alt);
   };
 
   return (
     <ProcessStyle zoom={zoom}>
-      <div className="bar"></div>
+      <div className="bar" />
       <div className="item">
         <strong className="num">04</strong>
         <div className="detail">
@@ -224,7 +224,7 @@ const Process = () => {
             <li onClick={(e) => zoomHandler(e)}>
               <div className="title_stack">
                 <h3>💫 무한스크롤</h3>
-                <span></span>
+                <span />
                 <section>
                   {/* <Image
                     alt="stack"
@@ -238,7 +238,7 @@ const Process = () => {
                   /> */}
                 </section>
               </div>
-              <Image alt="infinity_scroll" src={infinity_scroll} />
+              <Image alt="infinity_scroll" src={infinityScroll} />
               <p>
                 • axios api로 초기 로드 데이터 10개를 불러오고 스크롤 값을 계산해서 추가 로드시에 10개씩 추가
                 로드합니다.
@@ -249,7 +249,7 @@ const Process = () => {
             <li onClick={(e) => zoomHandler(e)}>
               <div className="title_stack">
                 <h3>💫 요청 작성</h3>
-                <span></span>
+                <span />
                 <section>
                   {/* <Image
                     alt="stack"
@@ -278,7 +278,7 @@ const Process = () => {
                   /> */}
                 </section>
               </div>
-              <Image alt="write" alt="write" src={write} />
+              <Image alt="write" src={write} />
               <p>• 선택 or 입력하지 않은 Input이 있다면 ErrorHandler를 통해서 리턴합니다.</p>
               <p>• 파일을 첨부하면 FileReader를 사용해서 미리보기를 보여줍니다.</p>
               <p>• 파일을 포함한 FormData를 서버로 POST 요청합니다. </p>
@@ -293,7 +293,7 @@ const Process = () => {
             <li onClick={(e) => zoomHandler(e)}>
               <div className="title_stack">
                 <h3>💫 필터링</h3>
-                <span></span>
+                <span />
                 <section>
                   {/* <img
                     className="stack"
@@ -313,7 +313,7 @@ const Process = () => {
             <li onClick={(e) => zoomHandler(e)}>
               <div className="title_stack">
                 <h3>💫 상태 변경</h3>
-                <span></span>
+                <span />
                 <section>
                   {/* <img
                     className="stack"
@@ -329,7 +329,7 @@ const Process = () => {
                   /> */}
                 </section>
               </div>
-              <img alt="state_change" src={state_change} />
+              <Image alt="state_change" src={stateChange} />
               <p>
                 • 작업물 접수 및 상태 변경을 클릭하면 해당 조건을 서버에서 이미 눌렀거나 다른 유저가 눌렀다면 예외처리
                 합니다.
@@ -343,7 +343,7 @@ const Process = () => {
             <li onClick={(e) => zoomHandler(e)}>
               <div className="title_stack">
                 <h3>💫 Notification</h3>
-                <span></span>
+                <span />
                 <section>
                   {/* <img
                     className="stack"
@@ -368,7 +368,7 @@ const Process = () => {
             <li onClick={(e) => zoomHandler(e)}>
               <div className="title_stack">
                 <h3>💫 모바일</h3>
-                <span></span>
+                <span />
                 <section>
                   {/* <img
                     className="stack"
@@ -394,12 +394,13 @@ const Process = () => {
       </div>
 
       <div id="zoom">
-        <img
+        <Image
+          alt="zoom"
           src={
-            (zoom === "infinity_scroll" && infinity_scroll) ||
+            (zoom === "infinity_scroll" && infinityScroll) ||
             (zoom === "write" && write) ||
             (zoom === "filter" && filter) ||
-            (zoom === "state_change" && state_change) ||
+            (zoom === "state_change" && stateChange) ||
             (zoom === "noti" && noti) ||
             (zoom === "mobile" && mobile)
           }

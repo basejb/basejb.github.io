@@ -1,17 +1,13 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
-import Overview from "./Hugus/Overview";
-import Goal from "./Hugus/Goal";
-import Process from "./Hugus/Process";
-import Used from "./Hugus/Used";
-import Architecture from "./Hugus/Architecture";
-import UI from "./Hugus/UI";
-import Branding from "./Hugus/Branding";
-import Youtube from "./Hugus/Youtube";
-import hugus from "@/public/images/hugus.png";
+import Overview from "./Overview";
+import Goal from "./Goal";
+import Process from "./Process";
+import Used from "./Used";
+import Architecture from "./Architecture";
 import Image from "next/image";
 
-const HugusStyle = styled.article`
+const RealTimeWorkStyle = styled.article`
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -20,7 +16,7 @@ const HugusStyle = styled.article`
   color: white;
 
   .intro {
-    height: 400px;
+    height: 100px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -31,7 +27,7 @@ const HugusStyle = styled.article`
     }
 
     p {
-      color: #ffb73f;
+      color: #ec6375;
       font-size: 2.5rem;
       font-family: Kcc;
     }
@@ -46,7 +42,7 @@ const HugusStyle = styled.article`
       }
 
       p {
-        color: #ffb73f;
+        color: #ec6375;
         font-size: 1.5rem;
         font-family: Kcc;
       }
@@ -54,27 +50,24 @@ const HugusStyle = styled.article`
   }
 `;
 
-const Hugus = () => {
+const RealTimeWork = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
   return (
-    <HugusStyle>
+    <RealTimeWorkStyle>
       <div className="intro">
-        <Image height={150} alt="logo" className="logo" src={hugus} />
-        <p>"허그어스, 기부문화의 새로운 방향을 제시하다"</p>
+        <Image alt="logo" className="logo" src={""} />
+        <p>"실시간으로 빠르게 소통하는 업무 시스템"</p>
       </div>
       <Overview />
       <Goal />
       <Architecture />
       <Process />
-      <UI />
       <Used />
-      <Branding />
-      <Youtube />
-    </HugusStyle>
+    </RealTimeWorkStyle>
   );
 };
 
-export default Hugus;
+export default RealTimeWork;

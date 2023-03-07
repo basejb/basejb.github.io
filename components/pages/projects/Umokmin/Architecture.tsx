@@ -3,7 +3,7 @@ import styled from "styled-components";
 import Image from "next/image";
 import architecture from "@/public/images/umokmin-architecture.png";
 
-const ArchitectureStyle = styled.div`
+const ArchitectureStyle: any = styled.div`
   width: 100%;
   display: flex;
   justify-content: center;
@@ -97,7 +97,7 @@ const Architecture = () => {
 
   return (
     <ArchitectureStyle zoom={zoom}>
-      <div className="bar"></div>
+      <div className="bar" />
       <div className="item">
         <strong className="num">04</strong>
         <div className="detail">

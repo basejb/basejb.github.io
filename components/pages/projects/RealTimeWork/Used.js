@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import styled from 'styled-components';
+import React, { useState } from "react";
+import styled from "styled-components";
 
 const UsedStyle = styled.div`
   width: 100%;
@@ -130,7 +130,7 @@ const UsedStyle = styled.div`
 const Used = () => {
   return (
     <UsedStyle>
-      <div className="bar"></div>
+      <div className="bar" />
       <div className="item">
         <strong className="num">05</strong>
         <div className="detail">

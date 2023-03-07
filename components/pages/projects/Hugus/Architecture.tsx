@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import architecture from "@/public/images/GM-시스템 시스템 아키텍쳐.001.png";
+import architecture from "@/public/images/architecture.jpg";
 import Image from "next/image";
 
-const ArchitectureStyle = styled.div`
+const ArchitectureStyle: any = styled.div`
   width: 100%;
   display: flex;
   justify-content: center;
@@ -97,7 +97,7 @@ const Architecture = () => {
 
   return (
     <ArchitectureStyle zoom={zoom}>
-      <div className="bar"></div>
+      <div className="bar" />
       <div className="item">
         <strong className="num">03</strong>
         <div className="detail">
@@ -106,12 +106,12 @@ const Architecture = () => {
             <p>System Architecture</p>
           </ul>
           <ul id="body">
-            <Image alt="architecture" alt="process" src={architecture} onClick={() => setZoom(!zoom)} />
+            <Image alt="process" src={architecture} onClick={() => setZoom(!zoom)} />
           </ul>
         </div>
       </div>
       <div id="zoom">
-        <Image alt="architecture" alt="process" src={architecture} onClick={() => setZoom(!zoom)} />
+        <Image alt="process" src={architecture} onClick={() => setZoom(!zoom)} />
       </div>
     </ArchitectureStyle>
   );
