@@ -5,7 +5,7 @@ const repository = "racejb.github.io";
 
 const nextConfig = {
   // assetPrefix: !debug ? `/${repository}` : "",
-  basePath: !debug ? `/${repository}` : "",
+  // basePath: !debug ? `/${repository}` : "",
   trailingSlash: true,
   reactStrictMode: true,
   swcMinify: true,

@@ -1,6 +1,6 @@
 {
   "name": "racejb-github-new",
-  "homepage": "http://racejb.github.io/",
+  "homepage": "http://racejb.github.io",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -9,7 +9,7 @@
     "start": "next start",
     "lint": "next lint",
     "predeploy": "npm run build",
-    "deploy": "npm run build && gh-pages -d build"
+    "deploy": "yarn build && gh-pages -d build"
   },
   "dependencies": {
     "@next/font": "13.1.6",
