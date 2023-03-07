@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { getDefaultLayout, IDefaultLayoutPage, IPageHeader } from "@/components/layout/default-layout";
-import Head from "next/head";
-import Image from "next/image";
-import { DefaultSeo } from "next-seo";
+// import Head from "next/head";
+// import Image from "next/image";
+// import { DefaultSeo } from "next-seo";
 import styled from "styled-components";
 import First from "@/components/pages/Home/First";
 import Second from "@/components/pages/Home/Second";
@@ -20,32 +20,32 @@ const HomePageWrapper: any = styled.section`
   -webkit-transform: translateY(${(props: any) => -props.spin * 100}vh);
 `;
 
-const DEFAULT_SEO = {
-  title: "Title",
-  description: "JB'S description",
-  canonical: "",
-  openGraph: {
-    type: "website",
-    locale: "ko_KR",
-    url: "",
-    title: "TITLE",
-    site_name: "SITE_NAME",
-    // images: [
-    //   {
-    //     url: "/assets/icons/velog.png",
-    //     width: 285,
-    //     height: 167,
-    //     alt: "이미지",
-    //   },
-    // ],
-  },
-};
+// const DEFAULT_SEO = {
+//   title: "Title",
+//   description: "JB'S description",
+//   canonical: "",
+//   openGraph: {
+//     type: "website",
+//     locale: "ko_KR",
+//     url: "",
+//     title: "TITLE",
+//     site_name: "SITE_NAME",
+//     // images: [
+//     //   {
+//     //     url: "/assets/icons/velog.png",
+//     //     width: 285,
+//     //     height: 167,
+//     //     alt: "이미지",
+//     //   },
+//     // ],
+//   },
+// };
 
 const HomePage: IDefaultLayoutPage = () => {
-  const [spin, setSpin] = useState(0);
-  const [touchStart, setTouchStart] = useState(0);
-  const [scroll, setScroll] = useState(true);
-  const [articleNum] = useState(4);
+  const [spin, setSpin] = useState<number>(0);
+  const [touchStart, setTouchStart] = useState<number>(0);
+  const [scroll, setScroll] = useState<boolean>(true);
+  const [articleNum] = useState<number>(4);
 
   const wheelEvent = (e: WheelEvent) => {
     if (scroll) {

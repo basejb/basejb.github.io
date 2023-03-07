@@ -305,7 +305,7 @@ const Process = () => {
                   /> */}
                 </section>
               </div>
-              <img alt="filter" src={filter} />
+              <Image alt="filter" src={filter} />
               <p>• 필터링을 적용하면 api 요청으로 해당 필터로 리스트를 로드합니다.</p>
               <p>• 매 로드시 새로 불러오는 불필요한 데이터 로드를 막기위해 수정중에 있습니다.</p>
               <hr />
@@ -355,7 +355,7 @@ const Process = () => {
                   /> */}
                 </section>
               </div>
-              <img alt="noti" src={noti} />
+              <Image alt="noti" src={noti} />
               <p>
                 • 같은 채널의 유저(
                 <span>
