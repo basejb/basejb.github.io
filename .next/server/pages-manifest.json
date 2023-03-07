@@ -3,8 +3,8 @@
   "/api/hello": "pages/api/hello.js",
   "/home": "pages/home.html",
   "/me": "pages/me.html",
+  "/projects": "pages/projects.html",
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
-  "/projects": "pages/projects.html",
   "/404": "pages/404.html"
 }
