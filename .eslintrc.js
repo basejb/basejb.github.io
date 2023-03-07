@@ -19,15 +19,7 @@ module.exports = {
     ecmaVersion: "latest",
     sourceType: "module",
   },
-  plugins: [
-    "react",
-    "react-hooks",
-    "@typescript-eslint",
-    "testing-library",
-    "jest-dom",
-    "simple-import-sort",
-    "prettier",
-  ],
+  plugins: ["react", "react-hooks", "@typescript-eslint", "jest-dom", "simple-import-sort", "prettier"],
   rules: {
     "react/jsx-filename-extension": [
       1,
