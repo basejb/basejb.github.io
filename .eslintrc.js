@@ -5,9 +5,10 @@ module.exports = {
     node: true,
   },
   extends: [
-    // "plugin:@next/next/recommended",
+    "plugin:@next/next/recommended",
     "eslint:recommended",
     "airbnb",
+    "next",
     "plugin:react/recommended",
     "plugin:react-hooks/recommended",
     "plugin:@typescript-eslint/recommended",

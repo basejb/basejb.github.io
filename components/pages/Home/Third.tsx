@@ -7,7 +7,8 @@ const ThirdStyle: any = styled.section`
   align-items: center;
   width: 100%;
   height: 100vh;
-  background-color: ${(props: any) => (props.spin == 2 ? "rgba(0, 0, 0, 0.5)" : "rgba(0, 0, 0, 1)")};
+  /* background-color: ${(props: any) => (props.spin == 2 ? "rgba(0, 0, 0, 0.5)" : "rgba(0, 0, 0, 1)")}; */
+  background-color: black;
   transition: all 2s cubic-bezier(0.46, 0.03, 0.52, 0.96);
 
   .container {

@@ -5,12 +5,12 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
     "export": "next export",
     "start": "next start",
     "lint": "next lint",
+    "build": "next build && next export",
     "predeploy": "npm run build",
-    "deploy": "yarn build && yarn export && touch out/.nojekyll && gh-pages -d out"
+    "deploy": "touch out/.nojekyll && gh-pages -d out --dotfiles"
   },
   "dependencies": {
     "@next/font": "13.1.6",

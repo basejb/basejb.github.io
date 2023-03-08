@@ -5,9 +5,10 @@ import Link from "next/link";
 const FourthStyle: any = styled.section`
   display: flex;
   justify-content: center;
+  align-items: center;
   width: 100%;
   height: 100vh;
-  background-color: black;
+  background-color: rgba(0, 0, 0, 0.8);
 
   .container {
     margin-top: 150px;

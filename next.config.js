@@ -15,8 +15,8 @@ const nextConfig = {
   },
   images: {
     unoptimized: true,
-    loader: "akamai",
-    path: "",
+    // loader: "akamai",
+    // path: "",
     formats: ["image/avif", "image/webp"],
   },
 };

@@ -1,7 +1,7 @@
 @font-face {
   font-family: "Kcc";
   font-style: normal;
-  src: local(KCC-은영체), url("~/public/fonts/KCC-eunyoung.woff2") format("woff2");
+  src: local(KCC-은영체), url("/fonts/KCC-eunyoung.woff2") format("woff2");
 }
 
 * {
