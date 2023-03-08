@@ -135,7 +135,7 @@ const GoalStyle = styled.div`
     }
   }
 
-  @media (max-width: 600px) {
+  @media (max-width: 640px) {
     width: 80%;
     .item {
       grid-template-columns: 1fr 6fr;
@@ -158,12 +158,13 @@ const GoalStyle = styled.div`
             width: 200px;
             img {
               width: 70px;
+              height: auto;
             }
           }
         }
         #summary {
           height: 280px;
-          width: 160px;
+          width: 200px;
           padding-top: 30px;
           padding-left: 20px;
           padding-right: 20px;

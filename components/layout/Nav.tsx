@@ -168,11 +168,11 @@ const NavStyle: any = styled.nav`
     }
   }
 
-  @media (max-width: 500px) {
+  @media (max-width: 640px) {
     .nav__btn {
-      width: 30px;
-      height: 25px;
-      top: 35px;
+      width: 25px;
+      height: 20px;
+      top: 15px;
       right: 7%;
       background: none;
       border: none;

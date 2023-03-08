@@ -66,7 +66,7 @@ const OverviewStyle = styled.div`
     }
   }
 
-  @media (max-width: 600px) {
+  @media (max-width: 640px) {
     width: 80%;
     .item {
       grid-template-columns: 1fr 6fr;
@@ -84,7 +84,6 @@ const OverviewStyle = styled.div`
 
           li {
             grid-template-columns: 2fr 3fr;
-            line-height: 10px;
           }
           p {
             font-size: 12px;

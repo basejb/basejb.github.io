@@ -37,10 +37,9 @@ const ProcessStyle: any = styled.div`
         }
       }
       #head_stack {
-        float: left;
-        position: absolute;
-        margin: 10px 0 0 100px;
         .stack {
+          width: 65px;
+          height: 20px;
           margin-right: 10px;
         }
       }
@@ -121,7 +120,7 @@ const ProcessStyle: any = styled.div`
     }
   }
 
-  @media (max-width: 600px) {
+  @media (max-width: 640px) {
     width: 80%;
     .item {
       grid-template-columns: 1fr 6fr;
@@ -136,7 +135,7 @@ const ProcessStyle: any = styled.div`
           }
         }
         #head_stack {
-          margin: 0 0 15px 100px;
+          /* margin: 0 0 15px 100px; */
         }
 
         #body {
@@ -196,22 +195,36 @@ const Process = () => {
             <p>Main Function</p>
           </ul>
           <ul id="head_stack">
-            {/* <Image
+            <Image
+              alt="stack"
               className="stack"
-              src="https://img.shields.io/badge/MongoDB-47A248?style=flat-square&logo=MongoDB&logoColor=white&width=200"
+              src={
+                "https://img.shields.io/badge/MongoDB-47A248?style=flat-square&logo=MongoDB&logoColor=white&width=200"
+              }
+              width={30}
+              height={20}
             />
             <Image
+              alt="stack"
               className="stack"
               src="https://img.shields.io/badge/Ubuntu-E95420?style=flat-square&logo=Ubuntu&logoColor=white"
+              width={30}
+              height={20}
             />
             <Image
+              alt="stack"
               className="stack"
               src="https://img.shields.io/badge/Amazon AWS-232F3E?style=flat-square&logo=Amazon AWS&logoColor=white"
+              width={30}
+              height={20}
             />
             <Image
+              alt="stack"
               className="stack"
               src="https://img.shields.io/badge/NGINX-009639?style=flat-square&logo=NGINX&logoColor=white"
-            /> */}
+              width={30}
+              height={20}
+            />
           </ul>
 
           <ul id="body">
@@ -220,16 +233,20 @@ const Process = () => {
                 <h3>💫 무한스크롤</h3>
                 <span />
                 <section>
-                  {/* <Image
+                  <Image
                     alt="stack"
                     className="stack"
                     src="https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=React&logoColor=white"
+                    width={30}
+                    height={20}
                   />
                   <Image
                     alt="stack"
                     className="stack"
                     src="https://img.shields.io/badge/Redux-764ABC?style=flat-square&logo=Redux&logoColor=white"
-                  /> */}
+                    width={30}
+                    height={20}
+                  />
                 </section>
               </div>
               <Image alt="infinityScroll" src={"/work_infinity_scroll.gif"} width={200} height={200} />
@@ -245,31 +262,41 @@ const Process = () => {
                 <h3>💫 요청 작성</h3>
                 <span />
                 <section>
-                  {/* <Image
+                  <Image
                     alt="stack"
                     className="stack"
                     src="https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=React&logoColor=white"
-                  /> */}
-                  {/* <Image
+                    width={30}
+                    height={20}
+                  />
+                  <Image
                     alt="stack"
                     className="stack"
                     src="https://img.shields.io/badge/Redux-764ABC?style=flat-square&logo=Redux&logoColor=white"
+                    width={30}
+                    height={20}
                   />
                   <Image
                     alt="stack"
                     className="stack"
                     src="https://img.shields.io/badge/Amazon S3-569A31?style=flat-square&logo=Amazon S3&logoColor=white"
+                    width={30}
+                    height={20}
                   />
                   <Image
                     alt="stack"
                     className="stack"
                     src="https://img.shields.io/badge/Firebase-FFCA28?style=flat-square&logo=Firebase&logoColor=white"
+                    width={30}
+                    height={20}
                   />
                   <Image
                     alt="stack"
                     className="stack"
                     src="https://img.shields.io/badge/Socket.io-51DAAB?style=flat-square&logo=Socket.io&logoColor=white"
-                  /> */}
+                    width={30}
+                    height={20}
+                  />
                 </section>
               </div>
               <Image alt="write" src={"/work_write.gif"} width={200} height={200} />
@@ -289,14 +316,20 @@ const Process = () => {
                 <h3>💫 필터링</h3>
                 <span />
                 <section>
-                  {/* <img
+                  <Image
+                    alt="stack"
                     className="stack"
                     src="https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=React&logoColor=white"
+                    width={30}
+                    height={20}
                   />
-                  <img
+                  <Image
+                    alt="stack"
                     className="stack"
                     src="https://img.shields.io/badge/Redux-764ABC?style=flat-square&logo=Redux&logoColor=white"
-                  /> */}
+                    width={30}
+                    height={20}
+                  />
                 </section>
               </div>
               <Image alt="filter" src={"/work_filter.gif"} width={200} height={200} />
@@ -309,18 +342,27 @@ const Process = () => {
                 <h3>💫 상태 변경</h3>
                 <span />
                 <section>
-                  {/* <img
+                  <Image
+                    alt="stack"
                     className="stack"
                     src="https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=React&logoColor=white"
+                    width={30}
+                    height={20}
                   />
-                  <img
+                  <Image
+                    alt="stack"
                     className="stack"
                     src="https://img.shields.io/badge/Redux-764ABC?style=flat-square&logo=Redux&logoColor=white"
+                    width={30}
+                    height={20}
                   />
-                  <img
+                  <Image
+                    alt="stack"
                     className="stack"
                     src="https://img.shields.io/badge/Socket.io-51DAAB?style=flat-square&logo=Socket.io&logoColor=white"
-                  /> */}
+                    width={30}
+                    height={20}
+                  />
                 </section>
               </div>
               <Image alt="stateChange" src={"/work_state_change.gif"} width={200} height={200} />
@@ -339,14 +381,20 @@ const Process = () => {
                 <h3>💫 Notification</h3>
                 <span />
                 <section>
-                  {/* <img
+                  <Image
+                    alt="stack"
                     className="stack"
                     src="https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=React&logoColor=white"
+                    width={30}
+                    height={20}
                   />
-                  <img
+                  <Image
+                    alt="stack"
                     className="stack"
                     src="https://img.shields.io/badge/Redux-764ABC?style=flat-square&logo=Redux&logoColor=white"
-                  /> */}
+                    width={30}
+                    height={20}
+                  />
                 </section>
               </div>
               <Image alt="noti" src={"/work_noti.gif"} width={200} height={200} />
@@ -364,18 +412,27 @@ const Process = () => {
                 <h3>💫 모바일</h3>
                 <span />
                 <section>
-                  {/* <img
+                  <Image
+                    alt="stack"
                     className="stack"
                     src="https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=React&logoColor=white"
+                    width={30}
+                    height={20}
                   />
-                  <img
+                  <Image
+                    alt="stack"
                     className="stack"
                     src="https://img.shields.io/badge/Redux-764ABC?style=flat-square&logo=Redux&logoColor=white"
+                    width={30}
+                    height={20}
                   />
-                  <img
+                  <Image
+                    alt="stack"
                     className="stack"
                     src="https://img.shields.io/badge/styled-components-DB7093?style=flat-square&logo=styled-components&logoColor=white"
-                  /> */}
+                    width={30}
+                    height={20}
+                  />
                 </section>
               </div>
               <Image className="mobile" alt="mobile" src={"/work_mobile.gif"} width={200} height={200} />
@@ -388,7 +445,7 @@ const Process = () => {
       </div>
 
       <div id="zoom">
-        <Image alt="zoom" src={zoom} onClick={() => setZoom("")} width={200} height={200} />
+        {zoom !== "" ? <Image alt="zoom" src={zoom} onClick={() => setZoom("")} width={200} height={200} /> : null}
       </div>
     </ProcessStyle>
   );

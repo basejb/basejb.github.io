@@ -13,6 +13,9 @@ const Head = styled.section`
   background-color: black;
   height: 120px;
   width: 100%;
+  @media (max-width: 640px) {
+    height: 60px;
+  }
 `;
 
 const ProjectsStyle: any = styled.section`
@@ -131,7 +134,9 @@ const ProjectsStyle: any = styled.section`
     }
   }
 
-  @media (max-width: 600px) {
+  @media (max-width: 640px) {
+    padding-top: 60px;
+
     .container {
       .list {
         width: 100%;
@@ -139,7 +144,7 @@ const ProjectsStyle: any = styled.section`
 
         li {
           button {
-            font-size: 25px;
+            font-size: 20px;
 
             span {
               font-size: 15px;

@@ -15,7 +15,7 @@ const HugusStyle = styled.article`
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 200px;
+  padding-top: 150px;
   color: white;
 
   .intro {
@@ -27,6 +27,7 @@ const HugusStyle = styled.article`
 
     .logo {
       width: 400px;
+      height: 150px;
     }
 
     p {
@@ -42,6 +43,7 @@ const HugusStyle = styled.article`
       height: 250px;
       .logo {
         width: 250px;
+        height: 100px;
       }
 
       p {

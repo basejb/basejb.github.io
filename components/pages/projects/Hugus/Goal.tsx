@@ -53,6 +53,7 @@ const GoalStyle = styled.div`
 
           img {
             width: 100px;
+            height: 100px;
             color: white;
             margin-bottom: 20px;
           }
@@ -106,6 +107,7 @@ const GoalStyle = styled.div`
             margin-bottom: 50px;
             img {
               width: 100px;
+              height: auto;
               margin-bottom: 20px;
             }
 
@@ -163,7 +165,8 @@ const GoalStyle = styled.div`
         }
         #summary {
           height: 280px;
-          width: 160px;
+          width: 200px;
+
           padding-top: 30px;
           padding-left: 20px;
           padding-right: 20px;

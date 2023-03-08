@@ -1,8 +1,7 @@
-import Image from "next/image";
 import React from "react";
 import styled from "styled-components";
 
-const FirstStyle: any = styled.section`
+const FirstStyle = styled.section<{ spin: number }>`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -62,8 +61,14 @@ const FirstStyle: any = styled.section`
   }
 
   .forest {
-    z-index: 2;
-    min-width: 1920px;
+    /* transform: ${(props) => (props.spin === 0 ? "scale(1)" : "scale(1.3)")}; */
+    /* transition: transform 1s cubic-bezier(0.46, 0.03, 0.52, 0.96); */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 0;
+    width: 100%;
+    max-width: 1920px;
     position: absolute;
     right: 0;
     height: 100vh;
@@ -116,9 +121,9 @@ const FirstStyle: any = styled.section`
   }
 `;
 
-const HomeFirstPage = () => {
+const HomeFirstPage = (spin: any) => {
   return (
-    <FirstStyle>
+    <FirstStyle spin={spin}>
       <div className="container">
         <p id="name">JUNBEOM MOON</p>
         <div id="job">
@@ -129,16 +134,15 @@ const HomeFirstPage = () => {
       </div>
       <div className="me" />
       {/* <div className="round" /> */}
-
-      <Image alt="forest" className="forest" src={`/forest.png`} width={1920} height={300} />
+      <div className="forest" style={{ backgroundImage: `url('/forest.png')` }} />
     </FirstStyle>
   );
 };
 
-export async function getServerSideProps() {
-  return {
-    props: {},
-  };
-}
+// export async function getServerSideProps() {
+//   return {
+//     props: {},
+//   };
+// }
 
 export default React.memo(HomeFirstPage);

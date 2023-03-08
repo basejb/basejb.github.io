@@ -40,7 +40,7 @@ const ProcessStyle: any = styled.div`
       #body {
         img {
           width: 100%;
-          height: 400px;
+          height: auto;
           cursor: ${(props: any) => (props.zoom ? "zoom-out" : "zoom-in")};
         }
       }
@@ -62,7 +62,7 @@ const ProcessStyle: any = styled.div`
       cursor: ${(props: any) => (props.zoom ? "zoom-out" : "zoom-in")};
       inset: 0px;
       width: 85%;
-      height: 100vh;
+      height: auto;
     }
   }
 
@@ -86,6 +86,10 @@ const ProcessStyle: any = styled.div`
             font-size: 12px;
           }
         }
+      }
+    }
+    #zoom {
+      img {
       }
     }
   }

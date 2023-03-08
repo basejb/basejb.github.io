@@ -34,6 +34,13 @@ const Email = styled.div`
     font-weight: 600;
     line-height: 1.6;
   }
+  @media (max-width: 640px) {
+    margin-left: 0;
+    a {
+      font-size: 0.8rem;
+      font-weight: 700;
+    }
+  }
 `;
 
 const HeaderTitle: any = styled.div`
@@ -69,7 +76,7 @@ const Title = styled.p`
   font-weight: 800;
   @media (max-width: 640px) {
     gap: 5px;
-    font-size: 1rem;
+    font-size: 0.8rem;
     font-weight: 700;
   }
 `;

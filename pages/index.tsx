@@ -9,11 +9,18 @@ import Second from "@/components/pages/Home/Second";
 import Third from "@/components/pages/Home/Third";
 import Fourth from "@/components/pages/Home/Fourth";
 
-const HomePageWrapper: any = styled.section`
+interface HomeProps {
+  spin: number;
+  onWheel: any;
+  onTouchStart: any;
+  onTouchEnd: any;
+}
+
+const HomePageWrapper = styled.section<HomeProps>`
   transition: transform 1s cubic-bezier(0.8, 0.085, 0, 0.99);
   -webkit-transition: transform 1s cubic-bezier(0.8, 0.085, 0, 0.99);
-  transform: translateY(${(props: any) => -props.spin * 100}vh);
-  -webkit-transform: translateY(${(props: any) => -props.spin * 100}vh);
+  transform: translateY(${(props) => -props.spin * 100}vh);
+  -webkit-transform: translateY(${(props) => -props.spin * 100}vh);
 `;
 
 // const DEFAULT_SEO = {
@@ -51,7 +58,7 @@ const HomePage: IDefaultLayoutPage = () => {
       } else {
         spin > 0 && setSpin((prev) => prev - 1);
       }
-      setTimeout(() => setScroll(true), 800);
+      setTimeout(() => setScroll(true), 1000);
     }
   };
 
@@ -82,8 +89,8 @@ const HomePage: IDefaultLayoutPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head> */}
       <HomePageWrapper spin={spin} onWheel={wheelEvent} onTouchStart={touchEvent} onTouchEnd={touchEvent}>
-        <First />
-        <Second />
+        <First spin={spin} />
+        <Second spin={spin} />
         <Third spin={spin} />
         <Fourth spin={spin} />
       </HomePageWrapper>

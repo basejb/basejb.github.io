@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import React from "react";
 import styled from "styled-components";
 
@@ -16,7 +17,7 @@ const SecondStyle = styled.section`
     z-index: 1;
     transition: all 0.3s ease-in-out;
 
-    h1 {
+    h1#text {
       text-align: center;
       margin: 0 auto;
       color: white;
@@ -34,7 +35,7 @@ const SecondStyle = styled.section`
   }
 
   @media (max-width: 1100px) {
-    align-items: flex-start;
+    align-items: center;
     .container {
       margin-top: 0;
       /* transform: translateY(150px); */
@@ -42,8 +43,8 @@ const SecondStyle = styled.section`
       flex-direction: column;
       align-items: center;
       z-index: 1;
-      #text {
-        font-size: 0.8rem;
+      h1#text {
+        font-size: 1.5rem;
       }
     }
   }
@@ -51,31 +52,44 @@ const SecondStyle = styled.section`
   @media (max-width: 500px) {
     .container {
       min-width: 350px;
+      h1#text {
+        font-size: 0.8rem;
+      }
     }
   }
 `;
 
-const HomeSecondPage = () => {
+const HomeSecondPage = ({ spin }: any) => {
   return (
     <SecondStyle>
       <div className="container">
-        <h1 id="text">
-          안녕하세요 문준범입니다. ✋🏻
-          <br />
-          페이지 전체를 리뉴얼 준비중에 있습니다. 🙂
-          <br />
-          아래에 저의 정보가 더 있습니다 👇🏻
-        </h1>
+        <motion.div
+          animate={spin === 1 ? "open" : "close"}
+          variants={{
+            open: { display: "block", opacity: 1, y: 0, scale: 1.2 },
+            closed: { opacity: 0, y: "-10px", transitionEnd: { display: "none" } },
+          }}
+          initial={{ opacity: 0 }}
+          transition={{ duration: 0.2, delay: 0.6 }}
+        >
+          <h1 id="text">
+            안녕하세요 문준범입니다. ✋🏻
+            <br />
+            페이지 전체를 리뉴얼 준비중에 있습니다. 🙂
+            <br />
+            아래에 저의 정보가 더 있습니다 👇🏻
+          </h1>
+        </motion.div>
       </div>
       {/* <Image className="me" src={me} alt={"준범"} priority={true} /> */}
     </SecondStyle>
   );
 };
 
-export async function getServerSideProps() {
-  return {
-    props: {},
-  };
-}
+// export async function getServerSideProps() {
+//   return {
+//     props: {},
+//   };
+// }
 
 export default React.memo(HomeSecondPage);
