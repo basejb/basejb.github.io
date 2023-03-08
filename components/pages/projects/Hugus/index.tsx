@@ -1,5 +1,7 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import styled from "styled-components";
+import Image from "next/image";
+
 import Overview from "./Overview";
 import Goal from "./Goal";
 import Process from "./Process";
@@ -8,9 +10,6 @@ import Architecture from "./Architecture";
 import UI from "./UI";
 import Branding from "./Branding";
 import Youtube from "./Youtube";
-import hugus from "@/public/images/hugus.png";
-import Image from "next/image";
-
 const HugusStyle = styled.article`
   width: 100%;
   display: flex;
@@ -62,7 +61,7 @@ const Hugus = () => {
   return (
     <HugusStyle>
       <div className="intro">
-        <Image height={150} alt="logo" className="logo" src={hugus} />
+        <Image width={300} height={150} alt="logo" className="logo" src={"/hugus.png"} />
         <p>"허그어스, 기부문화의 새로운 방향을 제시하다"</p>
       </div>
       <Overview />

@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import umokminLogo from "@/public/images/umokminLogo2.png";
+
 import Image from "next/image";
 
 const BrandingStyle = styled.div`
@@ -192,7 +192,7 @@ const Branding = () => {
             <li>
               <p id="title">Logo</p>
               <div>
-                <Image alt="logo" id="logo" src={umokminLogo} />
+                <Image alt="logo" id="logo" src={"/umokminLogo2.png"} width={50} height={50} />
               </div>
               <p id="explanation">
                 자연의 색을 표현하고자 푸른색감과 한곳의 머무름 보다는 유목민이라는 이름대로 '자유로움'을 강조한 여행의

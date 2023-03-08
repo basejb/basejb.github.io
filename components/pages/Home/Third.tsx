@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import flower from "@/public/images/flower.png";
 
 const ThirdStyle: any = styled.section`
   display: flex;
@@ -357,7 +356,7 @@ const Third = ({ spin }: any) => {
           </div>
         </div>
       </div>
-      <div className="background" style={{ backgroundImage: `url(${flower.src})` }}></div>
+      <div className="background" style={{ backgroundImage: `url('/flower.png')` }}></div>
       <div className="background2"></div>
     </ThirdStyle>
   );

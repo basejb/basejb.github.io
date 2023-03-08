@@ -1,5 +1,5 @@
 import Image from "next/image";
-import React, { useState } from "react";
+import React from "react";
 import styled from "styled-components";
 
 const BrandingStyle = styled.div`
@@ -184,7 +184,7 @@ const Branding = () => {
             <li>
               <p id="title">Logo</p>
               <div>
-                <Image alt="icon" id="logo" src="/src/assets/images/hugusLogo.png" />
+                <Image alt="icon" id="logo" src={"/hugusLogo.png"} width={50} height={50} />
               </div>
               <p id="explanation">
                 따뜻함이 전해지는 주황색으로 기부자를 나타내었으며, 도움을 필요로 하는 수혜자와의 포옹을 표현하였다.
@@ -193,7 +193,7 @@ const Branding = () => {
             <li>
               <p id="title">Name</p>
               <div>
-                <Image alt="icon" id="name" src="/src/assets/images/hugusName.png" />
+                <Image alt="icon" id="name" src={"/hugusName.png"} width={50} height={50} />
               </div>
               <p id="explanation">
                 포옹하다 'HUG' + 우리를 'US'. 기부를 통해 서로를 껴안는다는 의미와 더불어, 기부의 선순환을 통해 'HUG
@@ -203,7 +203,7 @@ const Branding = () => {
             <li>
               <p id="title">Color</p>
               <div>
-                <Image alt="icon" id="color" src="/src/assets/images/hugusColor.png" />
+                <Image alt="icon" id="color" src={"hugusColor.png"} width={50} height={50} />
               </div>
               <div id="list">
                 <p>R 255</p>

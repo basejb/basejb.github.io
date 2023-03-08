@@ -1,15 +1,16 @@
 {
-  "name": "racejb-github-new",
-  "homepage": "http://racejb.github.io",
+  "name": "racejb",
+  "homepage": "https://racejb.github.io/racejb.github.io",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "export": "next export",
     "start": "next start",
     "lint": "next lint",
     "predeploy": "npm run build",
-    "deploy": "yarn build && gh-pages -d build"
+    "deploy": "yarn build && yarn export && touch out/.nojekyll && gh-pages -d out"
   },
   "dependencies": {
     "@next/font": "13.1.6",

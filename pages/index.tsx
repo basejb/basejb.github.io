@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { getDefaultLayout, IDefaultLayoutPage, IPageHeader } from "@/components/layout/default-layout";
+import { getDefaultLayout, IDefaultLayoutPage } from "@/components/layout/default-layout";
 // import Head from "next/head";
 // import Image from "next/image";
 // import { DefaultSeo } from "next-seo";
@@ -8,10 +8,6 @@ import First from "@/components/pages/Home/First";
 import Second from "@/components/pages/Home/Second";
 import Third from "@/components/pages/Home/Third";
 import Fourth from "@/components/pages/Home/Fourth";
-
-const pageHeader: IPageHeader = {
-  title: "Welcome",
-};
 
 const HomePageWrapper: any = styled.section`
   transition: transform 1s cubic-bezier(0.8, 0.085, 0, 0.99);
@@ -96,6 +92,5 @@ const HomePage: IDefaultLayoutPage = () => {
 };
 
 HomePage.getLayout = getDefaultLayout;
-HomePage.pageHeader = pageHeader;
 
 export default HomePage;

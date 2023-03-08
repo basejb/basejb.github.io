@@ -14,11 +14,13 @@ const Head = styled.section`
   height: 120px;
   width: 100%;
 `;
+
 const ProjectsStyle: any = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
   min-height: 100vh;
+  width: 100%;
   padding-top: 114px;
   background-color: black;
 
@@ -31,7 +33,7 @@ const ProjectsStyle: any = styled.section`
     justify-content: center;
     background-color: rgb(17, 17, 19);
     transition: all 1s ease-in-out;
-    /* transform: translateY(${(props: any) => (props.scroll ? "-100px" : "0px")}); */
+    transform: translateY(${(props: any) => (props.scroll ? "-100px" : "0px")});
 
     .list {
       display: grid;
@@ -161,10 +163,9 @@ const Projects = () => {
     // console.log(e.deltaY);
     if (e.deltaY > 0) {
       setScroll(true);
+    } else {
+      setScroll(false);
     }
-    // else {
-    //   setScroll(false);
-    // }
   };
 
   useEffect(() => {

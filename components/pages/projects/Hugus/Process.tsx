@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import process from "@/public/images/process.jpg";
 import Image from "next/image";
 
 const ProcessStyle: any = styled.div`
@@ -106,12 +105,12 @@ const Process = () => {
             <p>Working Process</p>
           </ul>
           <ul id="body">
-            <Image alt="process" src={process} onClick={() => setZoom(!zoom)} />
+            <Image alt="process" src={"/process.jpg"} width={50} height={50} onClick={() => setZoom(!zoom)} />
           </ul>
         </div>
       </div>
       <div id="zoom">
-        <Image alt="process" src={process} onClick={() => setZoom(!zoom)} />
+        <Image alt="process" src={"/process.jpg"} width={50} height={50} onClick={() => setZoom(!zoom)} />
       </div>
     </ProcessStyle>
   );

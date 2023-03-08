@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import Link from "next/link";
-import iphone from "@/public/images/second2.jpg";
 
 const FourthStyle: any = styled.section`
   display: flex;
@@ -241,7 +240,7 @@ const Fourth = ({ spin }: any) => {
           </Link>
         </div>
       </div>
-      <div className="background" style={{ backgroundImage: `url(${iphone})` }} />
+      <div className="background" style={{ backgroundImage: `url('/second2.jpg')` }} />
     </FourthStyle>
   );
 };

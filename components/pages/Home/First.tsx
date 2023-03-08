@@ -1,9 +1,6 @@
+import Image from "next/image";
 import React from "react";
 import styled from "styled-components";
-import me from "@/public/junbeom.webp";
-import Image from "next/image";
-import Round from "@/public/elipse-home-slide.png";
-import Forest from "@/public/asdf.png";
 
 const FirstStyle: any = styled.section`
   display: flex;
@@ -46,7 +43,7 @@ const FirstStyle: any = styled.section`
     height: 100vh;
     background-position: center;
     background-size: cover;
-    background-image: url(${(props: any) => props.me.src});
+    background-image: url("/junbeom.webp");
   }
 
   .round {
@@ -57,7 +54,7 @@ const FirstStyle: any = styled.section`
     width: 65vw;
     height: 65vw;
     background-size: cover;
-    background-image: url(${(props: any) => props.round.src});
+    background-image: url("/elipse-home-slide.png");
     transition-duration: 1.5s;
     transition-delay: 150ms;
     transform: translate3d(0, 0, 0);
@@ -121,7 +118,7 @@ const FirstStyle: any = styled.section`
 
 const HomeFirstPage = () => {
   return (
-    <FirstStyle me={me} round={Round}>
+    <FirstStyle>
       <div className="container">
         <p id="name">JUNBEOM MOON</p>
         <div id="job">
@@ -133,7 +130,7 @@ const HomeFirstPage = () => {
       <div className="me" />
       {/* <div className="round" /> */}
 
-      <Image alt="forest" className="forest" src={Forest} />
+      <Image alt="forest" className="forest" src={`/forest.png`} width={1920} height={300} />
     </FirstStyle>
   );
 };

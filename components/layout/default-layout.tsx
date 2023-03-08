@@ -35,7 +35,7 @@ const DefaultLayout = ({ Page, ...props }: IDefaultLayoutProps) => {
   const [isShowPopupMenu, setIsShowPopupMenu] = useState(false);
 
   useEffect(() => {
-    // router.route.includes("projects") ? setOverflow("auto") : setOverflow("hidden");
+    router.route.includes("projects") ? setOverflow("auto") : setOverflow("hidden");
   }, [router]);
 
   return (

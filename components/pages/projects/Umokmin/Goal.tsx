@@ -1,7 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import uxui from "@/public/images/uxui.png";
-import cycle from "@/public/images/cycle.png";
 import Image from "next/image";
 
 const GoalStyle = styled.div`
@@ -198,12 +196,12 @@ const Goal = () => {
           </ul>
           <ul id="body">
             <li>
-              <Image alt="icon" src={uxui} />
+              <Image alt="icon" src={"/uxui.png"} width={100} height={100} />
               <p>웹과 모바일의 조화를 갖춘</p>
               <p>사용자의 편의성을 고려한 UX & UI</p>
             </li>
             <li>
-              <Image alt="icon" src={cycle} />
+              <Image alt="icon" src={"/cycle.png"} width={100} height={100} />
               <p>양질의 특별한 장소들을 공유하고</p>
               <p>커뮤니티 기능을 고루 갖춘 소통 플랫폼</p>
             </li>

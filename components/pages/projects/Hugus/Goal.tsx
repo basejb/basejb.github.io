@@ -1,8 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import trust from "@/public/images/trust.png";
-import uxui from "@/public/images/uxui.png";
-import cycle from "@/public/images/cycle.png";
 import Image from "next/image";
 
 const GoalStyle = styled.div`
@@ -198,17 +195,17 @@ const Goal = () => {
           </ul>
           <ul id="body">
             <li>
-              <Image alt="icon" src={trust} />
+              <Image alt="icon" src={"/trust.png"} width={100} height={100} />
               <p>기부부터 전달과정까지</p>
               <p>투명하게 기록되는 기부 전과정</p>
             </li>
             <li>
-              <Image alt="icon" src={uxui} />
+              <Image alt="icon" src={"/uxui.png"} width={100} height={100} />
               <p>소통을 위한 접근성이 좋은 웹사이트</p>
               <p>사용자의 편의성을 고려한 UX & UI</p>
             </li>
             <li>
-              <Image alt="icon" src={cycle} />
+              <Image alt="icon" src={"/cycle.png"} width={100} height={100} />
               <p>일회성에 그치지 않는 소통을 통한 기부</p>
               <p>기부문화의 선순환</p>
             </li>

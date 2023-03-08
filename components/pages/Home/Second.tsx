@@ -1,7 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import me from "@/public/junbeom.png";
-import Image from "next/image";
 
 const SecondStyle = styled.section`
   display: flex;

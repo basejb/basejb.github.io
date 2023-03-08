@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import Image from "next/image";
-import architecture from "@/public/images/umokmin-architecture.png";
 
 const ArchitectureStyle: any = styled.div`
   width: 100%;
@@ -106,12 +105,24 @@ const Architecture = () => {
             <p>System Architecture</p>
           </ul>
           <ul id="body">
-            <Image alt="process" src={architecture} onClick={() => setZoom(!zoom)} />
+            <Image
+              alt="process"
+              src={"/umokmin-architecture.png"}
+              width={200}
+              height={200}
+              onClick={() => setZoom(!zoom)}
+            />
           </ul>
         </div>
       </div>
       <div id="zoom">
-        <Image alt="process" src={architecture} onClick={() => setZoom(!zoom)} />
+        <Image
+          alt="process"
+          src={"/umokmin-architecture.png"}
+          width={200}
+          height={200}
+          onClick={() => setZoom(!zoom)}
+        />
       </div>
     </ArchitectureStyle>
   );

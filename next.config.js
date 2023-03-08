@@ -4,8 +4,9 @@ const debug = process.env.NODE_ENV !== "production";
 const repository = "racejb.github.io";
 
 const nextConfig = {
+  assetPrefix: !debug ? "." : "",
   // assetPrefix: !debug ? `/${repository}` : "",
-  // basePath: !debug ? `/${repository}` : "",
+  basePath: !debug ? `/${repository}` : "",
   trailingSlash: true,
   reactStrictMode: true,
   swcMinify: true,
@@ -13,16 +14,10 @@ const nextConfig = {
     styledComponents: true,
   },
   images: {
+    unoptimized: true,
+    loader: "akamai",
+    path: "",
     formats: ["image/avif", "image/webp"],
-  },
-  async redirects() {
-    return [
-      {
-        source: "/",
-        destination: "/home",
-        permanent: true,
-      },
-    ];
   },
 };
 
