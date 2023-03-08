@@ -47,6 +47,7 @@ export default function App({ Component, pageProps }: AppProps) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       {/* <Analytics /> */}
+
       <main>{getLayout(Component, pageProps)}</main>
     </>
   );
