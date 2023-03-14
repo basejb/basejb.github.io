@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import styled from "styled-components";
 import Overview from "./Overview";
 import Goal from "./Goal";
@@ -51,10 +51,6 @@ const RealTimeWorkStyle = styled.article`
 `;
 
 const RealTimeWork = () => {
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
-
   return (
     <RealTimeWorkStyle>
       <div className="intro">
@@ -65,7 +61,7 @@ const RealTimeWork = () => {
       <Goal />
       <Architecture />
       <Process />
-      <Used />
+      {/* <Used /> */}
     </RealTimeWorkStyle>
   );
 };

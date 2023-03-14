@@ -109,12 +109,12 @@ const Process = () => {
             <p>Working Process</p>
           </ul>
           <ul id="body">
-            <Image alt="process" src={"/process.jpg"} width={50} height={50} onClick={() => setZoom(!zoom)} />
+            <Image alt="process" src={"/images/process.jpg"} width={50} height={50} onClick={() => setZoom(!zoom)} />
           </ul>
         </div>
       </div>
       <div id="zoom">
-        <Image alt="process" src={"/process.jpg"} width={50} height={50} onClick={() => setZoom(!zoom)} />
+        <Image alt="process" src={"/images/process.jpg"} width={50} height={50} onClick={() => setZoom(!zoom)} />
       </div>
     </ProcessStyle>
   );

@@ -196,12 +196,12 @@ const Goal = () => {
           </ul>
           <ul id="body">
             <li>
-              <Image alt="icon" src={"/clock.png"} width={100} height={100} />
+              <Image alt="icon" src={"/images/clock.png"} width={100} height={100} />
               <p>동료간의 빠른 소통을 위한</p>
               <p>실시간으로 생성&#183;변경되는 Work</p>
             </li>
             <li>
-              <Image alt="icon" src={"/cycle.png"} width={100} height={100} />
+              <Image alt="icon" src={"/images/cycle.png"} width={100} height={100} />
               <p>정확한 요청&#183;응답을 통한</p>
               <p>본인의 업무시간 가속화</p>
             </li>

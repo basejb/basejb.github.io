@@ -48,6 +48,13 @@ const FourthStyle: any = styled.section`
           opacity: ${(props: any) => (props.spin === 3 ? "1" : "0")};
         }
 
+        a {
+          :hover {
+            transform: translateY(-10px);
+            /* transform: rotateY(180deg); */
+          }
+        }
+
         p {
           margin: 20px;
           min-width: 270px;
@@ -58,6 +65,7 @@ const FourthStyle: any = styled.section`
         .hugus {
           background-color: #f5d0a9;
           transition-delay: ${(props: any) => (props.spin === 3 ? "0.4s" : "0s")};
+
           p {
             color: #ffa500;
             font-size: 2rem;
@@ -223,25 +231,25 @@ const Fourth = ({ spin }: any) => {
         <div>
           <p id="title">Projects</p>
           <ul className="project__all">
-            <Link href="/projects" className="project hugus">
+            <Link href="/projects/#hugus" className="project hugus" passHref>
               <p>하이퍼레저 패브릭 기반 기부 플랫폼</p>
               <p>HUGUS</p>
             </Link>
-            <Link href="/projects" className="project work">
+            <Link href="/projects/#work" className="project work">
               <p>웹/앱 기반 자사 실시간 소통 시스템</p>
               <p>REAL TIME WORK</p>
             </Link>
-            <Link href="/projects" className="project umokmin">
+            <Link href="/projects/#umokmin" className="project umokmin">
               <p>웹앱 기반 여행 커뮤니티</p>
               <p>UMOKMIN</p>
             </Link>
           </ul>
-          <Link href="/projects" id="more">
+          <Link href="/projects/#hugus" id="more">
             더보기
           </Link>
         </div>
       </div>
-      <div className="background" style={{ backgroundImage: `url('/second2.jpg')` }} />
+      <div className="background" style={{ backgroundImage: `url('/images/second2.jpg')` }} />
     </FourthStyle>
   );
 };

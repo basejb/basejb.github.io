@@ -105,12 +105,18 @@ const Architecture = () => {
             <p>System Architecture</p>
           </ul>
           <ul id="body">
-            <Image alt="process" src={"/architecture.jpg"} width={200} height={200} onClick={() => setZoom(!zoom)} />
+            <Image
+              alt="process"
+              src={"/images/architecture.jpg"}
+              width={200}
+              height={200}
+              onClick={() => setZoom(!zoom)}
+            />
           </ul>
         </div>
       </div>
       <div id="zoom">
-        <Image alt="process" src={"/architecture.jpg"} width={200} height={200} onClick={() => setZoom(!zoom)} />
+        <Image alt="process" src={"/images/architecture.jpg"} width={200} height={200} onClick={() => setZoom(!zoom)} />
       </div>
     </ArchitectureStyle>
   );

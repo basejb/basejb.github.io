@@ -5,6 +5,8 @@ import styled from "styled-components";
 import Hugus from "@/components/pages/projects/Hugus";
 import RealTimeWork from "@/components/pages/projects/RealTimeWork";
 import Umokmin from "@/components/pages/projects/Umokmin";
+import { useRouter } from "next/router";
+import Link from "next/link";
 
 const Head = styled.section`
   position: fixed;
@@ -53,15 +55,16 @@ const ProjectsStyle: any = styled.section`
         justify-self: center;
         align-self: center;
 
-        button {
-          /* font-family: AppleSDGothicNeoEB00; */
+        a {
+          text-decoration: none;
+          font-family: AppleSDGothicNeoEB00;
           font-size: 30px;
           background: none;
           border: none;
           color: white;
           cursor: pointer;
           font-weight: bolder;
-          line-height: 50px;
+          /* line-height: 50px; */
           transition: all 0.3s ease-in-out;
 
           span {
@@ -143,7 +146,7 @@ const ProjectsStyle: any = styled.section`
         height: 60px;
 
         li {
-          button {
+          a {
             font-size: 20px;
 
             span {
@@ -161,7 +164,8 @@ const ProjectsStyle: any = styled.section`
 `;
 
 const Projects = () => {
-  const [type, setType] = useState<string>("hugus");
+  const router = useRouter();
+  const [type, setType] = useState<any>(router.asPath.split("#")[1] || "hugus");
   const [scroll, setScroll] = useState(false);
 
   const wheelEvent = (e: WheelEvent) => {
@@ -173,10 +177,24 @@ const Projects = () => {
     }
   };
 
+  const ProjectContents = () => {
+    const project = router.asPath.split("#")[1];
+    switch (project) {
+      case "hugus":
+        return <Hugus />;
+      case "work":
+        return <RealTimeWork />;
+      case "umokmin":
+        return <Umokmin />;
+      default:
+        return null;
+    }
+  };
+
   useEffect(() => {
-    // document.querySelector("body").style.overflow = "visible";
-    // document.querySelector("#header").style.backgroundColor = "black";
-  }, []);
+    const project = router.asPath.split("#")[1];
+    if (project !== null) setType(project);
+  }, [router]);
 
   return (
     <ProjectsStyle onWheel={wheelEvent} scroll={scroll} type={type}>
@@ -184,19 +202,19 @@ const Projects = () => {
       <div className="container">
         <ul className="list">
           <li>
-            <button id="hugus" onClick={() => setType("hugus")}>
+            <Link href="/projects/#hugus" id="hugus">
               H<span>ugus</span>
-            </button>
+            </Link>
           </li>
           <li>
-            <button id="work" onClick={() => setType("work")}>
+            <Link href="/projects/#work" id="work">
               R<span>ealTimeWork</span>
-            </button>
+            </Link>
           </li>
           <li>
-            <button id="umokmin" onClick={() => setType("umokmin")}>
+            <Link href="/projects/#umokmin" id="umokmin">
               U<span>mokmin</span>
-            </button>
+            </Link>
           </li>
         </ul>
         <div className="bar">
@@ -206,9 +224,18 @@ const Projects = () => {
         </div>
       </div>
 
-      {type === "hugus" && <Hugus />}
-      {type === "work" && <RealTimeWork />}
-      {type === "umokmin" && <Umokmin />}
+      {(() => {
+        switch (type) {
+          case "hugus":
+            return <Hugus />;
+          case "work":
+            return <RealTimeWork />;
+          case "umokmin":
+            return <Umokmin />;
+          default:
+            return null;
+        }
+      })()}
     </ProjectsStyle>
   );
 };

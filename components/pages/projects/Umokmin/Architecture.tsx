@@ -107,7 +107,7 @@ const Architecture = () => {
           <ul id="body">
             <Image
               alt="process"
-              src={"/umokmin-architecture.png"}
+              src={"/images/umokmin-architecture.png"}
               width={200}
               height={200}
               onClick={() => setZoom(!zoom)}
@@ -118,7 +118,7 @@ const Architecture = () => {
       <div id="zoom">
         <Image
           alt="process"
-          src={"/umokmin-architecture.png"}
+          src={"/images/umokmin-architecture.png"}
           width={200}
           height={200}
           onClick={() => setZoom(!zoom)}

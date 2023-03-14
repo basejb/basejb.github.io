@@ -24,9 +24,7 @@ export default class MyDocument extends Document {
   render() {
     return (
       <Html lang="ko">
-        <Head>
-          {/* <link href="//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css" rel="stylesheet" type="text/css" /> */}
-        </Head>
+        <Head></Head>
         <body>
           <Main />
           <NextScript />

@@ -257,7 +257,7 @@ const Nav = () => {
         </button>
         <ul>
           <li>
-            <Link href="/projects" onClick={() => setOpen(!open)}>
+            <Link href="/projects/#hugus" onClick={() => setOpen(!open)}>
               PROJECTS
             </Link>
           </li>

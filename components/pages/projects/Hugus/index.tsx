@@ -10,6 +10,7 @@ import Architecture from "./Architecture";
 import UI from "./UI";
 import Branding from "./Branding";
 import Youtube from "./Youtube";
+
 const HugusStyle = styled.article`
   width: 100%;
   display: flex;
@@ -56,14 +57,10 @@ const HugusStyle = styled.article`
 `;
 
 const Hugus = () => {
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
-
   return (
     <HugusStyle>
       <div className="intro">
-        <Image width={300} height={150} alt="logo" className="logo" src={"/hugus.png"} />
+        <Image width={400} height={150} alt="logo" className="logo" src="/images/hugus.png" priority />
         <p>"허그어스, 기부문화의 새로운 방향을 제시하다"</p>
       </div>
       <Overview />

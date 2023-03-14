@@ -103,12 +103,12 @@ const UI = () => {
             <p>Convenient UI</p>
           </ul>
           <ul id="body">
-            <Image alt="process" src={"/UI.jpg"} width={50} height={50} onClick={() => setZoom(!zoom)} />
+            <Image alt="process" src={"/images/UI.jpg"} width={50} height={50} onClick={() => setZoom(!zoom)} />
           </ul>
         </div>
       </div>
       <div id="zoom">
-        <Image alt="ui" src={"/UI.jpg"} width={50} height={50} onClick={() => setZoom(!zoom)} />
+        <Image alt="ui" src={"/images/UI.jpg"} width={50} height={50} onClick={() => setZoom(!zoom)} />
       </div>
     </UIStyle>
   );

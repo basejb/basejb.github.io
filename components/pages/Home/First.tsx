@@ -42,7 +42,7 @@ const FirstStyle = styled.section<{ spin: number }>`
     height: 100vh;
     background-position: center;
     background-size: cover;
-    background-image: url("/junbeom.webp");
+    background-image: url("/images/junbeom.webp");
   }
 
   .round {
@@ -53,7 +53,7 @@ const FirstStyle = styled.section<{ spin: number }>`
     width: 65vw;
     height: 65vw;
     background-size: cover;
-    background-image: url("/elipse-home-slide.png");
+    background-image: url("/images/elipse-home-slide.png");
     transition-duration: 1.5s;
     transition-delay: 150ms;
     transform: translate3d(0, 0, 0);
@@ -133,7 +133,7 @@ const HomeFirstPage = (spin: any) => {
       </div>
       <div className="me" />
       {/* <div className="round" /> */}
-      <div className="forest" style={{ backgroundImage: `url('/forest.png')` }} />
+      <div className="forest" style={{ backgroundImage: `url('/images/forest.png')` }} />
     </FirstStyle>
   );
 };

@@ -249,7 +249,7 @@ const Process = () => {
                   />
                 </section>
               </div>
-              <Image alt="infinityScroll" src={"/work_infinity_scroll.gif"} width={200} height={200} />
+              <Image alt="infinityScroll" src={"/images/work_infinity_scroll.gif"} width={200} height={200} />
               <p>
                 • axios api로 초기 로드 데이터 10개를 불러오고 스크롤 값을 계산해서 추가 로드시에 10개씩 추가
                 로드합니다.
@@ -299,7 +299,7 @@ const Process = () => {
                   />
                 </section>
               </div>
-              <Image alt="write" src={"/work_write.gif"} width={200} height={200} />
+              <Image alt="write" src={"/images/work_write.gif"} width={200} height={200} />
               <p>• 선택 or 입력하지 않은 Input이 있다면 ErrorHandler를 통해서 리턴합니다.</p>
               <p>• 파일을 첨부하면 FileReader를 사용해서 미리보기를 보여줍니다.</p>
               <p>• 파일을 포함한 FormData를 서버로 POST 요청합니다. </p>
@@ -332,7 +332,7 @@ const Process = () => {
                   />
                 </section>
               </div>
-              <Image alt="filter" src={"/work_filter.gif"} width={200} height={200} />
+              <Image alt="filter" src={"/images/work_filter.gif"} width={200} height={200} />
               <p>• 필터링을 적용하면 api 요청으로 해당 필터로 리스트를 로드합니다.</p>
               <p>• 매 로드시 새로 불러오는 불필요한 데이터 로드를 막기위해 수정중에 있습니다.</p>
               <hr />
@@ -365,7 +365,7 @@ const Process = () => {
                   />
                 </section>
               </div>
-              <Image alt="stateChange" src={"/work_state_change.gif"} width={200} height={200} />
+              <Image alt="stateChange" src={"/images/work_state_change.gif"} width={200} height={200} />
               <p>
                 • 작업물 접수 및 상태 변경을 클릭하면 해당 조건을 서버에서 이미 눌렀거나 다른 유저가 눌렀다면 예외처리
                 합니다.
@@ -397,7 +397,7 @@ const Process = () => {
                   />
                 </section>
               </div>
-              <Image alt="noti" src={"/work_noti.gif"} width={200} height={200} />
+              <Image alt="noti" src={"/images/work_noti.gif"} width={200} height={200} />
               <p>
                 • 같은 채널의 유저(
                 <span>
@@ -435,7 +435,7 @@ const Process = () => {
                   />
                 </section>
               </div>
-              <Image className="mobile" alt="mobile" src={"/work_mobile.gif"} width={200} height={200} />
+              <Image className="mobile" alt="mobile" src={"/images/work_mobile.gif"} width={200} height={200} />
               <p>• styled-components 및 Emotion을 사용해서 커스텀태그를 만들어 사용하며 css를 적용했습니다.</p>
               <p>• 반응형 웹을 적용해서 세세한 부분까지 유저의 입장으로써 편하게 볼수 있게 구현했습니다.</p>
               <hr />

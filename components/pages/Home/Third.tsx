@@ -357,7 +357,7 @@ const Third = ({ spin }: any) => {
           </div>
         </div>
       </div>
-      <div className="background" style={{ backgroundImage: `url('/flower.png')` }}></div>
+      <div className="background" style={{ backgroundImage: `url('/images/flower.png')` }}></div>
       <div className="background2"></div>
     </ThirdStyle>
   );
