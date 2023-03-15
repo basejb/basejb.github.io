@@ -231,20 +231,20 @@ const Fourth = ({ spin }: any) => {
         <div>
           <p id="title">Projects</p>
           <ul className="project__all">
-            <Link href="/projects/#hugus" className="project hugus" passHref>
+            <Link href="/projects/hugus" className="project hugus" passHref>
               <p>하이퍼레저 패브릭 기반 기부 플랫폼</p>
               <p>HUGUS</p>
             </Link>
-            <Link href="/projects/#work" className="project work">
+            <Link href="/projects/work" className="project work">
               <p>웹/앱 기반 자사 실시간 소통 시스템</p>
               <p>REAL TIME WORK</p>
             </Link>
-            <Link href="/projects/#umokmin" className="project umokmin">
+            <Link href="/projects/umokmin" className="project umokmin">
               <p>웹앱 기반 여행 커뮤니티</p>
               <p>UMOKMIN</p>
             </Link>
           </ul>
-          <Link href="/projects/#hugus" id="more">
+          <Link href="/projects/hugus" id="more">
             더보기
           </Link>
         </div>

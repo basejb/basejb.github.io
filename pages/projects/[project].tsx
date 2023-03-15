@@ -125,6 +125,15 @@ const ProjectsStyle: any = styled.section`
     }
   }
 
+  div.project-section {
+    overflow: scroll;
+    height: 100vh;
+    padding: 0 0 150px 0;
+    ::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
   @media (max-width: 1200px) {
     .container {
       .list {
@@ -165,8 +174,10 @@ const ProjectsStyle: any = styled.section`
 
 const Projects = () => {
   const router = useRouter();
-  const [type, setType] = useState<any>(router.asPath.split("#")[1] || "hugus");
+  const [pageOverflow, setOverflow] = useState("hidden");
+  const [type, setType] = useState<any>(router.asPath.split("/")[2] || "hugus");
   const [scroll, setScroll] = useState(false);
+  const scrollRef = React.useRef(null);
 
   const wheelEvent = (e: WheelEvent) => {
     // console.log(e.deltaY);
@@ -177,42 +188,34 @@ const Projects = () => {
     }
   };
 
-  const ProjectContents = () => {
-    const project = router.asPath.split("#")[1];
-    switch (project) {
-      case "hugus":
-        return <Hugus />;
-      case "work":
-        return <RealTimeWork />;
-      case "umokmin":
-        return <Umokmin />;
-      default:
-        return null;
-    }
-  };
-
   useEffect(() => {
-    const project = router.asPath.split("#")[1];
+    const project = router.asPath.split("/")[2];
     if (project !== null) setType(project);
   }, [router]);
 
+  useEffect(() => {
+    router.route.includes("projects") ? setOverflow("auto") : setOverflow("hidden");
+    window.scrollTo(0, 0);
+  }, [router]);
+
   return (
-    <ProjectsStyle onWheel={wheelEvent} scroll={scroll} type={type}>
+    <ProjectsStyle onWheel={wheelEvent} scroll={scroll} type={type} ref={scrollRef}>
       <Head />
+
       <div className="container">
         <ul className="list">
           <li>
-            <Link href="/projects/#hugus" id="hugus">
+            <Link href="/projects/hugus" id="hugus">
               H<span>ugus</span>
             </Link>
           </li>
           <li>
-            <Link href="/projects/#work" id="work">
+            <Link href="/projects/work" id="work">
               R<span>ealTimeWork</span>
             </Link>
           </li>
           <li>
-            <Link href="/projects/#umokmin" id="umokmin">
+            <Link href="/projects/umokmin" id="umokmin">
               U<span>mokmin</span>
             </Link>
           </li>
@@ -224,18 +227,20 @@ const Projects = () => {
         </div>
       </div>
 
-      {(() => {
-        switch (type) {
-          case "hugus":
-            return <Hugus />;
-          case "work":
-            return <RealTimeWork />;
-          case "umokmin":
-            return <Umokmin />;
-          default:
-            return null;
-        }
-      })()}
+      <div className="project-section">
+        {(() => {
+          switch (type) {
+            case "hugus":
+              return <Hugus />;
+            case "work":
+              return <RealTimeWork />;
+            case "umokmin":
+              return <Umokmin />;
+            default:
+              return null;
+          }
+        })()}
+      </div>
     </ProjectsStyle>
   );
 };

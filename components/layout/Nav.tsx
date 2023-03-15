@@ -202,7 +202,8 @@ const NavStyle: any = styled.nav`
       -webkit-transition: all 1s cubic-bezier(0.55, 0.085, 0, 0.99);
 
       .nav__btn {
-        left: 85%;
+        left: 87%;
+        top: 20px;
       }
 
       ul {
@@ -257,7 +258,7 @@ const Nav = () => {
         </button>
         <ul>
           <li>
-            <Link href="/projects/#hugus" onClick={() => setOpen(!open)}>
+            <Link href="/projects/hugus" onClick={() => setOpen(!open)}>
               PROJECTS
             </Link>
           </li>

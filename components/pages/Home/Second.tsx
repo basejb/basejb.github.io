@@ -44,6 +44,7 @@ const SecondStyle = styled.section`
       align-items: center;
       z-index: 1;
       h1#text {
+        line-height: 40px;
         font-size: 1.5rem;
       }
     }

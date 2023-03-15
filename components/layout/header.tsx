@@ -1,8 +1,9 @@
-import React, { useCallback, useState } from "react";
+import React from "react";
 import MenuBtn from "./menu-btn";
 import styled from "styled-components";
 import Link from "next/link";
 import Nav from "./Nav";
+import { useRouter } from "next/router";
 
 const HeaderWrapper = styled.div`
   @media (max-width: 640px) {
@@ -81,25 +82,27 @@ const Title = styled.p`
   }
 `;
 
-const Header = (props: any) => {
-  const { isShowPopupMenu, setIsShowPopupMenu } = props;
-  const [isShowSidebar, setIsShowSidebar] = useState(true);
+const Header = () => {
+  const router = useRouter();
 
-  const setActive = useCallback((val: boolean) => {
-    if (val) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "";
-    }
-    setTimeout(() => {
-      setIsShowPopupMenu(val);
-    }, 100);
-  }, []);
+  const handleMain = (e: any) => {
+    e.preventDefault();
+    router.push(
+      {
+        pathname: "/",
+        //  query: '',
+      },
+      undefined,
+      { scroll: false },
+    );
+  };
 
   return (
     <HeaderWrapper>
-      <HeaderTitle open={isShowPopupMenu}>
-        <Link href="/">R</Link>
+      <HeaderTitle>
+        <Link href="/" passHref onClick={handleMain}>
+          R
+        </Link>
         <Title>RACEJB.</Title>
         <Email>
           <a href="mailto:moonnr94@gmail.com">moonnr94@gmail.com</a>

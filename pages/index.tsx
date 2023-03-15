@@ -74,11 +74,6 @@ const HomePage: IDefaultLayoutPage = () => {
     }
   };
 
-  useEffect(() => {
-    window.scrollTo(0, 0);
-    //  document.querySelector("#header").style.backgroundColor = "transparent";
-  }, []);
-
   return (
     <>
       {/* <DefaultSeo {...DEFAULT_SEO} />

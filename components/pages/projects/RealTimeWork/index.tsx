@@ -61,7 +61,7 @@ const RealTimeWork = () => {
       <Goal />
       <Architecture />
       <Process />
-      {/* <Used /> */}
+      <Used />
     </RealTimeWorkStyle>
   );
 };
