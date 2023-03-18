@@ -101,9 +101,9 @@ const Header = () => {
     <HeaderWrapper>
       <HeaderTitle>
         <Link href="/" passHref onClick={handleMain}>
-          R
+          B
         </Link>
-        <Title>RACEJB.</Title>
+        <Title>BACEJB.</Title>
         <Email>
           <a href="mailto:moonnr94@gmail.com">moonnr94@gmail.com</a>
         </Email>

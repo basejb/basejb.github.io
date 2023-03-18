@@ -309,7 +309,7 @@ const MenuBtn = ({ isActive, setActive }: IMenuBtnProps) => {
         </ul>
         <div className="sites">
           <button>
-            <a href="https://github.com/racejb" target="_blank" id="github">
+            <a href="https://github.com/basejb" target="_blank" id="github">
               GH.
             </a>
           </button>

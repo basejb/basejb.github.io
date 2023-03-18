@@ -275,7 +275,7 @@ const Nav = () => {
         </ul>
         <div className="sites">
           <button type="button">
-            <a href="https://github.com/racejb" target="_blank" id="github" rel="noreferrer">
+            <a href="https://github.com/basejb" target="_blank" id="github" rel="noreferrer">
               GH.
             </a>
           </button>

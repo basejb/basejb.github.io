@@ -16,15 +16,17 @@ interface HomeProps {
   onTouchEnd: any;
 }
 
-const HomePageWrapper = styled.section<HomeProps>`
-  transition: transform 1s cubic-bezier(0.8, 0.085, 0, 0.99);
-  -webkit-transition: transform 1s cubic-bezier(0.8, 0.085, 0, 0.99);
-  transform: translateY(${(props) => -props.spin * 100}vh);
-  -webkit-transform: translateY(${(props) => -props.spin * 100}vh);
-`;
+const S = {
+  Container: styled.section<HomeProps>`
+    transition: transform 1s cubic-bezier(0.8, 0.085, 0, 0.99);
+    -webkit-transition: transform 1s cubic-bezier(0.8, 0.085, 0, 0.99);
+    transform: translateY(${(props) => -props.spin * 100}vh);
+    -webkit-transform: translateY(${(props) => -props.spin * 100}vh);
+  `,
+};
 
 // const DEFAULT_SEO = {
-//   title: "Title",
+//   title: "JB's github",
 //   description: "JB'S description",
 //   canonical: "",
 //   openGraph: {
@@ -78,17 +80,17 @@ const HomePage: IDefaultLayoutPage = () => {
     <>
       {/* <DefaultSeo {...DEFAULT_SEO} />
       <Head>
-        <title>JB's boilerplate</title>
+        <title>JB's github</title>
         <meta name="description" content="It's JBs description" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head> */}
-      <HomePageWrapper spin={spin} onWheel={wheelEvent} onTouchStart={touchEvent} onTouchEnd={touchEvent}>
+      <S.Container spin={spin} onWheel={wheelEvent} onTouchStart={touchEvent} onTouchEnd={touchEvent}>
         <First spin={spin} />
         <Second spin={spin} />
         <Third spin={spin} />
         <Fourth spin={spin} />
-      </HomePageWrapper>
+      </S.Container>
     </>
   );
 };

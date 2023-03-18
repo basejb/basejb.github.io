@@ -12,7 +12,7 @@ import * as gtag from "@/utils/gtag";
 import Script from "next/script";
 
 const DEFAULT_SEO = {
-  title: "Title",
+  title: "JB's github",
   description: "JB'S description",
   canonical: "",
   openGraph: {
