@@ -5,54 +5,55 @@ import Goal from "./Goal";
 import Process from "./Process";
 import Used from "./Used";
 import Architecture from "./Architecture";
-import Image from "next/image";
 
-const RealTimeWorkStyle = styled.article`
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-top: 200px;
-  color: white;
-
-  .intro {
-    height: 100px;
+const S = {
+  Container: styled.article`
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    padding-top: 200px;
+    color: white;
 
-    .logo {
-      width: 400px;
-    }
-
-    p {
-      color: #ec6375;
-      font-size: 2.5rem;
-      font-family: Kcc;
-    }
-  }
-
-  @media (max-width: 600px) {
-    padding-top: 120px;
     .intro {
-      height: 250px;
+      height: 100px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
       .logo {
-        width: 250px;
+        width: 400px;
       }
 
       p {
         color: #ec6375;
-        font-size: 1.5rem;
+        font-size: 2.5rem;
         font-family: Kcc;
       }
     }
-  }
-`;
+
+    @media (max-width: 600px) {
+      padding-top: 120px;
+      .intro {
+        height: 250px;
+        .logo {
+          width: 250px;
+        }
+
+        p {
+          color: #ec6375;
+          font-size: 1.5rem;
+          font-family: Kcc;
+        }
+      }
+    }
+  `,
+};
 
 const RealTimeWork = () => {
   return (
-    <RealTimeWorkStyle>
+    <S.Container>
       <div className="intro">
         {/* <Image alt="logo" className="logo" src={""} /> */}
         <p>"실시간으로 빠르게 소통하는 업무 시스템"</p>
@@ -62,7 +63,7 @@ const RealTimeWork = () => {
       <Architecture />
       <Process />
       <Used />
-    </RealTimeWorkStyle>
+    </S.Container>
   );
 };
 

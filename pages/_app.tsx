@@ -1,4 +1,3 @@
-import "@/styles/globals.css";
 import { IDefaultLayoutPage } from "@/components/layout/default-layout";
 
 import type { AppProps } from "next/app";
@@ -10,10 +9,11 @@ import { useEffect } from "react";
 // import { Analytics } from "@vercel/analytics/react";
 import * as gtag from "@/utils/gtag";
 import Script from "next/script";
+import GlobalStyle from "@/styles/GlobalStyle";
 
 const DEFAULT_SEO = {
   title: "JB's github",
-  description: "JB'S description",
+  description: "주니어 프론트엔드 문준범의 github.io입니다.",
   canonical: "",
   openGraph: {
     type: "website",
@@ -86,6 +86,7 @@ export default function App({ Component, pageProps }: AppProps) {
         }}
       />
       <main>{getLayout(Component, pageProps)}</main>
+      <GlobalStyle />
     </>
   );
 }

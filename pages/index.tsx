@@ -16,15 +16,6 @@ interface HomeProps {
   onTouchEnd: any;
 }
 
-const S = {
-  Container: styled.section<HomeProps>`
-    transition: transform 1s cubic-bezier(0.8, 0.085, 0, 0.99);
-    -webkit-transition: transform 1s cubic-bezier(0.8, 0.085, 0, 0.99);
-    transform: translateY(${(props) => -props.spin * 100}vh);
-    -webkit-transform: translateY(${(props) => -props.spin * 100}vh);
-  `,
-};
-
 // const DEFAULT_SEO = {
 //   title: "JB's github",
 //   description: "JB'S description",
@@ -93,6 +84,15 @@ const HomePage: IDefaultLayoutPage = () => {
       </S.Container>
     </>
   );
+};
+
+const S = {
+  Container: styled.section<HomeProps>`
+    transition: transform 1s cubic-bezier(0.8, 0.085, 0, 0.99);
+    -webkit-transition: transform 1s cubic-bezier(0.8, 0.085, 0, 0.99);
+    transform: translateY(${(props) => -props.spin * 100}vh);
+    -webkit-transform: translateY(${(props) => -props.spin * 100}vh);
+  `,
 };
 
 HomePage.getLayout = getDefaultLayout;

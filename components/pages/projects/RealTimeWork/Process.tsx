@@ -2,190 +2,16 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import Image from "next/image";
 
-const ProcessStyle: any = styled.div`
-  width: 100%;
-  display: flex;
-  justify-content: center;
-
-  .item {
-    margin: 70px;
-    width: 50%;
-    display: grid;
-    grid-template-columns: 1fr 5fr;
-    background-color: transparent;
-    min-width: 800px;
-
-    .num {
-      margin: 0;
-    }
-
-    .detail {
-      display: flex;
-      flex-direction: column;
-
-      ul {
-        padding: 0;
-        margin: 0;
-      }
-
-      #head {
-        font-size: 1.2rem;
-
-        p {
-          margin-top: 5px;
-          font-size: 0.8rem;
-        }
-      }
-      #head_stack {
-        .stack {
-          width: 65px;
-          height: 20px;
-          margin-right: 10px;
-        }
-      }
-
-      #body {
-        li {
-          list-style: none;
-          margin-bottom: 50px;
-          .title_stack {
-            display: flex;
-            align-items: center;
-            gap: 20px;
-            span {
-              background-color: white;
-              height: 20px;
-              width: 1px;
-            }
-            section {
-              .stack {
-                margin: 0 5px 0 0;
-              }
-            }
-          }
-          img {
-            width: 100%;
-            height: auto;
-            cursor: ${(props: any) => (props.zoom ? "zoom-out" : "zoom-in")};
-          }
-          .mobile {
-            width: 35%;
-          }
-          p {
-            font-size: 0.8rem;
-            span {
-              color: #808080;
-              span {
-                color: #b56622;
-              }
-            }
-          }
-          .stack {
-            width: auto;
-          }
-          hr {
-            border: none;
-            height: 1px;
-            color: #333;
-            background-color: #333;
-          }
-        }
-      }
-    }
-  }
-
-  #zoom {
-    position: fixed;
-    inset: 0px;
-    z-index: ${(props: any) => (props.zoom ? 100 : -1)};
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: white;
-    opacity: ${(props: any) => (props.zoom ? 1 : 0)};
-    transition: opacity 0.3s ease-in-out;
-
-    img {
-      cursor: ${(props: any) => (props.zoom ? "zoom-out" : "zoom-in")};
-      inset: 0px;
-      width: 85%;
-      height: auto;
-    }
-  }
-
-  @media (max-width: 900px) {
-    width: 80%;
-    .item {
-      min-width: 570px;
-    }
-  }
-
-  @media (max-width: 640px) {
-    width: 80%;
-    .item {
-      grid-template-columns: 1fr 6fr;
-      min-width: 300px;
-      .detail {
-        #head {
-          font-size: 1rem;
-          margin-left: 10px;
-          p {
-            margin-top: 5px;
-            font-size: 12px;
-          }
-        }
-        #head_stack {
-          /* margin: 0 0 15px 100px; */
-        }
-
-        #body {
-          li {
-            width: 280px;
-            .title_stack {
-              display: grid;
-              gap: none;
-              h3 {
-                font-size: 14px;
-                margin: 0;
-              }
-              span {
-                display: none;
-              }
-              section {
-                display: grid;
-                width: 200px;
-                grid-template-columns: 1fr 1fr 1fr;
-                gap: 5px;
-                margin: 0 0 10px 0;
-              }
-            }
-            img {
-              width: 280px;
-            }
-            p {
-              width: 90%;
-            }
-            hr {
-              width: 280px;
-              text-align: start;
-            }
-          }
-        }
-      }
-    }
-  }
-`;
-
 const Process = () => {
   const [zoom, setZoom] = useState<string>("");
 
   const zoomHandler = (e: React.MouseEvent<HTMLLIElement, MouseEvent>) => {
-    const { alt }: any = e.target;
-    setZoom(alt);
+    const { src }: any = e.target;
+    setZoom(src);
   };
 
   return (
-    <ProcessStyle zoom={zoom}>
+    <S.Container zoom={zoom}>
       <div className="bar" />
       <div className="item">
         <strong className="num">04</strong>
@@ -447,8 +273,184 @@ const Process = () => {
       <div id="zoom">
         {zoom !== "" ? <Image alt="zoom" src={zoom} onClick={() => setZoom("")} width={200} height={200} /> : null}
       </div>
-    </ProcessStyle>
+    </S.Container>
   );
+};
+
+const S = {
+  Container: styled.div<{ zoom: string }>`
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    .item {
+      margin: 70px;
+      width: 50%;
+      display: grid;
+      grid-template-columns: 1fr 5fr;
+      background-color: transparent;
+      min-width: 800px;
+
+      .num {
+        margin: 0;
+      }
+
+      .detail {
+        display: flex;
+        flex-direction: column;
+
+        ul {
+          padding: 0;
+          margin: 0;
+        }
+
+        #head {
+          font-size: 1.2rem;
+
+          p {
+            margin-top: 5px;
+            font-size: 0.8rem;
+          }
+        }
+        #head_stack {
+          .stack {
+            width: 65px;
+            height: 20px;
+            margin-right: 10px;
+          }
+        }
+
+        #body {
+          li {
+            list-style: none;
+            margin-bottom: 50px;
+            .title_stack {
+              display: flex;
+              align-items: center;
+              gap: 20px;
+              span {
+                background-color: white;
+                height: 20px;
+                width: 1px;
+              }
+              section {
+                .stack {
+                  margin: 0 5px 0 0;
+                }
+              }
+            }
+            img {
+              width: 100%;
+              height: auto;
+              cursor: ${(props: any) => (props.zoom ? "zoom-out" : "zoom-in")};
+            }
+            .mobile {
+              width: 35%;
+            }
+            p {
+              font-size: 0.8rem;
+              span {
+                color: #808080;
+                span {
+                  color: #b56622;
+                }
+              }
+            }
+            .stack {
+              width: auto;
+            }
+            hr {
+              border: none;
+              height: 1px;
+              color: #333;
+              background-color: #333;
+            }
+          }
+        }
+      }
+    }
+
+    #zoom {
+      position: fixed;
+      inset: 0px;
+      z-index: ${(props: any) => (props.zoom ? 100 : -1)};
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: white;
+      opacity: ${(props: any) => (props.zoom ? 1 : 0)};
+      transition: opacity 0.3s ease-in-out;
+
+      img {
+        cursor: ${(props: any) => (props.zoom ? "zoom-out" : "zoom-in")};
+        inset: 0px;
+        width: 85%;
+        height: auto;
+      }
+    }
+
+    @media (max-width: 900px) {
+      width: 80%;
+      .item {
+        min-width: 570px;
+      }
+    }
+
+    @media (max-width: 640px) {
+      width: 80%;
+      .item {
+        grid-template-columns: 1fr 6fr;
+        min-width: 300px;
+        .detail {
+          #head {
+            font-size: 1rem;
+            margin-left: 10px;
+            p {
+              margin-top: 5px;
+              font-size: 12px;
+            }
+          }
+          #head_stack {
+            /* margin: 0 0 15px 100px; */
+          }
+
+          #body {
+            li {
+              width: 280px;
+              .title_stack {
+                display: grid;
+                gap: none;
+                h3 {
+                  font-size: 14px;
+                  margin: 0;
+                }
+                span {
+                  display: none;
+                }
+                section {
+                  display: grid;
+                  width: 200px;
+                  grid-template-columns: 1fr 1fr 1fr;
+                  gap: 5px;
+                  margin: 0 0 10px 0;
+                }
+              }
+              img {
+                width: 280px;
+              }
+              p {
+                width: 90%;
+              }
+              hr {
+                width: 280px;
+                text-align: start;
+              }
+            }
+          }
+        }
+      }
+    }
+  `,
 };
 
 export default Process;

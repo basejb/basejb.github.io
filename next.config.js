@@ -6,7 +6,7 @@ const repository = "basejb.github.io";
 const nextConfig = {
   assetPrefix: !debug ? "." : "",
   // assetPrefix: !debug ? `/${repository}` : "",
-  basePath: !debug ? `/${repository}` : "",
+  basePath: !debug ? `` : "",
   trailingSlash: true,
   reactStrictMode: true,
   swcMinify: true,

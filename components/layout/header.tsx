@@ -5,6 +5,16 @@ import Link from "next/link";
 import Nav from "./Nav";
 import { useRouter } from "next/router";
 
+const Title = styled.p`
+  font-size: 1.8rem;
+  font-weight: 800;
+  @media (max-width: 640px) {
+    gap: 5px;
+    font-size: 0.8rem;
+    font-weight: 700;
+  }
+`;
+
 const HeaderWrapper = styled.div`
   @media (max-width: 640px) {
     padding: 0 20px;
@@ -51,15 +61,19 @@ const HeaderTitle: any = styled.div`
   align-items: center;
   transition: all 0.5s ease-in-out;
   & > a {
+    display: flex;
+    gap: 20px;
     transition: all 0.5s ease-in-out;
     color: ${(props: any) => (!props.open ? "#eeeeee" : "#000000")};
     text-decoration: none;
     font-size: 1.5rem;
     text-align: center;
     line-height: 45px;
-    width: 45px;
+    width: auto;
     height: 45px;
     border-radius: 3px;
+    ${Title} {
+    }
   }
   ${Email} {
     a {
@@ -69,16 +83,6 @@ const HeaderTitle: any = styled.div`
   p {
     transition: all 0.5s ease-in-out;
     color: ${(props: any) => (!props.open ? "#eeeeee" : "#000000")};
-  }
-`;
-
-const Title = styled.p`
-  font-size: 1.8rem;
-  font-weight: 800;
-  @media (max-width: 640px) {
-    gap: 5px;
-    font-size: 0.8rem;
-    font-weight: 700;
   }
 `;
 
@@ -101,9 +105,9 @@ const Header = () => {
     <HeaderWrapper>
       <HeaderTitle>
         <Link href="/" passHref onClick={handleMain}>
-          B
+          B<Title>BASEJB.</Title>
         </Link>
-        <Title>BACEJB.</Title>
+
         <Email>
           <a href="mailto:moonnr94@gmail.com">moonnr94@gmail.com</a>
         </Email>

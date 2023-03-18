@@ -2833,6 +2833,11 @@ styled-jsx@5.1.1:
   dependencies:
     client-only "0.0.1"
 
+styled-reset@^4.4.5:
+  version "4.4.5"
+  resolved "https://registry.npmmirror.com/styled-reset/-/styled-reset-4.4.5.tgz#8c4bf50ee4f53d104473b156d0697ff509d54405"
+  integrity sha512-uEQzbCqSBbx1ZT9VuquoGOJyVzs3kMIMCyjxmtSo4/JoTCrq92UFTJx91KcdMncDaymz6NE8sgSvstHHcJjExg==
+
 stylis@^4.0.6:
   version "4.1.3"
   resolved "https://registry.npmmirror.com/stylis/-/stylis-4.1.3.tgz#fd2fbe79f5fed17c55269e16ed8da14c84d069f7"
