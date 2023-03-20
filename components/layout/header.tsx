@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import MenuBtn from "./menu-btn";
 import styled from "styled-components";
 import Link from "next/link";
@@ -97,9 +97,21 @@ const Header = () => {
         //  query: '',
       },
       undefined,
-      { scroll: false },
+      { scroll: true },
     );
   };
+
+  useEffect(() => {
+    if (router.pathname === "/") {
+      router.push(
+        {
+          pathname: "/",
+        },
+        undefined,
+        { scroll: true },
+      );
+    }
+  }, []);
 
   return (
     <HeaderWrapper>

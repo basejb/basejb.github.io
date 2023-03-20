@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, ComponentType, MemoExoticComponent } from "react";
 import { getDefaultLayout, IDefaultLayoutPage } from "@/components/layout/default-layout";
 // import Head from "next/head";
 // import Image from "next/image";
@@ -31,7 +31,7 @@ import withSpin, { WithSpinProps } from "@/HOC/withSpin";
 //   },
 // };
 
-const HomePage = (props: any) => {
+const HomePage = (props: WithSpinProps) => {
   const { spin } = props;
 
   // const [spin, setSpin] = useState<number>(0);
@@ -105,7 +105,7 @@ const S = {
   `,
 };
 
-const Home: any = withSpin()(React.memo(HomePage));
+const Home: MemoExoticComponent<ComponentType<WithSpinProps>> & any = React.memo(withSpin()(HomePage));
 
 Home.getLayout = getDefaultLayout;
 

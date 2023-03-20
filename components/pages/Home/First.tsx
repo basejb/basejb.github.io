@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import CountUp from "react-countup";
+import { motion } from "framer-motion";
 import { WithSpinProps } from "@/HOC/withSpin";
 
 const HomeFirstPage = ({ spin }: WithSpinProps["spin"]) => {
@@ -25,7 +26,23 @@ const HomeFirstPage = ({ spin }: WithSpinProps["spin"]) => {
         </div>
       </div>
       <div className="me" />
-      <div className="round" />
+      <motion.div
+        animate={spin === 0 ? "open" : "close"}
+        variants={{
+          open: {
+            display: "block",
+            opacity: 1,
+            top: "15vw",
+            left: "50vw",
+          },
+          closed: { opacity: 0, transitionEnd: { left: "100vw" } },
+        }}
+        initial={{ opacity: 0, position: "absolute", top: "40vw", left: "100vw" }}
+        transition={{ duration: 0.9, delay: 0.2 }}
+      >
+        <div className="round" />
+      </motion.div>
+
       <div className="forest" style={{ backgroundImage: `url('/images/forest.png')` }} />
     </S.Container>
   );
@@ -113,18 +130,10 @@ const S = {
 
     .round {
       z-index: 1;
-      position: absolute;
-      /* bottom: 40vw; */
-      top: 10vw;
-      left: ${(props) => (props.spin === 0 ? "55vw" : "100vw")};
-      width: 65vw;
-      height: 65vw;
+      width: 1500px;
+      height: 1500px;
       background-size: cover;
       background-image: url("/images/elipse-home-slide.png");
-      transition-duration: 1.5s;
-      transition-delay: 300ms;
-      transform: translate3d(0, 0, 0);
-      opacity: 1;
     }
 
     .forest {
@@ -168,9 +177,9 @@ const S = {
       }
       .me {
         display: none;
-        .round {
-          display: none;
-        }
+      }
+      .round {
+        display: none;
       }
     }
 

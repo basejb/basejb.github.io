@@ -32,8 +32,6 @@ const DEFAULT_SEO = {
 };
 
 export default function App({ Component, pageProps }: AppProps) {
-  console.log(Component, pageProps);
-
   const router = useRouter();
 
   useEffect(() => {

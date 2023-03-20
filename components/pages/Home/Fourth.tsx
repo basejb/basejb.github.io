@@ -1,8 +1,39 @@
-import React, { useState } from "react";
+import React from "react";
 import styled from "styled-components";
 import Link from "next/link";
+import { WithSpinProps } from "@/HOC/withSpin";
 
-const FourthStyle: any = styled.section`
+const Fourth = ({ spin }: WithSpinProps["spin"]) => {
+  return (
+    <FourthStyle spin={spin}>
+      <div className="container">
+        <div>
+          <p id="title">Projects</p>
+          <ul className="project__all">
+            <Link href="/projects/hugus" className="project hugus" passHref>
+              <p>하이퍼레저 패브릭 기반 기부 플랫폼</p>
+              <p>HUGUS</p>
+            </Link>
+            <Link href="/projects/work" className="project work">
+              <p>웹/앱 기반 자사 실시간 소통 시스템</p>
+              <p>REAL TIME WORK</p>
+            </Link>
+            <Link href="/projects/umokmin" className="project umokmin">
+              <p>웹앱 기반 여행 커뮤니티</p>
+              <p>UMOKMIN</p>
+            </Link>
+          </ul>
+          <Link href="/projects/hugus" id="more">
+            더보기
+          </Link>
+        </div>
+      </div>
+      <div className="background" style={{ backgroundImage: `url('/images/second2.jpg')` }} />
+    </FourthStyle>
+  );
+};
+
+const FourthStyle = styled.section<{ spin: WithSpinProps["spin"] }>`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -45,7 +76,7 @@ const FourthStyle: any = styled.section`
           background-color: white;
           border-radius: 100%;
           transition: all 2s ease-in-out;
-          opacity: ${(props: any) => (props.spin === 3 ? "1" : "0")};
+          opacity: ${(props) => (props.spin === 3 ? "1" : "0")};
         }
 
         a {
@@ -64,7 +95,7 @@ const FourthStyle: any = styled.section`
 
         .hugus {
           background-color: #f5d0a9;
-          transition-delay: ${(props: any) => (props.spin === 3 ? "0.4s" : "0s")};
+          transition-delay: ${(props) => (props.spin === 3 ? "0.4s" : "0s")};
 
           p {
             color: #ffa500;
@@ -79,7 +110,7 @@ const FourthStyle: any = styled.section`
 
         .work {
           background-color: #ff9e9d;
-          transition-delay: ${(props: any) => (props.spin === 3 ? "0.7s" : "0s")};
+          transition-delay: ${(props) => (props.spin === 3 ? "0.7s" : "0s")};
           p {
             color: #da463c;
             font-size: 2rem;
@@ -92,7 +123,7 @@ const FourthStyle: any = styled.section`
 
         .umokmin {
           background-color: #e2f4de;
-          transition-delay: ${(props: any) => (props.spin === 3 ? "1s" : "0s")};
+          transition-delay: ${(props) => (props.spin === 3 ? "1s" : "0s")};
           p {
             color: #46613d;
             font-size: 2rem;
@@ -126,7 +157,7 @@ const FourthStyle: any = styled.section`
     position: absolute;
     width: 100%;
     height: 100vh;
-    transform: ${(props: any) => (props.spin === 3 ? "scale(1)" : "scale(1.3)")};
+    transform: ${(props) => (props.spin === 3 ? "scale(1)" : "scale(1.3)")};
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -223,35 +254,5 @@ const FourthStyle: any = styled.section`
     }
   }
 `;
-
-const Fourth = ({ spin }: any) => {
-  return (
-    <FourthStyle spin={spin}>
-      <div className="container">
-        <div>
-          <p id="title">Projects</p>
-          <ul className="project__all">
-            <Link href="/projects/hugus" className="project hugus" passHref>
-              <p>하이퍼레저 패브릭 기반 기부 플랫폼</p>
-              <p>HUGUS</p>
-            </Link>
-            <Link href="/projects/work" className="project work">
-              <p>웹/앱 기반 자사 실시간 소통 시스템</p>
-              <p>REAL TIME WORK</p>
-            </Link>
-            <Link href="/projects/umokmin" className="project umokmin">
-              <p>웹앱 기반 여행 커뮤니티</p>
-              <p>UMOKMIN</p>
-            </Link>
-          </ul>
-          <Link href="/projects/hugus" id="more">
-            더보기
-          </Link>
-        </div>
-      </div>
-      <div className="background" style={{ backgroundImage: `url('/images/second2.jpg')` }} />
-    </FourthStyle>
-  );
-};
 
 export default Fourth;

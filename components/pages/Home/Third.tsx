@@ -1,7 +1,134 @@
-import React, { useState } from "react";
+import { WithSpinProps } from "@/HOC/withSpin";
+import React from "react";
 import styled from "styled-components";
 
-const ThirdStyle: any = styled.section`
+const Third = ({ spin }: WithSpinProps["spin"]) => {
+  return (
+    <ThirdStyle spin={spin}>
+      <div className="container">
+        <div className="categories">
+          <div id="language">
+            <p id="category">Language</p>
+            <ul>
+              <li>
+                <p id="title">Javascript</p>
+                <div>
+                  <div id="javascript">85%</div>
+                </div>
+              </li>
+              <li>
+                <p id="title">Typescript</p>
+                <div>
+                  <div id="typescript">50%</div>
+                </div>
+              </li>
+              <li>
+                <p id="title">HTML</p>
+                <div>
+                  <div id="html">85%</div>
+                </div>
+              </li>
+              <li>
+                <p id="title">CSS3</p>
+                <div>
+                  <div id="css">80%</div>
+                </div>
+              </li>
+              <li>
+                <p id="title">Java</p>
+                <div>
+                  <div id="java">30%</div>
+                </div>
+              </li>
+              <li>
+                <p id="title">Solidity</p>
+                <div>
+                  <div id="solidity">30%</div>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <div id="framework">
+            <p>Framework</p>
+            <ul>
+              <li>
+                <p id="title">React.js</p>
+                <div>
+                  <div id="react">85%</div>
+                </div>
+              </li>
+              <li>
+                <p id="title">Express.js</p>
+                <div>
+                  <div id="express">80%</div>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <div id="blockchain">
+            <p>Blockchain</p>
+            <ul>
+              <li>
+                <p id="title">Hyperledger Fabirc</p>
+                <div>
+                  <div id="fabric">30%</div>
+                </div>
+              </li>
+              <li>
+                <p id="title">Ethereum</p>
+                <div>
+                  <div id="ethereum">30%</div>
+                </div>
+              </li>
+              <li>
+                <p id="title">Klaytn</p>
+                <div>
+                  <div id="klaytn">20%</div>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <div id="software">
+            <p>Software</p>
+            <ul>
+              <li>
+                <p id="title">Docker</p>
+                <div>
+                  <div id="docker">30%</div>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <div id="os">
+            <p>OS</p>
+            <ul>
+              <li>
+                <p id="title">Linux</p>
+                <div>
+                  <div id="linux">55%</div>
+                </div>
+              </li>
+              <li>
+                <p id="title">Ubuntu</p>
+                <div>
+                  <div id="ubuntu">55%</div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div className="background" style={{ backgroundImage: `url('/images/flower.png')` }}></div>
+      <div className="background2"></div>
+    </ThirdStyle>
+  );
+};
+
+const ThirdStyle = styled.section<{ spin: WithSpinProps["spin"] }>`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -237,130 +364,4 @@ const ThirdStyle: any = styled.section`
   }
 `;
 
-const Third = ({ spin }: any) => {
-  return (
-    <ThirdStyle spin={spin}>
-      <div className="container">
-        <div className="categories">
-          <div id="language">
-            <p id="category">Language</p>
-            <ul>
-              <li>
-                <p id="title">Javascript</p>
-                <div>
-                  <div id="javascript">85%</div>
-                </div>
-              </li>
-              <li>
-                <p id="title">Typescript</p>
-                <div>
-                  <div id="typescript">50%</div>
-                </div>
-              </li>
-              <li>
-                <p id="title">HTML</p>
-                <div>
-                  <div id="html">85%</div>
-                </div>
-              </li>
-              <li>
-                <p id="title">CSS3</p>
-                <div>
-                  <div id="css">80%</div>
-                </div>
-              </li>
-              <li>
-                <p id="title">Java</p>
-                <div>
-                  <div id="java">30%</div>
-                </div>
-              </li>
-              <li>
-                <p id="title">Solidity</p>
-                <div>
-                  <div id="solidity">30%</div>
-                </div>
-              </li>
-            </ul>
-          </div>
-
-          <div id="framework">
-            <p>Framework</p>
-            <ul>
-              <li>
-                <p id="title">React.js</p>
-                <div>
-                  <div id="react">85%</div>
-                </div>
-              </li>
-              <li>
-                <p id="title">Express.js</p>
-                <div>
-                  <div id="express">80%</div>
-                </div>
-              </li>
-            </ul>
-          </div>
-
-          <div id="blockchain">
-            <p>Blockchain</p>
-            <ul>
-              <li>
-                <p id="title">Hyperledger Fabirc</p>
-                <div>
-                  <div id="fabric">30%</div>
-                </div>
-              </li>
-              <li>
-                <p id="title">Ethereum</p>
-                <div>
-                  <div id="ethereum">30%</div>
-                </div>
-              </li>
-              <li>
-                <p id="title">Klaytn</p>
-                <div>
-                  <div id="klaytn">20%</div>
-                </div>
-              </li>
-            </ul>
-          </div>
-
-          <div id="software">
-            <p>Software</p>
-            <ul>
-              <li>
-                <p id="title">Docker</p>
-                <div>
-                  <div id="docker">30%</div>
-                </div>
-              </li>
-            </ul>
-          </div>
-
-          <div id="os">
-            <p>OS</p>
-            <ul>
-              <li>
-                <p id="title">Linux</p>
-                <div>
-                  <div id="linux">55%</div>
-                </div>
-              </li>
-              <li>
-                <p id="title">Ubuntu</p>
-                <div>
-                  <div id="ubuntu">55%</div>
-                </div>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <div className="background" style={{ backgroundImage: `url('/images/flower.png')` }}></div>
-      <div className="background2"></div>
-    </ThirdStyle>
-  );
-};
-
-export default Third;
+export default React.memo(Third);
