@@ -20,6 +20,7 @@
       "@/pages": ["./pages"],
       "@/styles": ["./styles"],
       "@/components": ["./components"],
+      "@/HOC": ["./HOC"],
       "@/utils": ["./utils"],
       "@/assets": ["./assets"]
     }

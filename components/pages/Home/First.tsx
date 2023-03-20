@@ -1,8 +1,38 @@
 import React from "react";
 import styled from "styled-components";
+import CountUp from "react-countup";
+import { WithSpinProps } from "@/HOC/withSpin";
+
+const HomeFirstPage = ({ spin }: WithSpinProps["spin"]) => {
+  return (
+    <S.Container spin={spin}>
+      <div className="contents">
+        <p id="name">JUNBEOM MOON</p>
+        <div id="job">
+          <p>I'm Junior </p>
+          <p>front-end</p>
+          <p>Developer ;</p>
+        </div>
+        <div className="row">
+          <div className="box">
+            <CountUp redraw delay={0.8} end={4} />
+            <h6>사이드 프로젝트</h6>
+          </div>
+          {/* <div className="box">
+            <span>8</span>
+            <h6>상용화 프로젝트</h6>
+          </div> */}
+        </div>
+      </div>
+      <div className="me" />
+      <div className="round" />
+      <div className="forest" style={{ backgroundImage: `url('/images/forest.png')` }} />
+    </S.Container>
+  );
+};
 
 const S = {
-  Container: styled.section<{ spin: number }>`
+  Container: styled.section<{ spin: WithSpinProps["spin"] }>`
     display: flex;
     align-items: center;
     justify-content: center;
@@ -84,14 +114,15 @@ const S = {
     .round {
       z-index: 1;
       position: absolute;
-      bottom: 40vw;
-      left: 55vw;
+      /* bottom: 40vw; */
+      top: 10vw;
+      left: ${(props) => (props.spin === 0 ? "55vw" : "100vw")};
       width: 65vw;
       height: 65vw;
       background-size: cover;
       background-image: url("/images/elipse-home-slide.png");
       transition-duration: 1.5s;
-      transition-delay: 150ms;
+      transition-delay: 300ms;
       transform: translate3d(0, 0, 0);
       opacity: 1;
     }
@@ -169,39 +200,5 @@ const S = {
     }
   `,
 };
-
-const HomeFirstPage = (spin: any) => {
-  return (
-    <S.Container spin={spin}>
-      <div className="contents">
-        <p id="name">JUNBEOM MOON</p>
-        <div id="job">
-          <p>I'm Junior </p>
-          <p>front-end</p>
-          <p>Developer ;</p>
-        </div>
-        <div className="row">
-          <div className="box">
-            <span>4</span>
-            <h6>사이드 프로젝트</h6>
-          </div>
-          {/* <div className="box">
-            <span>8</span>
-            <h6>상용화 프로젝트</h6>
-          </div> */}
-        </div>
-      </div>
-      <div className="me" />
-      <div className="round" />
-      <div className="forest" style={{ backgroundImage: `url('/images/forest.png')` }} />
-    </S.Container>
-  );
-};
-
-// export async function getServerSideProps() {
-//   return {
-//     props: {},
-//   };
-// }
 
 export default React.memo(HomeFirstPage);

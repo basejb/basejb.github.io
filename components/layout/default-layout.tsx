@@ -4,13 +4,8 @@ import { motion } from "framer-motion";
 import Copyright from "./Copyright";
 import Header from "./header";
 
-export interface IPageHeader {
-  title: string;
-}
-
 export type IDefaultLayoutPage<P = {}> = NextPage<P> & {
   getLayout(page: NextComponentType, props: unknown): React.ReactNode;
-  pageHeader?: IPageHeader;
 };
 
 interface IDefaultLayoutProps {
@@ -18,7 +13,7 @@ interface IDefaultLayoutProps {
 }
 
 const DefaultLayout = ({ Page, ...props }: IDefaultLayoutProps) => {
-  const [isShowPopupMenu, setIsShowPopupMenu] = useState(false);
+  // const [isShowPopupMenu, setIsShowPopupMenu] = useState(false);
 
   return (
     <div>
@@ -32,5 +27,5 @@ const DefaultLayout = ({ Page, ...props }: IDefaultLayoutProps) => {
 };
 
 export const getDefaultLayout = (Page: IDefaultLayoutPage, props: Record<string, unknown>) => {
-  return <DefaultLayout {...props} Page={Page} />;
+  return <DefaultLayout Page={Page} {...props} />;
 };

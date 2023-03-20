@@ -8,13 +8,7 @@ import First from "@/components/pages/Home/First";
 import Second from "@/components/pages/Home/Second";
 import Third from "@/components/pages/Home/Third";
 import Fourth from "@/components/pages/Home/Fourth";
-
-interface HomeProps {
-  spin: number;
-  onWheel: any;
-  onTouchStart: any;
-  onTouchEnd: any;
-}
+import withSpin, { WithSpinProps } from "@/HOC/withSpin";
 
 // const DEFAULT_SEO = {
 //   title: "JB's github",
@@ -37,35 +31,45 @@ interface HomeProps {
 //   },
 // };
 
-const HomePage: IDefaultLayoutPage = () => {
-  const [spin, setSpin] = useState<number>(0);
-  const [touchStart, setTouchStart] = useState<number>(0);
-  const [scroll, setScroll] = useState<boolean>(true);
-  const [articleNum] = useState<number>(4);
+const HomePage = (props: any) => {
+  const { spin } = props;
 
-  const wheelEvent = (e: WheelEvent) => {
-    if (scroll) {
-      setScroll(false);
-      if (e.deltaY > 0) {
-        spin < articleNum - 1 && setSpin((prev) => prev + 1);
-      } else {
-        spin > 0 && setSpin((prev) => prev - 1);
-      }
-      setTimeout(() => setScroll(true), 1000);
-    }
-  };
+  // const [spin, setSpin] = useState<number>(0);
+  // const [touchStart, setTouchStart] = useState<number>(0);
+  // const [scroll, setScroll] = useState<boolean>(true);
+  // const [articleNum] = useState<number>(4);
 
-  const touchEvent = (e: TouchEvent) => {
-    switch (e.type) {
-      case "touchstart":
-        setTouchStart(e.touches[0].clientY);
-        break;
-      case "touchend":
-        if (e.changedTouches[0].clientY < touchStart) {
-          spin < articleNum - 1 && setSpin((prev) => prev + 1);
-        } else spin > 0 && setSpin((prev) => prev - 1);
-    }
-  };
+  // const wheelEvent = (e: WheelEvent) => {
+  //   if (scroll) {
+  //     setScroll(false);
+  //     if (e.deltaY > 0) {
+  //       spin < articleNum - 1 && setSpin((prev) => prev + 1);
+  //     } else {
+  //       spin > 0 && setSpin((prev) => prev - 1);
+  //     }
+  //     setTimeout(() => setScroll(true), 1000);
+  //   }
+  // };
+
+  // const touchEvent = (e: TouchEvent) => {
+  //   switch (e.type) {
+  //     case "touchstart":
+  //       setTouchStart(e.touches[0].clientY);
+  //       break;
+  //     case "touchend":
+  //       const isTrigger = e.changedTouches[0].clientY < touchStart;
+  //       const isGapTrue = touchStart - e.changedTouches[0].clientY > 50;
+  //       const isGapFalse = e.changedTouches[0].clientY - touchStart > 50;
+
+  //       if (isTrigger && isGapTrue) {
+  //         spin < articleNum - 1 && setSpin((prev) => prev + 1);
+  //       }
+
+  //       if (isGapFalse) {
+  //         spin > 0 && setSpin((prev) => prev - 1);
+  //       }
+  //   }
+  // };
 
   return (
     <>
@@ -76,7 +80,13 @@ const HomePage: IDefaultLayoutPage = () => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head> */}
-      <S.Container spin={spin} onWheel={wheelEvent} onTouchStart={touchEvent} onTouchEnd={touchEvent}>
+      <S.Container
+        {...props}
+        // spin={spin}
+        // onWheel={wheelEvent}
+        // onTouchStart={touchEvent}
+        // onTouchEnd={touchEvent}
+      >
         <First spin={spin} />
         <Second spin={spin} />
         <Third spin={spin} />
@@ -87,7 +97,7 @@ const HomePage: IDefaultLayoutPage = () => {
 };
 
 const S = {
-  Container: styled.section<HomeProps>`
+  Container: styled.section<WithSpinProps>`
     transition: transform 1s cubic-bezier(0.8, 0.085, 0, 0.99);
     -webkit-transition: transform 1s cubic-bezier(0.8, 0.085, 0, 0.99);
     transform: translateY(${(props) => -props.spin * 100}vh);
@@ -95,6 +105,8 @@ const S = {
   `,
 };
 
-HomePage.getLayout = getDefaultLayout;
+const Home: any = withSpin()(React.memo(HomePage));
 
-export default HomePage;
+Home.getLayout = getDefaultLayout;
+
+export default Home;

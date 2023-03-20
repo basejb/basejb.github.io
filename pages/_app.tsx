@@ -6,7 +6,6 @@ import Head from "next/head";
 import { DefaultSeo } from "next-seo";
 import { useRouter } from "next/router";
 import { useEffect } from "react";
-// import { Analytics } from "@vercel/analytics/react";
 import * as gtag from "@/utils/gtag";
 import Script from "next/script";
 import GlobalStyle from "@/styles/GlobalStyle";
@@ -33,6 +32,8 @@ const DEFAULT_SEO = {
 };
 
 export default function App({ Component, pageProps }: AppProps) {
+  console.log(Component, pageProps);
+
   const router = useRouter();
 
   useEffect(() => {
@@ -61,10 +62,6 @@ export default function App({ Component, pageProps }: AppProps) {
         <title>JB's github</title>
         <meta name="description" content="It's JBs description" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        {/* <meta
-          name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0 viewport-fit=cover"
-        /> */}
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Script
@@ -85,8 +82,8 @@ export default function App({ Component, pageProps }: AppProps) {
         `,
         }}
       />
-      <main>{getLayout(Component, pageProps)}</main>
       <GlobalStyle />
+      <main>{getLayout(Component, pageProps)}</main>
     </>
   );
 }
