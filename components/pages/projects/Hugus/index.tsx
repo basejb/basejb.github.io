@@ -17,7 +17,7 @@ const S = {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 150px;
+    padding-top: 120px;
     color: white;
 
     .intro {

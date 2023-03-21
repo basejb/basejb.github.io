@@ -52,7 +52,7 @@ const BrandingStyle = styled.div`
           #title {
             margin-top: 70px;
             margin-bottom: 50px;
-            border-bottom: solid 1px #79928e;
+            border-bottom: solid 1px var(--umokmin-theme);
             padding-bottom: 5px;
           }
           div {
@@ -71,7 +71,7 @@ const BrandingStyle = styled.div`
             }
             #color {
               width: 80px;
-              background-color: #79928e;
+              background-color: var(--umokmin-theme);
               height: 80px;
               border-radius: 50%;
             }

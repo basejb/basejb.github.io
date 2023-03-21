@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 import { NextComponentType, NextPage } from "next";
-import { motion } from "framer-motion";
 import Copyright from "./Copyright";
 import Header from "./header";
+import Sites from "./Sites";
 
 export type IDefaultLayoutPage<P = {}> = NextPage<P> & {
   getLayout(page: NextComponentType, props: unknown): React.ReactNode;
@@ -22,6 +22,7 @@ const DefaultLayout = ({ Page, ...props }: IDefaultLayoutProps) => {
 
       <Page {...props} />
       <Copyright />
+      <Sites />
     </div>
   );
 };

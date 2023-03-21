@@ -20,88 +20,119 @@ const Process = () => {
             <strong>주요 기능</strong>
             <p>Main Function</p>
           </ul>
-          <ul id="head_stack">
-            <Image
-              alt="stack"
-              className="stack"
-              src={
-                "https://img.shields.io/badge/MongoDB-47A248?style=flat-square&logo=MongoDB&logoColor=white&width=200"
-              }
-              width={30}
-              height={20}
-            />
-            <Image
-              alt="stack"
-              className="stack"
-              src="https://img.shields.io/badge/Ubuntu-E95420?style=flat-square&logo=Ubuntu&logoColor=white"
-              width={30}
-              height={20}
-            />
-            <Image
-              alt="stack"
-              className="stack"
-              src="https://img.shields.io/badge/Amazon AWS-232F3E?style=flat-square&logo=Amazon AWS&logoColor=white"
-              width={30}
-              height={20}
-            />
-            <Image
-              alt="stack"
-              className="stack"
-              src="https://img.shields.io/badge/NGINX-009639?style=flat-square&logo=NGINX&logoColor=white"
-              width={30}
-              height={20}
-            />
-          </ul>
 
           <ul id="body">
             <li onClick={(e) => zoomHandler(e)}>
               <div className="title_stack">
-                <h3>💫 무한스크롤</h3>
+                <h3>💫 배포</h3>
                 <span />
                 <section>
                   <Image
                     alt="stack"
                     className="stack"
-                    src="https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=React&logoColor=white"
+                    src="https://img.shields.io/badge/Ubuntu-E95420?style=flat-square&logo=Ubuntu&logoColor=white&width=200"
                     width={30}
                     height={20}
                   />
                   <Image
                     alt="stack"
                     className="stack"
-                    src="https://img.shields.io/badge/Redux-764ABC?style=flat-square&logo=Redux&logoColor=white"
+                    src="https://img.shields.io/badge/Amazon AWS-232F3E?style=flat-square&logo=Amazon AWS&logoColor=white&width=200"
+                    width={30}
+                    height={20}
+                  />
+                  <Image
+                    alt="stack"
+                    className="stack"
+                    src="https://img.shields.io/badge/NGINX-009639?style=flat-square&logo=NGINX&logoColor=white&width=200"
                     width={30}
                     height={20}
                   />
                 </section>
               </div>
-              <Image alt="infinityScroll" src={"/images/work_infinity_scroll.gif"} width={200} height={200} />
-              <p>
-                • axios api로 초기 로드 데이터 10개를 불러오고 스크롤 값을 계산해서 추가 로드시에 10개씩 추가
-                로드합니다.
-              </p>
-              {/* <h5>🛠use func🛠</h5> */}
+              {/* <Image alt="filter" src={"/images/work_filter.gif"} width={200} height={200} /> */}
+              <div className="contents">
+                <p>• Nginx</p>
+                <p>• AWS lightsail</p>
+                <p>• SSL</p>
+              </div>
               <hr />
             </li>
             <li onClick={(e) => zoomHandler(e)}>
               <div className="title_stack">
-                <h3>💫 요청 작성</h3>
+                <h3>💫 서버</h3>
                 <span />
                 <section>
                   <Image
                     alt="stack"
                     className="stack"
-                    src="https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=React&logoColor=white"
+                    src={
+                      "https://img.shields.io/badge/express-000000?style=flat-square&logo=express&logoColor=white&width=200"
+                    }
                     width={30}
                     height={20}
                   />
                   <Image
                     alt="stack"
                     className="stack"
-                    src="https://img.shields.io/badge/Redux-764ABC?style=flat-square&logo=Redux&logoColor=white"
+                    src={
+                      "https://img.shields.io/badge/node.js-339933?style=flat-square&logo=Node.js&logoColor=white&width=200"
+                    }
                     width={30}
                     height={20}
                   />
+                  <Image
+                    alt="stack"
+                    className="stack"
+                    src={
+                      "https://img.shields.io/badge/mysql-4479A1?style=flat-square&logo=mysql&logoColor=white&width=200"
+                    }
+                    width={30}
+                    height={20}
+                  />
+                  <Image
+                    alt="stack"
+                    className="stack"
+                    src={
+                      "https://img.shields.io/badge/MongoDB-47A248?style=flat-square&logo=MongoDB&logoColor=white&width=200"
+                    }
+                    width={30}
+                    height={20}
+                  />
+                </section>
+              </div>
+              <div className="contents">
+                <p>• RESTful API</p>
+                <p>• Sequelize</p>
+                <p>• MongoDB</p>
+                <p>• Mysql</p>
+              </div>
+              <hr />
+            </li>
+            <li onClick={(e) => zoomHandler(e)}>
+              <div className="title_stack">
+                <h3>💫 무한스크롤</h3>
+                <span />
+                <section>
+                  <ReactStack />
+                  <ReduxStack />
+                </section>
+              </div>
+              {/* <Image alt="infinityScroll" src={"/images/work_infinity_scroll.gif"} width={200} height={200} /> */}
+              <div className="contents">
+                <p>• custom hooks로 재사용</p>
+              </div>
+
+              {/* <p>• </p> */}
+              <hr />
+            </li>
+            <li onClick={(e) => zoomHandler(e)}>
+              <div className="title_stack">
+                <h3>💫 소통</h3>
+                <span />
+                <section>
+                  <ReactStack />
+                  <ReduxStack />
                   <Image
                     alt="stack"
                     className="stack"
@@ -125,112 +156,13 @@ const Process = () => {
                   />
                 </section>
               </div>
-              <Image alt="write" src={"/images/work_write.gif"} width={200} height={200} />
-              <p>• 선택 or 입력하지 않은 Input이 있다면 ErrorHandler를 통해서 리턴합니다.</p>
-              <p>• 파일을 첨부하면 FileReader를 사용해서 미리보기를 보여줍니다.</p>
-              <p>• 파일을 포함한 FormData를 서버로 POST 요청합니다. </p>
-              <p>• 요청 받은 FormData에서 파일은 서버에서 AWS S3에 따로 저장합니다.</p>
-              <p>• DB에 저장하고 추가한 데이터를 포함한 리스트를 곧바로 Socket을 사용해서 실제 리스트 갱신합니다.</p>
-              <p>
-                • 저장에 성공하면 Firebase Cloud Messaging으로 요청자의 부서와 같은 채널의 유저들에게 Noti 알림을
-                보냅니다.
-              </p>
-              <hr />
-            </li>
-            <li onClick={(e) => zoomHandler(e)}>
-              <div className="title_stack">
-                <h3>💫 필터링</h3>
-                <span />
-                <section>
-                  <Image
-                    alt="stack"
-                    className="stack"
-                    src="https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=React&logoColor=white"
-                    width={30}
-                    height={20}
-                  />
-                  <Image
-                    alt="stack"
-                    className="stack"
-                    src="https://img.shields.io/badge/Redux-764ABC?style=flat-square&logo=Redux&logoColor=white"
-                    width={30}
-                    height={20}
-                  />
-                </section>
+              {/* <Image alt="write" src={"/images/work_write.gif"} width={200} height={200} /> */}
+              <div className="contents">
+                <p>• 위지위그(WYSIWYG) 에디터 기능</p>
+                <p>• 이미지 리사이즈</p>
+                <p>• S3 업로드</p>
+                <p>• Firebase Cloud Messaging 푸시 알림</p>
               </div>
-              <Image alt="filter" src={"/images/work_filter.gif"} width={200} height={200} />
-              <p>• 필터링을 적용하면 api 요청으로 해당 필터로 리스트를 로드합니다.</p>
-              <p>• 매 로드시 새로 불러오는 불필요한 데이터 로드를 막기위해 수정중에 있습니다.</p>
-              <hr />
-            </li>
-            <li onClick={(e) => zoomHandler(e)}>
-              <div className="title_stack">
-                <h3>💫 상태 변경</h3>
-                <span />
-                <section>
-                  <Image
-                    alt="stack"
-                    className="stack"
-                    src="https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=React&logoColor=white"
-                    width={30}
-                    height={20}
-                  />
-                  <Image
-                    alt="stack"
-                    className="stack"
-                    src="https://img.shields.io/badge/Redux-764ABC?style=flat-square&logo=Redux&logoColor=white"
-                    width={30}
-                    height={20}
-                  />
-                  <Image
-                    alt="stack"
-                    className="stack"
-                    src="https://img.shields.io/badge/Socket.io-51DAAB?style=flat-square&logo=Socket.io&logoColor=white"
-                    width={30}
-                    height={20}
-                  />
-                </section>
-              </div>
-              <Image alt="stateChange" src={"/images/work_state_change.gif"} width={200} height={200} />
-              <p>
-                • 작업물 접수 및 상태 변경을 클릭하면 해당 조건을 서버에서 이미 눌렀거나 다른 유저가 눌렀다면 예외처리
-                합니다.
-              </p>
-              <p>
-                • 상태 변경을 한 뒤 이전 상태의 filter를 그대로 적용한 리스트를 소켓을 이용해 클라이언트로 전송합니다.
-              </p>
-              <p>• useEffect Hooks를 거쳐서 클라이언트의 view에서는 변경된 작업물만 사라지게 보여집니다.</p>
-              <hr />
-            </li>
-            <li onClick={(e) => zoomHandler(e)}>
-              <div className="title_stack">
-                <h3>💫 Notification</h3>
-                <span />
-                <section>
-                  <Image
-                    alt="stack"
-                    className="stack"
-                    src="https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=React&logoColor=white"
-                    width={30}
-                    height={20}
-                  />
-                  <Image
-                    alt="stack"
-                    className="stack"
-                    src="https://img.shields.io/badge/Redux-764ABC?style=flat-square&logo=Redux&logoColor=white"
-                    width={30}
-                    height={20}
-                  />
-                </section>
-              </div>
-              <Image alt="noti" src={"/images/work_noti.gif"} width={200} height={200} />
-              <p>
-                • 같은 채널의 유저(
-                <span>
-                  해당 채널은 <span>office</span> 채널
-                </span>
-                )가 work를 등록하면 FCM을 통해 백,포그라운드 어떠한 경우에도 알림을 받습니다.
-              </p>
               <hr />
             </li>
             <li onClick={(e) => zoomHandler(e)}>
@@ -238,20 +170,8 @@ const Process = () => {
                 <h3>💫 모바일</h3>
                 <span />
                 <section>
-                  <Image
-                    alt="stack"
-                    className="stack"
-                    src="https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=React&logoColor=white"
-                    width={30}
-                    height={20}
-                  />
-                  <Image
-                    alt="stack"
-                    className="stack"
-                    src="https://img.shields.io/badge/Redux-764ABC?style=flat-square&logo=Redux&logoColor=white"
-                    width={30}
-                    height={20}
-                  />
+                  <ReactStack />
+
                   <Image
                     alt="stack"
                     className="stack"
@@ -261,9 +181,12 @@ const Process = () => {
                   />
                 </section>
               </div>
-              <Image className="mobile" alt="mobile" src={"/images/work_mobile.gif"} width={200} height={200} />
-              <p>• styled-components 및 Emotion을 사용해서 커스텀태그를 만들어 사용하며 css를 적용했습니다.</p>
-              <p>• 반응형 웹을 적용해서 세세한 부분까지 유저의 입장으로써 편하게 볼수 있게 구현했습니다.</p>
+              {/* <Image className="mobile" alt="mobile" src={"/images/work_mobile.gif"} width={200} height={200} /> */}
+              <div className="contents">
+                <p>• styled-components</p>
+                <p>• media Query</p>
+                <p>• 반응형 웹</p>
+              </div>
               <hr />
             </li>
           </ul>
@@ -274,6 +197,30 @@ const Process = () => {
         {zoom !== "" ? <Image alt="zoom" src={zoom} onClick={() => setZoom("")} width={200} height={200} /> : null}
       </div>
     </S.Container>
+  );
+};
+
+const ReactStack = () => {
+  return (
+    <Image
+      alt="stack"
+      className="stack"
+      src="https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=React&logoColor=white"
+      width={30}
+      height={20}
+    />
+  );
+};
+
+const ReduxStack = () => {
+  return (
+    <Image
+      alt="stack"
+      className="stack"
+      src="https://img.shields.io/badge/Redux-764ABC?style=flat-square&logo=Redux&logoColor=white"
+      width={30}
+      height={20}
+    />
   );
 };
 
@@ -321,6 +268,7 @@ const S = {
         }
 
         #body {
+          margin-top: 40px;
           li {
             list-style: none;
             margin-bottom: 50px;
@@ -334,7 +282,11 @@ const S = {
                 width: 1px;
               }
               section {
+                display: flex;
+                align-items: center;
                 .stack {
+                  border-radius: 8px;
+                  padding: 5px;
                   margin: 0 5px 0 0;
                 }
               }
@@ -344,17 +296,16 @@ const S = {
               height: auto;
               cursor: ${(props: any) => (props.zoom ? "zoom-out" : "zoom-in")};
             }
+
+            div.contents {
+              display: flex;
+              flex-direction: column;
+              gap: 10px;
+              padding: 8px 0;
+              font-size: 1rem;
+            }
             .mobile {
               width: 35%;
-            }
-            p {
-              font-size: 0.8rem;
-              span {
-                color: #808080;
-                span {
-                  color: #b56622;
-                }
-              }
             }
             .stack {
               width: auto;

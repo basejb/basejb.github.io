@@ -21,7 +21,7 @@ const withSpin = () => (OriginalComponent: ComponentType<WithSpinProps>) => (pro
       } else {
         spin > 0 && setSpin((prev) => prev - 1);
       }
-      setTimeout(() => setScroll(true), 1000);
+      setTimeout(() => setScroll(true), 1200);
     }
   };
 

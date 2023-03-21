@@ -6,7 +6,7 @@ import Goal from "./Goal";
 import Architecture from "./Architecture";
 // import UI from "./UI";
 import Branding from "./Branding";
-
+import Retrospect from "./Retrospect";
 import Image from "next/image";
 
 const Umokmin = () => {
@@ -22,6 +22,7 @@ const Umokmin = () => {
       <Architecture />
       {/* <UI /> */}
       {/* <Used /> */}
+      <Retrospect />
     </S.Umokmin>
   );
 };
@@ -32,7 +33,7 @@ const S = {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 200px;
+    padding-top: 120px;
     color: white;
 
     .intro {
@@ -46,8 +47,7 @@ const S = {
         height: auto;
       }
       p {
-        margin-top: 50px;
-        color: #79928e;
+        color: var(--umokmin-theme);
         font-size: 2.5rem;
         font-family: Kcc;
       }
@@ -61,7 +61,7 @@ const S = {
         }
 
         p {
-          color: #79928e;
+          color: var(--umokmin-theme);
           font-size: 1.5rem;
           font-family: Kcc;
         }

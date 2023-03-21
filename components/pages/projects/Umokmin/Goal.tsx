@@ -70,7 +70,7 @@ const GoalStyle = styled.div`
       }
 
       #summary {
-        border: dashed 2px #79928e;
+        border: dashed 2px var(--umokmin-theme);
         margin-top: 50px;
         height: 250px;
         border-radius: 5px;

@@ -25,7 +25,7 @@ const HomeFirstPage = ({ spin }: WithSpinProps["spin"]) => {
           </div> */}
         </div>
       </div>
-      <div className="me" />
+      <S.Me />
       <motion.div
         animate={spin === 0 ? "open" : "close"}
         variants={{
@@ -38,12 +38,22 @@ const HomeFirstPage = ({ spin }: WithSpinProps["spin"]) => {
           closed: { opacity: 0, transitionEnd: { left: "100vw" } },
         }}
         initial={{ opacity: 0, position: "absolute", top: "40vw", left: "100vw" }}
-        transition={{ duration: 0.9, delay: 0.2 }}
+        transition={{ duration: 1.3, delay: 0.3 }}
       >
-        <div className="round" />
+        <S.Round />
       </motion.div>
 
-      <div className="forest" style={{ backgroundImage: `url('/images/forest.png')` }} />
+      <motion.div
+        animate={spin === 0 ? "open" : "closed"}
+        variants={{
+          open: { display: "block", opacity: 1, y: 0 },
+          closed: { opacity: 0, y: 0, transitionEnd: { display: "none" } },
+        }}
+        initial={{ y: 100, position: "absolute", width: "100%" }}
+        transition={{ duration: 1, delay: 0.2 }}
+      >
+        <S.Forest style={{ backgroundImage: `url('/images/forest.png')` }} />
+      </motion.div>
     </S.Container>
   );
 };
@@ -56,7 +66,7 @@ const S = {
     width: 100%;
     height: 100vh;
     z-index: 10;
-    background-color: #268e47;
+    background-color: var(--theme);
     transition: all 0.4s ease-in-out;
     .contents {
       width: 65%;
@@ -114,39 +124,6 @@ const S = {
           }
         }
       }
-    }
-
-    .me {
-      z-index: 3;
-      position: absolute;
-      transition: all 0.4s ease-in-out;
-      right: 0;
-      width: 60vw;
-      height: 100vh;
-      background-position: center;
-      background-size: cover;
-      background-image: url("/images/junbeom.webp");
-    }
-
-    .round {
-      z-index: 1;
-      width: 1500px;
-      height: 1500px;
-      background-size: cover;
-      background-image: url("/images/elipse-home-slide.png");
-    }
-
-    .forest {
-      /* transform: ${(props) => (props.spin === 0 ? "scale(1)" : "scale(1.3)")}; */
-      /* transition: transform 1s cubic-bezier(0.46, 0.03, 0.52, 0.96); */
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
-      z-index: 0;
-      width: 100%;
-      position: absolute;
-      right: 0;
-      height: 100vh;
     }
 
     @media (max-width: 1400px) {
@@ -207,6 +184,42 @@ const S = {
       .me {
       }
     }
+  `,
+  Me: styled.div`
+    z-index: 3;
+    position: absolute;
+    transition: all 0.4s ease-in-out;
+    right: 0;
+    width: 60vw;
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+    background-image: url("/images/junbeom.webp");
+    @media (max-width: 1400px) {
+      right: 0;
+    }
+    @media (max-width: 1100px) {
+      display: none;
+    }
+  `,
+  Round: styled.div`
+    z-index: 1;
+    width: 1500px;
+    height: 1500px;
+    background-size: cover;
+    background-image: url("/images/elipse-home-slide.png");
+    @media (max-width: 1100px) {
+      display: none;
+    }
+  `,
+  Forest: styled.div`
+    z-index: 1;
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url("/images/elipse-home-slide.png");
   `,
 };
 

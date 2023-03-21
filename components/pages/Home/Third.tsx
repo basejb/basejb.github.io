@@ -3,6 +3,8 @@ import React from "react";
 import styled from "styled-components";
 
 const Third = ({ spin }: WithSpinProps["spin"]) => {
+  // 구조를 어떻게 가져갈지 ?
+
   return (
     <ThirdStyle spin={spin}>
       <div className="container">

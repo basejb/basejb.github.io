@@ -12,18 +12,20 @@ const S = {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 200px;
+    padding-top: 120px;
     color: white;
 
     .intro {
-      height: 100px;
+      height: 400px;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
 
       .logo {
+        display: block;
         width: 400px;
+        height: 150px;
       }
 
       p {
@@ -55,7 +57,7 @@ const RealTimeWork = () => {
   return (
     <S.Container>
       <div className="intro">
-        {/* <Image alt="logo" className="logo" src={""} /> */}
+        <section className="logo" />
         <p>"실시간으로 빠르게 소통하는 업무 시스템"</p>
       </div>
       <Overview />
