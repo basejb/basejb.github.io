@@ -49,6 +49,7 @@ const HomePage = (props: WithSpinProps) => {
         <Third spin={spin} />
         <Fourth spin={spin} />
       </S.Container>
+      <S.Pagination spin={spin}>0{spin + 1}</S.Pagination>
     </>
   );
 };
@@ -59,6 +60,26 @@ const S = {
     -webkit-transition: transform 1s cubic-bezier(0.8, 0.085, 0, 0.99);
     transform: translateY(${(props) => -props.spin * 100}vh);
     -webkit-transform: translateY(${(props) => -props.spin * 100}vh);
+  `,
+  Pagination: styled.div<{ spin: WithSpinProps["spin"] }>`
+    width: 150px;
+    height: 150px;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top-left-radius: 16px;
+    background-color: ${(props) => (props.spin === 2 ? "white" : "#1010107a")};
+    color: ${(props) => (props.spin === 2 ? "black" : "white")};
+    font-size: 2rem;
+    font-weight: 700;
+    @media (max-width: 640px) {
+      width: 80px;
+      height: 80px;
+      font-size: 1rem;
+    }
   `,
 };
 

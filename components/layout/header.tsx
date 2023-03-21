@@ -36,7 +36,7 @@ const Header = () => {
     <S.Header>
       <S.HeaderTitle>
         <Link href="/" passHref onClick={handleMain}>
-          <Title>BASEJB.</Title>
+          <S.Title>BASEJB.</S.Title>
         </Link>
 
         <S.Email>
@@ -48,16 +48,6 @@ const Header = () => {
     </S.Header>
   );
 };
-
-const Title = styled.p`
-  font-size: 1.8rem;
-  font-weight: 800;
-  @media (max-width: 640px) {
-    gap: 5px;
-    font-size: 0.8rem;
-    font-weight: 700;
-  }
-`;
 
 const S = {
   Header: styled.header`
@@ -84,6 +74,7 @@ const S = {
     flex-direction: row;
     align-items: center;
     transition: all 0.5s ease-in-out;
+    gap: 20px;
     & > a {
       display: flex;
       gap: 20px;
@@ -100,6 +91,15 @@ const S = {
     p {
       transition: all 0.5s ease-in-out;
       color: ${(props: any) => (!props.open ? "#eeeeee" : "#000000")};
+    }
+  `,
+  Title: styled.p`
+    font-size: 1.8rem;
+    font-weight: 800;
+    @media (max-width: 640px) {
+      gap: 5px;
+      font-size: 1rem;
+      font-weight: 700;
     }
   `,
   Email: styled.div`

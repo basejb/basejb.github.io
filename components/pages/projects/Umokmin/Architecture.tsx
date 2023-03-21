@@ -30,6 +30,7 @@ const ArchitectureStyle: any = styled.div`
 
       #head {
         font-size: 1.2rem;
+        margin-bottom: 16px;
 
         p {
           margin-top: 5px;

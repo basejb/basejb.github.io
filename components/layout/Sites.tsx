@@ -53,7 +53,12 @@ const S = {
       align-items: flex-end;
       flex-direction: row;
       padding-bottom: 20px;
+      right: 90px;
       gap: 5px;
+      z-index: 0;
+      top: auto;
+      bottom: 0;
+      height: 50px;
       button {
         transform: rotate(0);
         a {

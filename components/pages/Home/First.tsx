@@ -98,12 +98,12 @@ const S = {
         gap: 20px;
         .box {
           text-align: center;
-          width: 300px;
-          height: 100px;
+          width: 280px;
+          height: 90px;
           display: flex;
           padding: 2rem;
           border-radius: 8px;
-          background-color: rgba(255, 255, 255, 0.1);
+          background-color: rgba(255, 255, 255, 0.2);
           box-shadow: inset 0 -2px 0 0 rgba(255, 255, 255, 0.1);
           align-items: center;
           gap: 20px;

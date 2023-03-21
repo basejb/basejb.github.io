@@ -6,7 +6,7 @@ const Retrospect = () => {
     <S.Container>
       <div className="bar" />
       <div className="item">
-        <strong className="num">04</strong>
+        <strong className="num">05</strong>
         <div className="detail">
           <ul id="head">
             <strong>자세한 회고록</strong>
@@ -50,6 +50,15 @@ const S = {
           padding: 0;
           margin: 0;
           font-size: 0.8rem;
+        }
+
+        #head {
+          font-size: 1.2rem;
+
+          p {
+            margin-top: 5px;
+            font-size: 0.8rem;
+          }
         }
 
         a {

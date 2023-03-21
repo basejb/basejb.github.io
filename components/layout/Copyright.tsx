@@ -24,14 +24,14 @@ const CopyrightStyle = styled.div`
     }
   }
 
-  @media (max-width: 500px) {
+  @media (max-width: 640px) {
     margin: 0;
     left: 0;
     bottom: 0;
     min-width: 500px;
     transform: rotate(90deg) translate(60px, 230px) !important;
     p {
-      font-size: 10px;
+      font-size: 7px;
       /* transform: scale(0.7); */
       /* -webkit-transform: scale(0.7); */
     }
