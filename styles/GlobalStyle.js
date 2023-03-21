@@ -53,6 +53,11 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
     padding: 0;
   }
+
+  :root {
+    --theme: #268e47;
+    --umokmin-theme: #79928e;
+  }
 `;
 
 export default GlobalStyle;
