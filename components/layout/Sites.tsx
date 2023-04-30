@@ -5,6 +5,16 @@ const Sites = () => {
   return (
     <S.Sites>
       <button type="button">
+        <a
+          href="https://uneven-hour-bc5.notion.site/7aa69acd28164467877fb30796244929"
+          target="_blank"
+          id="resume"
+          rel="noreferrer"
+        >
+          CV.
+        </a>
+      </button>
+      <button type="button">
         <a href="https://github.com/basejb" target="_blank" id="github" rel="noreferrer">
           GH.
         </a>
