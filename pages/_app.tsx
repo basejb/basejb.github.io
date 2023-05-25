@@ -61,6 +61,7 @@ export default function App({ Component, pageProps }: AppProps) {
         <meta name="description" content="It's JBs description" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
+        <script defer data-domain="basejb.github.io" src="https://plausible.io/js/script.js" />
       </Head>
       <Script
         strategy="afterInteractive"
