@@ -40,7 +40,7 @@ const Header = () => {
         </Link>
 
         <S.Email>
-          <a href="mailto:moonnr94@gmail.com">moonnr94@gmail.com</a>
+          <a href="mailto:dev.bearjb@gmail.com">dev.bearjb@gmail.com</a>
         </S.Email>
       </S.HeaderTitle>
       {/* <MenuBtn isActive={isShowPopupMenu} setActive={setActive} /> */}
